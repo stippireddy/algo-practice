@@ -3,6 +3,9 @@ package geeksForGeeks;
 import java.util.Arrays;
 
 /*
+ * This problem can be found @
+ * http://www.geeksforgeeks.org/rearrange-positive-and-negative-numbers/
+ * 
  * Given an array of positive and negative numbers, arrange them such that all 
  * negative integers appear before all the positive integers in the array 
  * without using any additional data structure like hash table, arrays, etc. 
@@ -14,14 +17,13 @@ import java.util.Arrays;
  * input = {12, 11, -13, -5, 6, -7, 5, -3, -6}
  * output = {-13, -5, -7, -3, -6, 12, 11, 6, 5}
  * 
- * This GeeksForGeeks problem can be found @
- * http://www.geeksforgeeks.org/rearrange-positive-and-negative-numbers/
  */
 
 public class RearrangePositiveNegative {
 
 	/*
-	 
+	 * The following method provides the naive solution that uses O(n) space,
+	 * but solves the problem in O(n) time too!	 
 	 */
 
 	public void extraSpace(int[] a) {
@@ -42,6 +44,11 @@ public class RearrangePositiveNegative {
 		}
 	}
 
+	/*
+	 * The following method uses a modified version of insertion sort to
+	 * solve the problem in O(1) space. But, the worst case running time is O(n^2).
+	 */
+	
 	public void constSpaceWithInsertionSort(int[] a) {
 		int lastNeg = 0;
 		for (int i = 1; i < a.length; i++) {
@@ -54,6 +61,11 @@ public class RearrangePositiveNegative {
 		}
 	}
 
+	/*
+	 * The following method uses a modified version of merge sort to
+	 * solve the problem in O(n) space. But, the worst case running time is O(nlgn).
+	 */
+	
 	public void rearrangeWithModifiedMergeSort(int[] a, int low, int high) {
 		if (low < high) {
 			int mid = (low + high) / 2;
@@ -92,6 +104,11 @@ public class RearrangePositiveNegative {
 		input[j] = temp;
 	}
 
+	/*
+	 * The following method uses a modified version of merge sort to
+	 * solve the problem in O(1) space. The worst case running time is O(nlgn).
+	 */
+	
 	public void rearrangeWithConstSpaceMergeSort(int[] a, int low, int high) {
 		if (low < high) {
 			int mid = (low + high) / 2;
