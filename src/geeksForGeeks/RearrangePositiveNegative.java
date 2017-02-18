@@ -3,16 +3,25 @@ package geeksForGeeks;
 import java.util.Arrays;
 
 /*
- * Given an unsorted array of both negative and positive integer, the task is 
- * to place all the negative elements at the end of array while maintaining 
- * the input order of the elements.
+ * Given an array of positive and negative numbers, arrange them such that all 
+ * negative integers appear before all the positive integers in the array 
+ * without using any additional data structure like hash table, arrays, etc. 
+ * The input order should be maintained.
+ * 
+ * input = { 1, -1, 3, 2, -7, -5, 11, 6 }
+ * output = {-1, -7, -5, 1, 3, 2, 11, 6}
+ * 
+ * input = {12, 11, -13, -5, 6, -7, 5, -3, -6}
+ * output = {-13, -5, -7, -3, -6, 12, 11, 6, 5}
+ * 
+ * This GeeksForGeeks problem can be found @
+ * http://www.geeksforgeeks.org/rearrange-positive-and-negative-numbers/
  */
 
 public class RearrangePositiveNegative {
 
 	/*
-	 * This GeeksForGeeks problem can be found @
-	 * http://www.geeksforgeeks.org/rearrange-positive-and-negative-numbers-publish/
+	 
 	 */
 
 	public void extraSpace(int[] a) {
@@ -45,19 +54,89 @@ public class RearrangePositiveNegative {
 		}
 	}
 
+	public void rearrangeWithModifiedMergeSort(int[] a, int low, int high) {
+		if (low < high) {
+			int mid = (low + high) / 2;
+			rearrangeWithModifiedMergeSort(a, low, mid);
+			rearrangeWithModifiedMergeSort(a, mid + 1, high);
+			modifiedMerge(a, low, mid, high);
+		}
+	}
+
+	private void modifiedMerge(int[] a, int p, int q, int r) {
+		int[] left = new int[q - p + 1];
+		int[] right = new int[r - q];
+		System.arraycopy(a, p, left, 0, left.length);
+		System.arraycopy(a, q + 1, right, 0, right.length);
+		int i = 0, j = 0, k = p;
+		while (i < left.length && j < right.length) {
+			if (left[i] < 0) {
+				a[k++] = left[i++];
+			} else if (right[j] < 0) {
+				a[k++] = right[j++];
+			} else {
+				a[k++] = left[i++];
+			}
+		}
+		while (i < left.length) {
+			a[k++] = left[i++];
+		}
+		while (j < right.length) {
+			a[k++] = right[j++];
+		}
+	}
+
 	private void swap(int[] input, int i, int j) {
 		int temp = input[i];
 		input[i] = input[j];
 		input[j] = temp;
 	}
 
+	public void rearrangeWithConstSpaceMergeSort(int[] a, int low, int high) {
+		if (low < high) {
+			int mid = (low + high) / 2;
+			rearrangeWithConstSpaceMergeSort(a, low, mid);
+			rearrangeWithConstSpaceMergeSort(a, mid + 1, high);
+			optimizedMerge(a, low, mid, high);
+		}
+	}
+
+	private void optimizedMerge(int[] a, int low, int mid, int high) {
+		int i = low;
+		int j = mid + 1;
+		while (i <= mid && a[i] < 0) {
+			i++;
+		}
+		while (j <= high && a[j] < 0) {
+			j++;
+		}
+		reverse(a, i, mid);
+		reverse(a, mid + 1, j - 1);
+		reverse(a, i, j - 1);
+	}
+
+	private void reverse(int[] a, int low, int high) {
+		int i = low, j = high;
+		while (i < j) {
+			swap(a, i++, j--);
+		}
+
+	}
+
 	public static void main(String[] args) {
 		int[] input = { 1, -1, 3, 2, -7, -5, 11, 6 };
 		RearrangePositiveNegative driver = new RearrangePositiveNegative();
-		driver.constSpaceWithInsertionSort(input);
 		System.out.println(Arrays.toString(input));
+		driver.rearrangeWithConstSpaceMergeSort(input, 0, input.length - 1);
+		System.out.println(Arrays.toString(input));
+		driver.rearrangeWithModifiedMergeSort(input, 0, input.length - 1);
+		System.out.println(Arrays.toString(input));
+
 		input = new int[] { 12, 11, -13, -5, 6, -7, 5, -3, -6 };
-		driver.constSpaceWithInsertionSort(input);
+		System.out.println(Arrays.toString(input));
+		driver.rearrangeWithConstSpaceMergeSort(input, 0, input.length - 1);
+		System.out.println(Arrays.toString(input));
+		driver.rearrangeWithModifiedMergeSort(input, 0, input.length - 1);
 		System.out.println(Arrays.toString(input));
 	}
 }
