@@ -1,53 +1,43 @@
-package karumanchi;
+package karumanchi.trees;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-public class FindMaximum {
+public class FindElement {
 
-	public int findMaxRecursively(TreeNode head) {
-		int max = Integer.MIN_VALUE;
+	public boolean findElementRecursively(TreeNode head, int data) {
+		boolean isFound = false;
 		if (head != null) {
-			max = getMax(head.getData(), findMaxRecursively(head.getLeft()), findMaxRecursively(head.getRight()));
+			if (head.getData() == data) {
+				isFound = true;
+			} else {
+				isFound = findElementRecursively(head.getLeft(), data) || findElementRecursively(head.getRight(), data);
+			}
 		}
-		return max;
+		return isFound;
 	}
 
-	public int findMaxIteratively(TreeNode head) {
-		int max = Integer.MIN_VALUE;
+	public boolean findElementIteratively(TreeNode head, int data) {
+		boolean isFound = false;
 		if (head != null) {
 			Queue<TreeNode> q = new ArrayDeque<>();
 			q.add(head);
 			while (!q.isEmpty()) {
 				head = q.poll();
+				if (head.getData() == data) {
+					isFound = true;
+					break;
+				}
 				if (head.getLeft() != null) {
 					q.add(head.getLeft());
 				}
 				if (head.getRight() != null) {
 					q.add(head.getRight());
 				}
-				if (head.getData() > max) {
-					max = head.getData();
-				}
-			}
-		}
-		return max;
-	}
 
-	private int getMax(int a, int b, int c) {
-		if (a > b) {
-			if (a > c) {
-				return a;
-			} else {
-				return c;
-			}
-		} else {
-			if (b > c) {
-				return b;
-			} else {
-				return c;
 			}
 		}
+		return isFound;
 	}
 
 	public static void main(String[] args) {
@@ -58,7 +48,8 @@ public class FindMaximum {
 		TreeNode t3 = new TreeNode(3, t6, t7);
 		TreeNode t2 = new TreeNode(2, t4, t5);
 		TreeNode t1 = new TreeNode(1, t2, t3);
-		FindMaximum f = new FindMaximum();
-		System.out.println(f.findMaxIteratively(t1));
+		FindElement f = new FindElement();
+		System.out.println(f.findElementIteratively(t1, 7));
+		System.out.println(f.findElementRecursively(t1, 8));
 	}
 }

@@ -1,4 +1,4 @@
-package karumanchi;
+package karumanchi.trees;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

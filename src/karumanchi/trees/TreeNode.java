@@ -1,4 +1,4 @@
-package karumanchi;
+package karumanchi.trees;
 
 public class TreeNode {
 
