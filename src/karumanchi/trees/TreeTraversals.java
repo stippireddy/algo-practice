@@ -86,14 +86,45 @@ public class TreeTraversals {
 			}
 			s.append(node.getData() + ", ");
 		}
-		System.out.println(s.substring(0, s.length() - 2));
+		System.out.print(s.substring(0, s.length() - 2));
+	}
+
+	public static void reverseLevelOrder(TreeNode head) {
+		if (head == null)
+			return;
+		StringBuffer s = new StringBuffer();
+		Deque<TreeNode> stack = new ArrayDeque<TreeNode>();
+		Queue<TreeNode> q = new ArrayDeque<TreeNode>();
+		q.add(head);
+		while (!q.isEmpty()) {
+			TreeNode node = q.poll();
+			if (node.getRight() != null) {
+				q.add(node.getRight());
+			}
+			if (node.getLeft() != null) {
+				q.add(node.getLeft());
+			}
+			stack.push(node);
+		}
+		while (!stack.isEmpty()) {
+			s.append(stack.pop().getData() + ", ");
+		}
+		System.out.print(s.substring(0, s.length() - 2));
 	}
 
 	public static void main(String[] args) {
-		TreeNode t7 = new TreeNode(7, null, null);
-		TreeNode t6 = new TreeNode(6, null, null);
-		TreeNode t5 = new TreeNode(5, null, null);
-		TreeNode t4 = new TreeNode(4, null, null);
+		TreeNode t15 = new TreeNode(15, null, null);
+		TreeNode t14 = new TreeNode(14, null, null);
+		TreeNode t13 = new TreeNode(13, null, null);
+		TreeNode t12 = new TreeNode(12, null, null);
+		TreeNode t11 = new TreeNode(11, null, null);
+		TreeNode t10 = new TreeNode(10, null, null);
+		TreeNode t9 = new TreeNode(9, null, null);
+		TreeNode t8 = new TreeNode(8, null, null);
+		TreeNode t7 = new TreeNode(7, t14, t15);
+		TreeNode t6 = new TreeNode(6, t12, t13);
+		TreeNode t5 = new TreeNode(5, t10, t11);
+		TreeNode t4 = new TreeNode(4, t8, t9);
 		TreeNode t3 = new TreeNode(3, t6, t7);
 		TreeNode t2 = new TreeNode(2, t4, t5);
 		TreeNode t1 = new TreeNode(1, t2, t3);
@@ -149,6 +180,10 @@ public class TreeTraversals {
 
 		System.out.print("LevelOrder : ");
 		levelOrder(t1);
+		System.out.println();
+
+		System.out.print("ReverseLevelOrder : ");
+		reverseLevelOrder(t1);
 		System.out.println();
 		System.out.println("***************************");
 	}
