@@ -29,7 +29,7 @@ class PRIME1 {
 	}
 
 	private static void printPrimes(int m, int n) {
-		if(m==1){
+		if (m == 1) {
 			m++;
 		}
 		for (int i = m; i <= n; i++) {

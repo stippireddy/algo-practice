@@ -19,5 +19,5 @@ public class LeetCode412 {
 			}
 		}
 		return output;
-    }
+	}
 }

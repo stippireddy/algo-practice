@@ -1,6 +1,5 @@
 package geeksForGeeks.linkedLists;
 
-
 public class PolynomialNode<Data> extends Node<Data> {
 
 	int degree;

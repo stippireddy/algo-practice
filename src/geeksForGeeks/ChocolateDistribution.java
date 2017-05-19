@@ -34,27 +34,28 @@ import java.util.Arrays;
 
 public class ChocolateDistribution {
 
-    /*
-     * A naive solution can be formulated by forming all the possible subarrays of size m. However we need to examine
-     * exponential number of subsets. The following algorithm sorts the array in O(nlgn) and then linearly traverses to
-     * find the minimum.
-     */
-    public int getMin(int[] input, int m) {
-        Arrays.sort(input);
-        int minDifference = Integer.MAX_VALUE;
-        for (int i = 0; i + m - 1 < input.length; i++) {
-            int difference = input[i + m - 1] - input[i];
-            if (difference < minDifference) {
-                minDifference = difference;
-            }
-        }
-        return minDifference;
-    }
+	/*
+	 * A naive solution can be formulated by forming all the possible subarrays
+	 * of size m. However we need to examine exponential number of subsets. The
+	 * following algorithm sorts the array in O(nlgn) and then linearly
+	 * traverses to find the minimum.
+	 */
+	public int getMin(int[] input, int m) {
+		Arrays.sort(input);
+		int minDifference = Integer.MAX_VALUE;
+		for (int i = 0; i + m - 1 < input.length; i++) {
+			int difference = input[i + m - 1] - input[i];
+			if (difference < minDifference) {
+				minDifference = difference;
+			}
+		}
+		return minDifference;
+	}
 
-    public static void main(String[] args) {
-        ChocolateDistribution c = new ChocolateDistribution();
-        System.out.println(c.getMin(new int[] { 7, 3, 2, 4, 9, 12, 56 }, 3));
-        System.out.println(c.getMin(new int[] { 3, 4, 1, 9, 56, 7, 9, 12 }, 5));
-        System.out.println(c.getMin(new int[] { 12, 4, 7, 9, 2, 23, 25, 41, 30, 40, 28, 42, 30, 44, 48, 43, 50 }, 7));
-    }
+	public static void main(String[] args) {
+		ChocolateDistribution c = new ChocolateDistribution();
+		System.out.println(c.getMin(new int[] { 7, 3, 2, 4, 9, 12, 56 }, 3));
+		System.out.println(c.getMin(new int[] { 3, 4, 1, 9, 56, 7, 9, 12 }, 5));
+		System.out.println(c.getMin(new int[] { 12, 4, 7, 9, 2, 23, 25, 41, 30, 40, 28, 42, 30, 44, 48, 43, 50 }, 7));
+	}
 }

@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class DNAHealth {
 
+	// TODO Check if the solution is complete
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();

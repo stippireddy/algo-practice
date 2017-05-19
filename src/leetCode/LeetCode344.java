@@ -7,5 +7,5 @@ public class LeetCode344 {
 			sb.append(s.charAt(i));
 		}
 		return sb.toString();
-    }
+	}
 }

@@ -21,8 +21,9 @@ public class BinaryIndexedTree {
 	}
 
 	/*
-	 * This method creates an array representation of the Binary Indexed Tree for the given input array. It is to be
-	 * carefully noted that the size of the BIT is one more than the size of the input.
+	 * This method creates an array representation of the Binary Indexed Tree
+	 * for the given input array. It is to be carefully noted that the size of
+	 * the BIT is one more than the size of the input.
 	 */
 	public int[] create() {
 		for (int i = 0; i < input.length; i++) {
@@ -36,8 +37,8 @@ public class BinaryIndexedTree {
 	}
 
 	/*
-	 * If the value of the input array is updated at an index i with a value x, this method should be called to update
-	 * the corresponding BIT.
+	 * If the value of the input array is updated at an index i with a value x,
+	 * this method should be called to update the corresponding BIT.
 	 * 
 	 * i is to be mentioned in zero-based index notation.
 	 */
@@ -64,7 +65,8 @@ public class BinaryIndexedTree {
 	}
 
 	/*
-	 * getChild is a helper method to give the index of the next child of a node i of the BIT.
+	 * getChild is a helper method to give the index of the next child of a node
+	 * i of the BIT.
 	 * 
 	 * i + (i & -i) adds the last set bit of i to itself.
 	 */

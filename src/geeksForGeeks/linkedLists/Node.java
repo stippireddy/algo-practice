@@ -3,7 +3,7 @@ package geeksForGeeks.linkedLists;
 public class Node<Data> {
 
 	private Data data;
-	
+
 	private Node<Data> nextNode;
 
 	public Node(Data data) {

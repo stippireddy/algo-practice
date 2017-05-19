@@ -26,7 +26,7 @@ public class SeparateTheNumbers {
 				long index = 0;
 				long currentInteger = Long.parseLong(input.substring((int) index, (int) (index + dLength)));
 				long firstInteger = currentInteger;
-				do{
+				do {
 					sb.append(currentInteger);
 					currentInteger++;
 				} while ((sb.toString() + currentInteger).length() <= length);

@@ -23,7 +23,7 @@ public class RearrangePositiveNegative {
 
 	/*
 	 * The following method provides the naive solution that uses O(n) space,
-	 * but solves the problem in O(n) time too!	 
+	 * but solves the problem in O(n) time too!
 	 */
 
 	public void extraSpace(int[] a) {
@@ -45,10 +45,10 @@ public class RearrangePositiveNegative {
 	}
 
 	/*
-	 * The following method uses a modified version of insertion sort to
-	 * solve the problem in O(1) space. But, the worst case running time is O(n^2).
+	 * The following method uses a modified version of insertion sort to solve
+	 * the problem in O(1) space. But, the worst case running time is O(n^2).
 	 */
-	
+
 	public void constSpaceWithInsertionSort(int[] a) {
 		int lastNeg = 0;
 		for (int i = 1; i < a.length; i++) {
@@ -62,10 +62,10 @@ public class RearrangePositiveNegative {
 	}
 
 	/*
-	 * The following method uses a modified version of merge sort to
-	 * solve the problem in O(n) space. But, the worst case running time is O(nlgn).
+	 * The following method uses a modified version of merge sort to solve the
+	 * problem in O(n) space. But, the worst case running time is O(nlgn).
 	 */
-	
+
 	public void rearrangeWithModifiedMergeSort(int[] a, int low, int high) {
 		if (low < high) {
 			int mid = (low + high) / 2;
@@ -105,10 +105,10 @@ public class RearrangePositiveNegative {
 	}
 
 	/*
-	 * The following method uses a modified version of merge sort to
-	 * solve the problem in O(1) space. The worst case running time is O(nlgn).
+	 * The following method uses a modified version of merge sort to solve the
+	 * problem in O(1) space. The worst case running time is O(nlgn).
 	 */
-	
+
 	public void rearrangeWithConstSpaceMergeSort(int[] a, int low, int high) {
 		if (low < high) {
 			int mid = (low + high) / 2;

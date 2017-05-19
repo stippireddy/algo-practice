@@ -3,7 +3,7 @@ package geeksForGeeks.linkedLists;
 public class PolynomialAddition {
 
 	public PolynomialNode<Integer> addPolynomials(PolynomialNode<Integer> p1, PolynomialNode<Integer> p2) {
-		if(p1==null){
+		if (p1 == null) {
 			return p2;
 		}
 		if (p2 == null) {
@@ -11,7 +11,7 @@ public class PolynomialAddition {
 		}
 		PolynomialNode<Integer> result = null;
 		PolynomialNode<Integer> returnableResult = result;
-		
+
 		while (p1 != null && p2 != null) {
 			int degree1 = p1.getDegree();
 			int degree2 = p2.getDegree();

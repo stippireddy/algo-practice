@@ -32,8 +32,8 @@ import java.util.Arrays;
 public class SortByAbsoluteDifference {
 
 	/*
-	 * This method attempts to sort the array in a similar manner as a merge sort.
-	 * Do examine the modifiedMerge for finer implementation details.
+	 * This method attempts to sort the array in a similar manner as a merge
+	 * sort. Do examine the modifiedMerge for finer implementation details.
 	 */
 	public void sort(int[] a, int m, int low, int high) {
 		if (low < high) {

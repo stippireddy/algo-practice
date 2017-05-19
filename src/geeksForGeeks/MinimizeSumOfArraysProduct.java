@@ -22,11 +22,11 @@ import java.util.Arrays;
 
 public class MinimizeSumOfArraysProduct {
 	/*
-	 * To solve this problem, we can observe that the product will be minimized if
-	 * the elements at the higher end of each array are multiplied by their 
+	 * To solve this problem, we can observe that the product will be minimized
+	 * if the elements at the higher end of each array are multiplied by their
 	 * symmetric lower elements of the other array.
 	 */
-	
+
 	public static int getMinProduct(int[] a, int[] b) {
 		Arrays.sort(a);
 		Arrays.sort(b);
@@ -36,9 +36,9 @@ public class MinimizeSumOfArraysProduct {
 		}
 		return sum;
 	}
-	
+
 	public static void main(String[] args) {
-		System.out.println(getMinProduct(new int[]{3, 1, 1}, new int[] {6, 5, 4}));
-		System.out.println(getMinProduct(new int[]{ 6, 1, 9, 5, 4 }, new int[] { 3, 4, 8, 2, 4 }));
+		System.out.println(getMinProduct(new int[] { 3, 1, 1 }, new int[] { 6, 5, 4 }));
+		System.out.println(getMinProduct(new int[] { 6, 1, 9, 5, 4 }, new int[] { 3, 4, 8, 2, 4 }));
 	}
 }

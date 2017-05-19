@@ -13,5 +13,5 @@ public class LeetCode476 {
 			}
 		}
 		return Integer.parseInt(new String(charArray), 2);
-    }
+	}
 }

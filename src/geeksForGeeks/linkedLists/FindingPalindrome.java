@@ -29,7 +29,7 @@ public class FindingPalindrome {
 		Node<Character> reverseHead = Reverse.iterativeReverse(middle);
 		boolean isPalin = true;
 		while (head != null && reverseHead != null) {
-			if(!head.getData().equals(reverseHead.getData())){
+			if (!head.getData().equals(reverseHead.getData())) {
 				isPalin = false;
 			}
 		}
