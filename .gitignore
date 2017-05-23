@@ -4,3 +4,4 @@ bin
 .idea
 /AlgorithmsPractice.iml
 out
+/target/
