@@ -5,3 +5,5 @@ bin
 /AlgorithmsPractice.iml
 out
 /target/
+.settings
+test-output

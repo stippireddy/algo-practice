@@ -6,13 +6,14 @@ import java.util.Queue;
 
 public class TreeTraversals {
 
-    public static void preOrderRecursive(TreeNode node) {
+    public static String preOrderRecursive(TreeNode node) {
         if (node == null) {
-            return;
+            return "";
         }
         StringBuffer sb = new StringBuffer();
         preOrderRecursive(node, sb);
-        System.out.print(sb.substring(0, sb.length() - 2));
+        return sb.substring(0, sb.length() - 2);
+
     }
 
     private static void preOrderRecursive(TreeNode node, StringBuffer sb) {
@@ -24,9 +25,9 @@ public class TreeTraversals {
         preOrderRecursive(node.getRight(), sb);
     }
 
-    public static void preOrderIterative(TreeNode head) {
+    public static String preOrderIterative(TreeNode head) {
         if (head == null) {
-            return;
+            return "";
         }
         ArrayDeque<TreeNode> stack = new ArrayDeque<>();
         stack.push(head);
@@ -41,7 +42,7 @@ public class TreeTraversals {
             }
             s.append(node.getData() + ", ");
         }
-        System.out.print(s.substring(0, s.length() - 2));
+        return s.substring(0, s.length() - 2);
     }
 
     public static void postOrderRecursive(TreeNode node) {
