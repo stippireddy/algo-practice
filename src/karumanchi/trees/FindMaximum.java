@@ -8,7 +8,7 @@ public class FindMaximum {
 	public int findMaxRecursively(TreeNode head) {
 		int max = Integer.MIN_VALUE;
 		if (head != null) {
-			max = getMax(head.getData(), findMaxRecursively(head.getLeft()), findMaxRecursively(head.getRight()));
+			max = getMax(head.getVal(), findMaxRecursively(head.getLeft()), findMaxRecursively(head.getRight()));
 		}
 		return max;
 	}
@@ -26,8 +26,8 @@ public class FindMaximum {
 				if (head.getRight() != null) {
 					q.add(head.getRight());
 				}
-				if (head.getData() > max) {
-					max = head.getData();
+				if (head.getVal() > max) {
+					max = head.getVal();
 				}
 			}
 		}

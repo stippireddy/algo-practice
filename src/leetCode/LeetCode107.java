@@ -3,6 +3,8 @@ package leetCode;
 import java.util.LinkedList;
 import java.util.List;
 
+import karumanchi.trees.TreeNode;
+
 public class LeetCode107 {
   /* This solution uses DFS to add the nodes in the appropriate sublist which is identified by the level*/
   public List<List<Integer>> levelOrderBottom(TreeNode root) {
@@ -31,7 +33,7 @@ public class LeetCode107 {
     levelOrderBottomHelper(root.left, list, level + 1);
     levelOrderBottomHelper(root.right, list, level + 1);
   }
-  
+
   /*The above solution can be optimized by using a LinkedList and adding the sublist at the first of the LinkedList*/
   public List<List<Integer>> levelOrderBottomOptimized(TreeNode root) {
     LinkedList<List<Integer>> list = new LinkedList<>();

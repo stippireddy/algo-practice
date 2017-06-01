@@ -2,40 +2,43 @@ package karumanchi.trees;
 
 public class TreeNode {
 
-	int data;
+  public int val;
 
-	TreeNode left;
+  public TreeNode left;
 
-	TreeNode right;
+  public TreeNode right;
 
-	public TreeNode(int data, TreeNode left, TreeNode right) {
-		this.data = data;
-		this.left = left;
-		this.right = right;
-	}
+  public TreeNode(int val, TreeNode left, TreeNode right) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
 
-	public int getData() {
-		return data;
-	}
+  public TreeNode(int val) {
+    this(val, null, null);
+  }
 
-	public void setData(int data) {
-		this.data = data;
-	}
+  public int getVal() {
+    return val;
+  }
 
-	public TreeNode getLeft() {
-		return left;
-	}
+  public void setVal(int val) {
+    this.val = val;
+  }
 
-	public void setLeft(TreeNode left) {
-		this.left = left;
-	}
+  public TreeNode getLeft() {
+    return left;
+  }
 
-	public TreeNode getRight() {
-		return right;
-	}
+  public void setLeft(TreeNode left) {
+    this.left = left;
+  }
 
-	public void setRight(TreeNode right) {
-		this.right = right;
-	}
+  public TreeNode getRight() {
+    return right;
+  }
 
+  public void setRight(TreeNode right) {
+    this.right = right;
+  }
 }

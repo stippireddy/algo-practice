@@ -8,7 +8,7 @@ public class FindElement {
 	public boolean findElementRecursively(TreeNode head, int data) {
 		boolean isFound = false;
 		if (head != null) {
-			if (head.getData() == data) {
+			if (head.getVal() == data) {
 				isFound = true;
 			} else {
 				isFound = findElementRecursively(head.getLeft(), data) || findElementRecursively(head.getRight(), data);
@@ -24,7 +24,7 @@ public class FindElement {
 			q.add(head);
 			while (!q.isEmpty()) {
 				head = q.poll();
-				if (head.getData() == data) {
+				if (head.getVal() == data) {
 					isFound = true;
 					break;
 				}

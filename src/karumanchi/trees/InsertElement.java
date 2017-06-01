@@ -40,6 +40,6 @@ public class InsertElement {
 		InsertElement i = new InsertElement();
 		TreeNode t8 = new TreeNode(8, null, null);
 		i.insertByIterativeRoutine(t1, t8);
-		System.out.println(t4.getLeft().getData());
+		System.out.println(t4.getLeft().getVal());
 	}
 }
