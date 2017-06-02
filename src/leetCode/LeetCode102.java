@@ -59,11 +59,15 @@ public class LeetCode102 {
     q.add(root);
     q.add(null);
     List<Integer> l = new ArrayList<>();
-    while (!q.isEmpty()) {
+    while (true) {
       TreeNode temp = q.poll();
       if (temp == null) {
-        q.add(null);
         result.add(l);
+        if (q.size() == 0) {
+          break;
+        }
+        q.add(null);
+
         l = new ArrayList<>();
       } else {
         l.add(temp.val);

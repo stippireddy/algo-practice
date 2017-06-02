@@ -114,15 +114,17 @@ public class TreeUtils {
         tree[i] = null;
       }
     }
-    for (int i = 0; i <= inputLength >> 1; i++) {
-      int leftIndex = (i << 1) + 1;
-      int rightIndex = (i << 1) + 2;
-      if (leftIndex < inputLength) {
-        tree[i].setLeft(tree[leftIndex]);
+    //[1,2,null,null,3,4]
+    int i = 0;
+    int j = 1;
+    while (i < inputLength && j < inputLength) {
+      if (tree[i] != null) {
+        tree[i].setLeft(tree[j++]);
+        if (j < inputLength) {
+          tree[i].setRight(tree[j++]);
+        }
       }
-      if (rightIndex < inputLength) {
-        tree[i].setRight(tree[rightIndex]);
-      }
+      i++;
     }
     return tree[0];
   }
@@ -153,19 +155,16 @@ public class TreeUtils {
     }
     ArrayDeque<TreeNode> stack = new ArrayDeque<>();
     ArrayList<Integer> result = new ArrayList<>();
-    while (true) {
-      while (root != null) {
+    while (root != null || !stack.isEmpty()) {
+      if (root != null) {
         stack.push(root);
         root = root.getLeft();
-      }
-      if (!stack.isEmpty()) {
+      } else {
         TreeNode temp = stack.pop();
         result.add(temp.getVal());
         if (temp.getRight() != null) {
           root = temp.getRight();
         }
-      } else {
-        break;
       }
     }
     return result;
