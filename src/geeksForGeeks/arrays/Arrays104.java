@@ -12,21 +12,6 @@ import java.util.Scanner;
  *     which can be found @ http://practice.geeksforgeeks.org/problems/pairs-with-difference-k/0
  */
 public class Arrays104 {
-  public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    int n = sc.nextInt();
-    while (n-- > 0) {
-      int size = sc.nextInt();
-      int x = sc.nextInt();
-      int[] input = new int[size];
-      for (int i = 0; i < size; i++) {
-        input[i] = sc.nextInt();
-      }
-      System.out.println(new Arrays104().findPairsUsingHashing(input, x));
-    }
-    sc.close();
-  }
-
   public int findPairsUsingHashing(int[] input, int x) {
     HashMap<Integer, Integer> map = new HashMap<>();
     for (int i : input) {
