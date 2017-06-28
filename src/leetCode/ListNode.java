@@ -1,11 +1,11 @@
 package leetCode;
 
 public class ListNode {
-  
-  int val;
-  ListNode next;
 
-  ListNode(int x) {
+  public int val;
+  public ListNode next;
+
+  public ListNode(int x) {
     val = x;
   }
 
@@ -23,5 +23,4 @@ public class ListNode {
     }
     return true;
   }
-  
 }

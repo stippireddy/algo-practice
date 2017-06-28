@@ -2,6 +2,7 @@ package leetCode;
 
 public class LeetCode237 {
   public void deleteNode(ListNode node) {
-    abc
+    node.val = node.next.val;
+    node.next = node.next.next;
   }
 }
