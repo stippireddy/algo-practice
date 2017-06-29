@@ -1,7 +1,11 @@
 package geeksForGeeks.arrays;
 
+/**
+ * @author Sarveswara Tippireddy
+ *     <p>This GeeksforGeeks problem can be found @
+ *     http://www.geeksforgeeks.org/counting-inversions/
+ */
 public class Arrays018 {
-
   public static int countInversionsNaive(int[] input) {
     int count = 0;
     for (int i = 0; i < input.length - 1; i++) {
@@ -13,4 +17,5 @@ public class Arrays018 {
     }
     return count;
   }
+  //TODO Add more efficient ways to count inversions.
 }

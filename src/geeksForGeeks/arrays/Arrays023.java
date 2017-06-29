@@ -1,5 +1,10 @@
 package geeksForGeeks.arrays;
 
+/**
+ * @author Sarveswara Tippireddy
+ *     <p>This GeeksforGeeks problem can be found @
+ *     http://www.geeksforgeeks.org/segregate-0s-and-1s-in-an-array-by-traversing-array-once/
+ */
 public class Arrays023 {
   public void segregateZeroesOnes(int[] input) {
     int i = 0, j = input.length - 1;

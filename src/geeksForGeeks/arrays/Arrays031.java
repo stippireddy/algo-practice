@@ -1,5 +1,10 @@
 package geeksForGeeks.arrays;
 
+/**
+ * @author Sarveswara Tippireddy
+ *     <p>This GeeksforGeeks problem can be found @
+ *     http://www.geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s/
+ */
 public class Arrays031 {
   public void sort(int[] input) {
     int low = 0, mid = 0, high = input.length - 1;
