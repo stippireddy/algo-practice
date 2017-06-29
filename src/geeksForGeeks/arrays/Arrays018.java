@@ -1,6 +1,6 @@
 package geeksForGeeks.arrays;
 
-public class Arrays18 {
+public class Arrays018 {
 
   public static int countInversionsNaive(int[] input) {
     int count = 0;

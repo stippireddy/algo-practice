@@ -1,6 +1,6 @@
 package geeksForGeeks.arrays;
 
-public class Arrays23 {
+public class Arrays023 {
   public void segregateZeroesOnes(int[] input) {
     int i = 0, j = input.length - 1;
     while (i < j) {

@@ -4,11 +4,11 @@ import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.Test;
 
-public class Arrays23Test {
+public class Arrays023Test {
 
   @Test
   public void segregateZeroesOnes() {
-    Arrays23 a = new Arrays23();
+    Arrays023 a = new Arrays023();
     int[] input = new int[] {};
     a.segregateZeroesOnes(input);
     assertEquals(input, new int[] {});
