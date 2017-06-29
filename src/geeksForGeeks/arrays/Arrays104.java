@@ -2,7 +2,6 @@ package geeksForGeeks.arrays;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Scanner;
 
 /**
  * @author Sarveswara Tippireddy
