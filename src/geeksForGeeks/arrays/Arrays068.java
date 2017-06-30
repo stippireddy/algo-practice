@@ -12,7 +12,7 @@ package geeksForGeeks.arrays;
  * then it should be modified to {17, 5, 5, 5, 2, -1}.
  */
 public class Arrays068 {
-  public static void nextGreatestElementOnTheRightSide(int[] input) {
+  public void nextGreatestElementOnTheRightSide(int[] input) {
     int prev = input[input.length - 1];
     input[input.length - 1] = -1;
     for (int i = input.length - 2; i >= 0; i--) {
