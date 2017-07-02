@@ -6,6 +6,9 @@
  */
 package geeksForGeeks.arrays;
 
+import java.util.HashMap;
+import java.util.Scanner;
+
 public class FindPairWithSumInRotatedSortedArray {
   public int[] findPair(int[] a, int k) {
     int[] result = new int[] {-1, -1};
@@ -49,5 +52,27 @@ public class FindPairWithSumInRotatedSortedArray {
       }
     }
     return -1;
+  }
+
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    while (n-- > 0) {
+      int[] input = new int[sc.nextInt()];
+      for (int i = 0; i < input.length; i++) {
+        input[i] = sc.nextInt();
+      }
+      HashMap<Integer, Integer> map = new HashMap<>();
+      int minIndex = input.length;
+      for (int i = 0; i < input.length; i++) {
+        Integer val = map.get(input[i]);
+        if (val != null && val < minIndex) {
+          minIndex = map.get(i);
+        } else {
+          map.put(input[i], i);
+        }
+      }
+    }
+    sc.close();
   }
 }
