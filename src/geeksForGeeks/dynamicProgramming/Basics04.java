@@ -5,7 +5,7 @@ package geeksForGeeks.dynamicProgramming;
  *     <p>This GeeksforGeeks problem can be found @
  *     http://www.geeksforgeeks.org/largest-sum-contiguous-subarray/
  */
-public class Basic04 {
+public class Basics04 {
   public int findMaxContiguousSumKadane(int[] a) {
     int maxSum = 0;
     int maxEndingHere = 0;
