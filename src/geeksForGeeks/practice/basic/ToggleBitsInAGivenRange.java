@@ -24,7 +24,7 @@ public class ToggleBitsInAGivenRange {
     sc.close();
   }
 
-  private static int toggle1(int k, int left, int right) {
+  public static int toggle1(int k, int left, int right) {
     int toggler = 1 << left - 1;
     for (int i = left; i <= right; i++) {
       k ^= toggler;
@@ -32,7 +32,8 @@ public class ToggleBitsInAGivenRange {
     }
     return k;
   }
-  private static int toggle2(int k, int left, int right) {
+  
+  public static int toggle2(int k, int left, int right) {
     int toggler = ((1 << right) - 1) ^ ((1 << (left - 1)) - 1);
     return k ^ toggler;
   }
