@@ -1,10 +1,15 @@
 /**
  * Created by Sarveswara Tippireddy on Jul 21, 2017
  *
- * <p>This GeeksForGeeks problem can be found @
+ * <p>This is a GeeksForGeeks problem. The problem statement can be found @
+ * http://practice.geeksforgeeks.org/problems/primitive-typing/0
+ *
+ * <p>The solution editorials can be found @
  * http://www.geeksforgeeks.org/print-shortest-path-print-string-screen/
  */
 package geeksForGeeks.practice.basic;
+
+import java.util.Scanner;
 
 public class PrintShortestPathOnScreen {
   char[][] input =
@@ -33,7 +38,11 @@ public class PrintShortestPathOnScreen {
   }
   
   public static void main(String[] args) {
-    System.out.println(printPath("SARRU"));
-    System.out.println(printPath("Z"));
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    while (n-- > 0) {
+      System.out.println(printPath(sc.next()));
+    }
+    sc.close();
   }
 }
