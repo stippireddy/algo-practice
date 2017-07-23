@@ -8,52 +8,34 @@ package geeksForGeeks.arrays;
 
 public class Arrays098 {
   public int findMinimumInRotatedArray(int[] a) {
-    int left = 0, right = a.length - 1;
-    while (left <= right) {
-      if (a[left] < a[right]) {
-        return left;
+    int start = 0, end = a.length - 1;
+    while (start < end) {
+      if (a[start] < a[end]) {
+        return start;
       }
-      int mid = left + (right - left) / 2;
-      if (left == right) {
-        return left;
-      }
-      if (mid > left && a[mid - 1] > a[mid]) {
-        return mid;
-      }
-      if (mid < right && a[mid + 1] < a[mid]) {
-        return mid + 1;
-      }
-      if (a[mid] > a[right]) {
-        left = mid + 1;
+      int mid = start + (end - start) / 2;
+      if (a[mid] >= a[start]) {
+        start = mid + 1;
       } else {
-        right = mid - 1;
+        end = mid;
       }
     }
-    return -1;
+    return start;
   }
 
   public int findMaximumInRotatedArray(int[] a) {
-    int left = 0, right = a.length - 1;
-    while (left <= right) {
-      if (a[left] < a[right]) {
-        return right;
+    int start = 0, end = a.length - 1;
+    while (start < end) {
+      if (a[start] < a[end]) {
+        return end;
       }
-      if (left == right) {
-        return left;
-      }
-      int mid = left + (right - left) / 2;
-      if (mid < right && a[mid + 1] < a[mid]) {
-        return mid;
-      }
-      if (mid > left && a[mid - 1] > a[mid]) {
-        return mid - 1;
-      }
-      if (a[mid] > a[right]) {
-        left = mid + 1;
+      int mid = start + (end - start) / 2;
+      if (a[mid] > a[start]) {
+        start = mid;
       } else {
-        right = mid - 1;
+        end = mid - 1;
       }
     }
-    return -1;
+    return start;
   }
 }
