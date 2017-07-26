@@ -2,11 +2,12 @@
  * Created by Sarveswara Tippireddy on Jul 25, 2017
  *
  * <p>This is a GeeksForGeeks problem. The problem statement can be found @
- * http://practice.geeksforgeeks.org/problems/perfect-sum-problem/0
+ * http://practice.geeksforgeeks.org/problems/subset-sum-problem/0
  *
  * <p>The related solution editorials can be found @
  * http://www.geeksforgeeks.org/perfect-sum-problem-print-subsets-given-sum/
  * http://www.geeksforgeeks.org/dynamic-programming-set-18-partition-problem/
+ * http://www.geeksforgeeks.org/dynamic-programming-subset-sum-problem/
  */
 package geeksForGeeks.practice.easy;
 
