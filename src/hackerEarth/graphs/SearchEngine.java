@@ -2,7 +2,7 @@
  * Created by Sarveswara Tippireddy on Jul 9, 2017
  *
  * <p>This HackerEarth problem can be found @
- * https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/practice-problems/algorithm/search-engine/
+ * c
  */
 package hackerEarth.graphs;
 
