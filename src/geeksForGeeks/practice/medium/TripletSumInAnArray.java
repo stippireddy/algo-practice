@@ -7,7 +7,7 @@
  * <p>The solution editorial can be found @
  * http://www.geeksforgeeks.org/find-a-triplet-that-sum-to-a-given-value/
  */
-package geeksForGeeks.practice.basic;
+package geeksForGeeks.practice.medium;
 
 import java.util.Arrays;
 import java.util.Scanner;
