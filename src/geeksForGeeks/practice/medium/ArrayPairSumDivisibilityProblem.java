@@ -7,7 +7,7 @@
  * <p>The solution editorial can be found @
  * http://www.geeksforgeeks.org/check-if-an-array-can-be-divided-into-pairs-whose-sum-is-divisible-by-k/
  */
-package geeksForGeeks.practice.easy;
+package geeksForGeeks.practice.medium;
 
 import java.util.Scanner;
 
