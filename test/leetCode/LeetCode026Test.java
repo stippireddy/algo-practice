@@ -3,11 +3,11 @@ package leetCode;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
-public class LeetCode26Test {
+public class LeetCode026Test {
 
   @Test
   public void removeDuplicates() {
-    LeetCode26 l = new LeetCode26();
+    LeetCode026 l = new LeetCode026();
     int[] input = new int[] {1, 1, 1, 1, 1};
     //int[] output = new int[] {1, 1, 1, 1, 1};
     Assert.assertEquals(1, l.removeDuplicates(input));

@@ -3,11 +3,11 @@ package leetCode;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
-public class LeetCode27Test {
+public class LeetCode027Test {
 
   @Test
   public void removeElement() {
-    LeetCode27 l = new LeetCode27();
+    LeetCode027 l = new LeetCode027();
     int[] input1 = {0, 1, 0, 3, 12};
     Assert.assertEquals(3, l.removeElement(input1, 0));
     int[] input2 = {0};

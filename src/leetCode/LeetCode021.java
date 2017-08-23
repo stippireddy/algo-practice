@@ -1,6 +1,6 @@
 package leetCode;
 
-public class LeetCode21 {
+public class LeetCode021 {
   public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
     ListNode result = null;
     if (l1 == null) {

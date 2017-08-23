@@ -6,7 +6,7 @@ import java.util.List;
 
 import karumanchi.trees.TreeNode;
 
-public class LeetCode94 {
+public class LeetCode094 {
   public List<Integer> inorderTraversal(TreeNode root) {
     ArrayList<Integer> result = new ArrayList<>();
     if (root == null) {

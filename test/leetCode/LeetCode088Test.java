@@ -4,11 +4,11 @@ import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.Test;
 
-public class LeetCode88Test {
+public class LeetCode088Test {
 
   @Test
   public void mergeInefficient() {
-    LeetCode88 l = new LeetCode88();
+    LeetCode088 l = new LeetCode088();
     testHelperInefficient(
         l,
         new int[] {1, 3, 5, 7, 10, 0, 0, 0, 0, 0},
@@ -30,14 +30,14 @@ public class LeetCode88Test {
   }
 
   private void testHelperInefficient(
-      LeetCode88 l, int[] nums1, int m, int[] nums2, int n, int[] expectedResult) {
+      LeetCode088 l, int[] nums1, int m, int[] nums2, int n, int[] expectedResult) {
     l.mergeInefficient(nums1, m, nums2, n);
     assertEquals(expectedResult, nums1);
   }
 
   @Test
   public void mergeEfficient() {
-    LeetCode88 l = new LeetCode88();
+    LeetCode088 l = new LeetCode088();
     testHelperEfficient(
         l,
         new int[] {1, 3, 5, 7, 10, 0, 0, 0, 0, 0},
@@ -59,7 +59,7 @@ public class LeetCode88Test {
   }
 
   private void testHelperEfficient(
-      LeetCode88 l, int[] nums1, int m, int[] nums2, int n, int[] expectedResult) {
+      LeetCode088 l, int[] nums1, int m, int[] nums2, int n, int[] expectedResult) {
     l.mergeEfficient(nums1, m, nums2, n);
     assertEquals(expectedResult, nums1);
   }

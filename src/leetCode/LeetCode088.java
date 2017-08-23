@@ -1,6 +1,6 @@
 package leetCode;
 
-public class LeetCode88 {
+public class LeetCode088 {
   /**
    * @param nums1
    * @param m

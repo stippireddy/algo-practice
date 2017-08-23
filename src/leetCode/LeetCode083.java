@@ -1,6 +1,6 @@
 package leetCode;
 
-public class LeetCode83 {
+public class LeetCode083 {
   public ListNode deleteDuplicates(ListNode head) {
     if (head == null || head.next == null) {
       return head;

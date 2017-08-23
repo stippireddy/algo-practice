@@ -8,11 +8,11 @@ import org.testng.annotations.Test;
 
 import karumanchi.trees.TreeUtils;
 
-public class LeetCode94Test {
+public class LeetCode094Test {
 
   @Test
   public void inorderTraversal() {
-    LeetCode94 l = new LeetCode94();
+    LeetCode094 l = new LeetCode094();
     Assert.assertEquals(
         l.inorderTraversal(TreeUtils.createTree(new Integer[] {})), new ArrayList<Integer>());
     Assert.assertEquals(

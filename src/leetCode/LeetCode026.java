@@ -1,6 +1,6 @@
 package leetCode;
 
-public class LeetCode26 {
+public class LeetCode026 {
   public int removeDuplicates(int[] nums) {
     int i = 1;
     int j = 1;

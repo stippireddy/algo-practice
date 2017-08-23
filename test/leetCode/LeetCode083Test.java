@@ -4,11 +4,11 @@ import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.Test;
 
-public class LeetCode83Test {
+public class LeetCode083Test {
 
   @Test
   public void deleteDuplicates() {
-    LeetCode83 l = new LeetCode83();
+    LeetCode083 l = new LeetCode083();
     assertEquals(
         ListUtils.listToArray(l.deleteDuplicates(ListUtils.createList(new int[] {}))),
         new int[] {});

@@ -1,6 +1,6 @@
 package leetCode;
 
-public class LeetCode23 {
+public class LeetCode023 {
   public ListNode mergeKListsIterative(ListNode[] lists) {
     ListNode temp = new ListNode(-1);
     ListNode result = temp;

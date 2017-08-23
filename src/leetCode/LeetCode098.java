@@ -5,7 +5,7 @@ import java.util.List;
 
 import karumanchi.trees.TreeNode;
 
-public class LeetCode98 {
+public class LeetCode098 {
   
   /**
    * @param root
