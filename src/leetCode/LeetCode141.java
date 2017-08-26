@@ -23,5 +23,4 @@ public class LeetCode141 {
     }
     return false;
   }
-
 }

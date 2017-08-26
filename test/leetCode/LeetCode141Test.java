@@ -13,12 +13,24 @@ public class LeetCode141Test {
     assertFalse(l.hasCycle(ListUtils.createList(new int[] {1, 2, 3, 4, 5, 6})));
     assertFalse(l.hasCycle(ListUtils.createList(new int[] {1})));
     assertFalse(l.hasCycle(ListUtils.createList(new int[] {})));
-    ListNode testList = ListUtils.createList(new int[] {1, 2, 3, 4, 5, 6});
-    ListNode tail = testList;
-    while (tail.next != null) {
-      tail = tail.next;
-    }
-    tail.next = testList;
-    assertTrue(l.hasCycle(testList));
+    ListNode node1 = new ListNode(1);
+    ListNode node2 = new ListNode(2);
+    ListNode node3 = new ListNode(3);
+    ListNode node4 = new ListNode(4);
+    ListNode node5 = new ListNode(5);
+    ListNode node6 = new ListNode(6);
+    node1.next = node2;
+    node2.next = node3;
+    node3.next = node4;
+    node4.next = node5;
+    node5.next = node6;
+    node6.next = node1;
+    assertTrue(l.hasCycle(node1));
+    node6.next = node3;
+    assertTrue(l.hasCycle(node1));
+    node6.next = node4;
+    assertTrue(l.hasCycle(node1));
+    node6.next = node5;
+    assertTrue(l.hasCycle(node1));
   }
 }
