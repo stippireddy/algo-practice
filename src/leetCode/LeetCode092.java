@@ -1,30 +1,32 @@
 package leetCode;
 
 public class LeetCode092 {
-  s
   public ListNode reverseBetween(ListNode head, int m, int n) {
-    ListNode result = head;
-    int diff = n - m + 1;
-    while (m > 2 && head != null) {
-      head = head.next;
-      m--;
+    if (head == null || head.next == null) {
+      return head;
     }
-    if (diff > 1) {
-      head.next = helper(head.next, diff);
+    ListNode dummy = new ListNode(-1);
+    dummy.next = head;
+    ListNode result = dummy;
+    int i = 0;
+    while (dummy != null && i < m - 1) {
+      dummy = dummy.next;
+      i++;
     }
-    return result;
-  }
-
-  private ListNode helper(ListNode head, int diff) {
-    ListNode head1 = head;
-    ListNode result = null;
-    while (diff-- > 0) {
-      ListNode temp = head.next;
-      head.next = result;
-      result = head;
-      head = temp;
+    ListNode lastNodeOfUnreversedList = dummy;
+    ListNode headOfReversedPart = null;
+    dummy = dummy.next;
+    ListNode tailOfReversedPart = dummy;
+    i = m;
+    while (dummy != null && i < n + 1) {
+      ListNode temp = dummy.next;
+      dummy.next = headOfReversedPart;
+      headOfReversedPart = dummy;
+      dummy = temp;
+      i++;
     }
-    head1.next = head;
-    return result;
+    tailOfReversedPart.next = dummy;
+    lastNodeOfUnreversedList.next = headOfReversedPart;
+    return result.next;
   }
 }
