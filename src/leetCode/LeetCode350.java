@@ -25,7 +25,7 @@ public class LeetCode350 {
     int k = 0;
     for (int l : list) {
       result[k++] = l;
-      }
-    return result;
     }
+    return result;
+  }
 }

@@ -28,10 +28,10 @@ public class LeetCode349 {
     Arrays.sort(nums2);
     int i = 0;
     int j = 0;
-    HashSet<Integer> map = new HashSet<>();
+    HashSet<Integer> set = new HashSet<>();
     while (i < nums1.length && j < nums2.length) {
       if (nums1[i] == nums2[j]) {
-        map.add(nums1[i]);
+        set.add(nums1[i]);
         i++;
         j++;
       } else if (nums1[i] < nums2[j]) {
@@ -40,9 +40,9 @@ public class LeetCode349 {
         j++;
       }
     }
-    int[] result = new int[map.size()];
+    int[] result = new int[set.size()];
     int k = 0;
-    for (Integer l : map) {
+    for (Integer l : set) {
       result[k++] = l;
     }
     return result;
