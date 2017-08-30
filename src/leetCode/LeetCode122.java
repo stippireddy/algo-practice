@@ -1,7 +1,8 @@
 /**
  * Created by Sarveswara Tippireddy on Jul 2, 2017
  *
- * <p>This LeetCode problem can be found @
+ * <p>
+ * This LeetCode problem can be found @
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/#/description
  */
 package leetCode;
@@ -9,18 +10,18 @@ package leetCode;
 public class LeetCode122 {
   public int maxProfit(int[] prices) {
     int maxProfit = 0;
-    if (prices.length < 2) {
-      return maxProfit;
-    }
-    int maxRight = prices[prices.length - 1];
-    for (int i = prices.length - 2; i >= 0; i--) {
-      int currProfit = maxRight - prices[i];
-      if (maxProfit < currProfit) {
-        maxProfit = currProfit;
+    int currMin = Integer.MAX_VALUE;
+    int i = 0;
+    while (i < prices.length) {
+      if (prices[i] < currMin) {
+        currMin = prices[i];
       }
-      if (prices[i] > maxRight) {
-        maxRight = prices[i];
+      while (i < prices.length - 1 && prices[i] < prices[i + 1]) {
+        i++;
       }
+      maxProfit += prices[i] - currMin;
+      currMin = prices[i];
+      i++;
     }
     return maxProfit;
   }
