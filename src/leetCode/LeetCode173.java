@@ -9,15 +9,7 @@ package leetCode;
  */
 import java.util.ArrayDeque;
 
-class TreeNode {
-  int val;
-  TreeNode left;
-  TreeNode right;
-
-  TreeNode(int x) {
-    val = x;
-  }
-}
+import karumanchi.trees.TreeNode;
 
 public class LeetCode173 {
   ArrayDeque<TreeNode> stack;
