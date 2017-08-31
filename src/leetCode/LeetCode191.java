@@ -6,7 +6,7 @@
  * 
  * Sources for the ideas used in the solutions: 
  * https://leetcode.com/articles/number-1-bits/
- * https://discuss.leetcode.com/topic/11385/simple-java-solution-bit-shifting. 
+ * https://discuss.leetcode.com/topic/11385/simple-java-solution-bit-shifting 
  * Do read them for better understanding.
  */
 package leetCode;
