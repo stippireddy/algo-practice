@@ -8,9 +8,10 @@ public class LeetCode191Test {
   @Test
   public void hammingWeight() {
     LeetCode191 l = new LeetCode191();
-    System.out.println(Integer.MAX_VALUE);
-    System.out.println(Integer.toBinaryString(Integer.MAX_VALUE));
-    System.out.println(Integer.toBinaryString(Integer.MIN_VALUE));
-    Assert.assertEquals(l.hammingWeight(2147483647), 32);
+    Assert.assertEquals(l.hammingWeight(Integer.MAX_VALUE + 1), 1);
+    Assert.assertEquals(l.hammingWeight(Integer.MAX_VALUE + Integer.MAX_VALUE), 31);
+    Assert.assertEquals(l.hammingWeight(Integer.MAX_VALUE + 2), 2);
+    Assert.assertEquals(l.hammingWeight(4096), 1);
+    Assert.assertEquals(l.hammingWeight(4095), 12);
   }
 }
