@@ -1,5 +1,5 @@
 /**
- * Created by Sarveswara Tippireddy on Sep 1, 2017
+ * Created by Sarveswara Tippireddy on Sep 2, 2017
  *
  * <p>
  * This LeetCode problem can be found @ https://leetcode.com/problems/valid-square/description/
