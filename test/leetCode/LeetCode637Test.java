@@ -12,15 +12,29 @@ import karumanchi.trees.TreeUtils;
 public class LeetCode637Test {
 
   @Test
-  public void averageOfLevels() {
+  public void averageOfLevelsUsingBFS() {
     LeetCode637 l = new LeetCode637();
-    testHelper(l, new Integer[] {3, 9, 20, 15, 7}, new Double[] {3.0, 14.5, 11.0});
-    testHelper(l, new Integer[] {3}, new Double[] {3.0});
-    testHelper(l, new Integer[] {}, new Double[] {});
+    testHelperBFS(l, new Integer[] {3, 9, 20, 15, 7}, new Double[] {3.0, 14.5, 11.0});
+    testHelperBFS(l, new Integer[] {3}, new Double[] {3.0});
+    testHelperBFS(l, new Integer[] {}, new Double[] {});
   }
 
-  private void testHelper(LeetCode637 l, Integer[] input, Double[] output) {
-    List<Double> expected = l.averageOfLevels(TreeUtils.createTree(input));
+  private void testHelperBFS(LeetCode637 l, Integer[] input, Double[] output) {
+    List<Double> expected = l.averageOfLevelsUsingBFS(TreeUtils.createTree(input));
+    List<Double> actual = Arrays.asList(output);
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  public void averageOfLevelsUsingDFS() {
+    LeetCode637 l = new LeetCode637();
+    testHelperDFS(l, new Integer[] {3, 9, 20, 15, 7}, new Double[] {3.0, 14.5, 11.0});
+    testHelperDFS(l, new Integer[] {3}, new Double[] {3.0});
+    testHelperDFS(l, new Integer[] {}, new Double[] {});
+  }
+
+  private void testHelperDFS(LeetCode637 l, Integer[] input, Double[] output) {
+    List<Double> expected = l.averageOfLevelsUsingDFS(TreeUtils.createTree(input));
     List<Double> actual = Arrays.asList(output);
     assertEquals(expected, actual);
   }
