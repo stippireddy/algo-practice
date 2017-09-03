@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TreeTraversals1 {
+public class TreeTraversalsPractice {
 
   public static List<Integer> preOrder(TreeNode root) {
     List<Integer> result = new ArrayList<>();
@@ -13,16 +13,14 @@ public class TreeTraversals1 {
     }
     ArrayDeque<TreeNode> stack = new ArrayDeque<>();
     stack.push(root);
-    while (root != null || !stack.isEmpty()) {
-      if (root != null) {
-        result.add(root.val);
-        stack.push(root);
-        root = root.left;
-      } else {
-        TreeNode temp = stack.pop();
-        if (temp.right != null) {
-          root = temp.right;
-        }
+    while (!stack.isEmpty()) {
+      TreeNode temp = stack.pop();
+      result.add(temp.val);
+      if (temp.right != null) {
+        stack.push(temp.right);
+      }
+      if (temp.left != null) {
+        stack.push(temp.left);
       }
     }
     return result;
@@ -34,15 +32,17 @@ public class TreeTraversals1 {
       return result;
     }
     ArrayDeque<TreeNode> stack = new ArrayDeque<>();
-    while (root != null || !stack.isEmpty()) {
-      if (root != null) {
-        stack.push(root);
+    stack.push(root);
+    while (!stack.isEmpty()) {
+      if (root.left != null) {
+        stack.push(root.left);
         root = root.left;
       } else {
-        TreeNode temp = stack.pop();
-        result.add(temp.val);
-        if (temp.right != null) {
-          root = temp.right;
+        root = stack.pop();
+        result.add(root.val);
+        if (root.right != null) {
+          stack.push(root.right);
+          root = root.right;
         }
       }
     }
@@ -55,6 +55,26 @@ public class TreeTraversals1 {
       return result;
     }
     ArrayDeque<TreeNode> stack = new ArrayDeque<>();
+    stack.push(root);
+    TreeNode prev = null;
+    while (!stack.isEmpty()) {
+      TreeNode curr = stack.peek();
+      if (prev == null || prev.left == curr || prev.right == curr) {
+        if (curr.left != null) {
+          stack.push(curr.left);
+        } else if (curr.right != null) {
+          stack.push(curr.right);
+        }
+      } else if (curr.left == prev) {
+        if (curr.right != null) {
+          stack.push(curr.right);
+        }
+      } else {
+        result.add(curr.val);
+        stack.pop();
+      }
+      prev = curr;
+    }
     return result;
   }
 
