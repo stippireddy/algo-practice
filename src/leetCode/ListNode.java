@@ -2,7 +2,7 @@ package leetCode;
 
 public class ListNode {
 
-  public int val;
+  public Integer val;
   public ListNode next;
 
   public ListNode(int x) {
@@ -22,5 +22,10 @@ public class ListNode {
       return false;
     }
     return true;
+  }
+
+  @Override
+  public String toString() {
+    return "[Val: " + val + ", Next Val: " + next + "]";
   }
 }
