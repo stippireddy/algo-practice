@@ -7,10 +7,10 @@ import java.util.List;
 public class TreeTraversals {
 
   public static List<Integer> preOrder(TreeNode root) {
-    if (root == null) {
-      return null;
-    }
     List<Integer> result = new ArrayList<>();
+    if (root == null) {
+      return result;
+    }
     ArrayDeque<TreeNode> stack = new ArrayDeque<>();
     stack.push(root);
     while (!stack.isEmpty()) {
@@ -27,10 +27,10 @@ public class TreeTraversals {
   }
 
   public static List<Integer> inOrder(TreeNode root) {
-    if (root == null) {
-      return null;
-    }
     List<Integer> result = new ArrayList<>();
+    if (root == null) {
+      return result;
+    }
     ArrayDeque<TreeNode> stack = new ArrayDeque<>();
     stack.push(root);
     while (!stack.isEmpty()) {
@@ -50,36 +50,39 @@ public class TreeTraversals {
   }
 
   public static List<Integer> postOrder(TreeNode root) {
-    if (root == null) {
-      return null;
-    }
     List<Integer> result = new ArrayList<>();
+    if (root == null) {
+      return result;
+    }
     ArrayDeque<TreeNode> stack = new ArrayDeque<>();
-    TreeNode curr = root;
-    while (curr != null || !stack.isEmpty()) {
-      if (curr != null) {
-        stack.push(curr);
-        curr = curr.getLeft();
-      } else {
-        TreeNode temp = stack.peek().getRight();
-        if (temp == null) {
-          do {
-            temp = stack.pop();
-            result.add(temp.val);
-          } while (!stack.isEmpty() && stack.peek().getRight() == temp);
-        } else {
-          curr = temp;
+    stack.push(root);
+    TreeNode prev = null;
+    while (!stack.isEmpty()) {
+      TreeNode curr = stack.peek();
+      if (prev == null || prev.left == curr || prev.right == curr) {
+        if (curr.left != null) {
+          stack.push(curr.left);
+        } else if (curr.right != null) {
+          stack.push(curr.right);
         }
+      } else if (curr.left == prev) {
+        if (curr.right != null) {
+          stack.push(curr.right);
+        }
+      } else {
+        result.add(curr.val);
+        stack.pop();
       }
+      prev = curr;
     }
     return result;
   }
 
   public static List<Integer> preOrderRecursive(TreeNode root) {
-    if (root == null) {
-      return null;
-    }
     List<Integer> result = new ArrayList<>();
+    if (root == null) {
+      return result;
+    }
     preOrderRecursive(root, result);
     return result;
   }
@@ -94,10 +97,10 @@ public class TreeTraversals {
   }
 
   public static List<Integer> inOrderRecursive(TreeNode root) {
-    if (root == null) {
-      return null;
-    }
     List<Integer> result = new ArrayList<>();
+    if (root == null) {
+      return result;
+    }
     inOrderRecursive(root, result);
     return result;
   }
@@ -110,4 +113,23 @@ public class TreeTraversals {
     result.add(root.getVal());
     inOrderRecursive(root.getRight(), result);
   }
+
+  public static List<Integer> postOrderRecursive(TreeNode root) {
+    List<Integer> result = new ArrayList<>();
+    if (root == null) {
+      return result;
+    }
+    postOrderRecursive(root, result);
+    return result;
+  }
+
+  private static void postOrderRecursive(TreeNode root, List<Integer> result) {
+    if (root == null) {
+      return;
+    }
+    postOrderRecursive(root.getLeft(), result);
+    postOrderRecursive(root.getRight(), result);
+    result.add(root.getVal());
+  }
+
 }

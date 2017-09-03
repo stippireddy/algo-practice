@@ -10,9 +10,9 @@ public class TreeTraversalsTest {
   @Test
   public void testTraversals1() {
     TreeNode root = TreeUtils.createTree(new Integer[] {null});
-    Assert.assertEquals(TreeTraversals1.preOrder(root), Arrays.asList(new Integer[] {}));
-    Assert.assertEquals(TreeTraversals1.inOrder(root), Arrays.asList(new Integer[] {}));
-    // Assert.assertEquals(TreeTraversals1.postOrder(root), Arrays.asList(new Integer[] {}));
+    Assert.assertEquals(TreeTraversals.preOrder(root), Arrays.asList(new Integer[] {}));
+    Assert.assertEquals(TreeTraversals.inOrder(root), Arrays.asList(new Integer[] {}));
+    Assert.assertEquals(TreeTraversals.postOrder(root), Arrays.asList(new Integer[] {}));
   }
 
   @Test
@@ -51,23 +51,32 @@ public class TreeTraversalsTest {
     traversalTestHelper(input, preOrderExpected, inOrderExpected, postOrderExpected);
   }
 
+  @Test
+  public void testTraversals6() {
+    Integer[] input = {5, 0};
+    Integer[] preOrderExpected = {5, 0};
+    Integer[] inOrderExpected = {0, 5};
+    Integer[] postOrderExpected = {0, 5};
+    traversalTestHelper(input, preOrderExpected, inOrderExpected, postOrderExpected);
+  }
+
   private void traversalTestHelper(Integer[] input, Integer[] preOrderExpected,
       Integer[] inOrderExpected, Integer[] postOrderExpected) {
     TreeNode root = TreeUtils.createTree(input);
 
-    List<Integer> result = TreeTraversals1.preOrder(root);
+    List<Integer> result = TreeTraversals.preOrder(root);
     Assert.assertEquals(preOrderExpected, result.toArray(new Integer[result.size()]));
-    result = TreeTraversals1.preOrderRecursive(root);
+    result = TreeTraversals.preOrderRecursive(root);
     Assert.assertEquals(preOrderExpected, result.toArray(new Integer[result.size()]));
 
-    result = TreeTraversals1.inOrder(root);
+    result = TreeTraversals.inOrder(root);
     Assert.assertEquals(inOrderExpected, result.toArray(new Integer[result.size()]));
-    result = TreeTraversals1.inOrderRecursive(root);
+    result = TreeTraversals.inOrderRecursive(root);
     Assert.assertEquals(inOrderExpected, result.toArray(new Integer[result.size()]));
 
-    // result = TreeTraversals1.postOrder(root);
-    // Assert.assertEquals(postOrderExpected, result.toArray(new Integer[result.size()]));
-    // result = TreeTraversals1.postOrderRecursive(root);
-    // Assert.assertEquals(postOrderExpected, result.toArray(new Integer[result.size()]));
+    result = TreeTraversals.postOrder(root);
+    Assert.assertEquals(postOrderExpected, result.toArray(new Integer[result.size()]));
+    result = TreeTraversals.postOrderRecursive(root);
+    Assert.assertEquals(postOrderExpected, result.toArray(new Integer[result.size()]));
   }
 }
