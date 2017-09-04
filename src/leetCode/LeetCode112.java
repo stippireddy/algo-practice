@@ -27,9 +27,6 @@ public class LeetCode112 {
     if (root == null) {
       return false;
     }
-    if (root.left == null && root.right == null) {
-      return root.val == sum;
-    }
     ArrayDeque<TreeNode> stack = new ArrayDeque<>();
     stack.push(root);
     int currentSum = root.val;
@@ -53,6 +50,9 @@ public class LeetCode112 {
           stack.push(curr.right);
         }
       } else {
+        if (root.left == null && root.right == null) {
+          return root.val == sum;
+        }
         currentSum -= curr.val;
         stack.pop();
       }
