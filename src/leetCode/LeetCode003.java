@@ -14,14 +14,14 @@ public class LeetCode003 {
     int[] freq = new int[128];
     int i = 0, j = 0, maxLength = 0;
     while (j < sArray.length) {
-      if (freq[sArray[j] - 'a'] == 0) {
-        freq[sArray[j] - 'a'] = 1;
+      if (freq[sArray[j]] == 0) {
+        freq[sArray[j]] = 1;
         maxLength = Integer.max(maxLength, j - i + 1);
         j++;
       } else {
-        freq[sArray[i] - 'a'] = 0;
+        freq[sArray[i]] = 0;
         i++;
-      } 
+      }
     }
     return maxLength;
   }
