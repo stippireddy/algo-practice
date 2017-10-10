@@ -5,7 +5,7 @@
  * http://practice.geeksforgeeks.org/problems/parenthesis-checker/0
  *
  * <p>The solution editorial can be found @
- * http://www.geeksforgeeks.org/implement-stack-using-queue/
+ * http://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/
  */
 package geeksForGeeks.practice.easy;
 
