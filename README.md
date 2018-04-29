@@ -1,4 +1,4 @@
-# FunWithAlgorithms
+# Algorithms Practice
 
 ## Synopsis
 
