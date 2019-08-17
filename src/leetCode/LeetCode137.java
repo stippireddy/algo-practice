@@ -29,5 +29,9 @@ public class LeetCode137 {
     }
     return result;
   }
-  public int singleNumberUsingMask(int[] nums) {}
+
+    public int singleNumberUsingMask(int[] nums) {
+        // TODO Complete this
+        return -1;
+    }
 }

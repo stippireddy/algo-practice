@@ -8,5 +8,7 @@ package leetCode;
 
 public class LeetCode649 {
   public String predictPartyVictory(String senate) {
+    // TODO
+    return null;
   }
 }

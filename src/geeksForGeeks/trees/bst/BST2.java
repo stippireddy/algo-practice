@@ -3,8 +3,8 @@ package geeksForGeeks.trees.bst;
 import karumanchi.trees.TreeNode;
 
 public class BST2 {
-  a
-  TreeNode deleteNode(TreeNode root, int key) {
+
+    TreeNode deleteNode(TreeNode root, int key) {
     if (root == null) {
       return root;
     }

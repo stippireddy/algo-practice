@@ -27,6 +27,9 @@ public class LeetCode023 {
     }
     return result.next;
   }
-  
-  public ListNode mergeKListsRecursive(ListNode[] lists) {}
+
+  public ListNode mergeKListsRecursive(ListNode[] lists) {
+    //TODO
+    return null;
+  }
 }

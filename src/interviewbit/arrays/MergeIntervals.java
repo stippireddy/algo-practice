@@ -45,7 +45,7 @@ public class MergeIntervals {
     return result;
   }
 
-  private class Interval {
+  static class Interval {
     int start;
     int end;
 

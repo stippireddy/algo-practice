@@ -1,16 +1,16 @@
-/**
- * Created by Sarveswara Tippireddy on Jul 27, 2017
- *
- * <p>This is a GeeksForGeeks problem. The problem statement can be found @
- * http://practice.geeksforgeeks.org/problems/shortest-uncommon-subsequence/0
- *
- * <p>The solution editorial can be found @
- * http://www.geeksforgeeks.org/shortest-uncommon-subsequence/
+/*
+  Created by Sarveswara Tippireddy on Jul 27, 2017
+
+  <p>This is a GeeksForGeeks problem. The problem statement can be found @
+  http://practice.geeksforgeeks.org/problems/shortest-uncommon-subsequence/0
+
+  <p>The solution editorial can be found @
+  http://www.geeksforgeeks.org/shortest-uncommon-subsequence/
  */
 package geeksForGeeks.practice.easy;
 
 import java.util.Scanner;
-a
+
 public class ShortestUncommonSubsequence {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);

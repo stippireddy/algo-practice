@@ -28,6 +28,7 @@ public class LeetCode378 {
   // BinarySearch
   public int kthSmallest(int[][] matrix, int k) {
     // TODO
+    return -1;
   }
 }
 
