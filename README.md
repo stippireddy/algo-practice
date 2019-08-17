@@ -22,4 +22,4 @@ All solutions are correct to the best of my knowledge. However, the quality of c
 
 ## License
 
-This project is licensed using MIT License @ 2017.
+This project is licensed using MIT License @ 2019.
