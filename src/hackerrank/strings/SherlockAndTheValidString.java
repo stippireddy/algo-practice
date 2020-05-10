@@ -7,6 +7,7 @@
 package hackerrank.strings;
 
 public class SherlockAndTheValidString {
+
   public static String isValid(String s) {
     int[] count = new int[26];
     for (char c : s.toCharArray()) {

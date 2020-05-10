@@ -3,13 +3,13 @@
  *
  * <p>
  * This LeetCode problem can be found @ https://leetcode.com/problems/balanced-binary-tree/description/
- * 
  */
 package leetCode;
 
 import karumanchi.trees.TreeNode;
 
 public class LeetCode110 {
+
   public boolean isBalanced(TreeNode root) {
     if (helper(root) < 0) {
       return false;

@@ -9,10 +9,10 @@ package leetCode;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import karumanchi.trees.TreeNode;
 
 public class LeetCode652 {
+
   public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
     ArrayList<TreeNode> result = new ArrayList<>();
     HashMap<String, TreeNode> map = new HashMap<>();

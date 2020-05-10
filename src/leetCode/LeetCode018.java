@@ -11,6 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class LeetCode018 {
+
   public List<List<Integer>> fourSum(int[] nums, int target) {
     int n = nums.length;
     List<List<Integer>> result = new ArrayList<>();

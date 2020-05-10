@@ -3,11 +3,11 @@
  *
  * <p>
  * This LeetCode problem can be found @ https://leetcode.com/problems/rotate-array/description/
- * 
  */
 package leetCode;
 
 public class LeetCode189 {
+
   public void rotate(int[] nums, int k) {
     if (nums.length < 2 || k == 0) {
       return;

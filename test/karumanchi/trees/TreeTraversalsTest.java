@@ -2,17 +2,17 @@ package karumanchi.trees;
 
 import java.util.Arrays;
 import java.util.List;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TreeTraversalsTest {
+
   @Test
   public void testTraversals1() {
-    TreeNode root = TreeUtils.createTree(new Integer[] {null});
-    Assert.assertEquals(TreeTraversals.preOrder(root), Arrays.asList(new Integer[] {}));
-    Assert.assertEquals(TreeTraversals.inOrder(root), Arrays.asList(new Integer[] {}));
-    Assert.assertEquals(TreeTraversals.postOrder(root), Arrays.asList(new Integer[] {}));
+    TreeNode root = TreeUtils.createTree(new Integer[]{null});
+    Assert.assertEquals(TreeTraversals.preOrder(root), Arrays.asList(new Integer[]{}));
+    Assert.assertEquals(TreeTraversals.inOrder(root), Arrays.asList(new Integer[]{}));
+    Assert.assertEquals(TreeTraversals.postOrder(root), Arrays.asList(new Integer[]{}));
   }
 
   @Test

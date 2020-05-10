@@ -10,9 +10,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class PascalTriangleRows {
+
   public static ArrayList<ArrayList<Integer>> generate(int a) {
     ArrayList<ArrayList<Integer>> result = new ArrayList<>();
-    if (a < 1) return result;
+    if (a < 1) {
+      return result;
+    }
     result.add(new ArrayList<>(Arrays.asList(1)));
     for (int i = 1; i < a; i++) {
       ArrayList<Integer> subList = new ArrayList<>();

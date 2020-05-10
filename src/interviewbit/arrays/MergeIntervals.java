@@ -8,6 +8,7 @@ package interviewbit.arrays;
 import java.util.ArrayList;
 
 public class MergeIntervals {
+
   public ArrayList<Interval> insert(ArrayList<Interval> intervals, Interval newInterval) {
     ArrayList<Interval> result = new ArrayList<>();
     if (intervals.size() < 1) {
@@ -26,7 +27,8 @@ public class MergeIntervals {
         result.add(intervals.get(i));
       } else if (newInterval.start < currentEnd) {
         currentStart = Integer.min(currentStart, newInterval.start);
-        while (++i < intervals.size() && newInterval.end > intervals.get(i).start) {}
+        while (++i < intervals.size() && newInterval.end > intervals.get(i).start) {
+        }
         currentEnd =
             (newInterval.end < intervals.get(i - 1).end)
                 ? intervals.get(i - 1).end
@@ -46,6 +48,7 @@ public class MergeIntervals {
   }
 
   static class Interval {
+
     int start;
     int end;
 

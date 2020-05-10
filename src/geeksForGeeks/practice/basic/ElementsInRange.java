@@ -13,6 +13,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ElementsInRange {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
@@ -41,7 +42,7 @@ public class ElementsInRange {
     }
     return "Yes";
   }
-  
+
   public static String areElementsInRangeUsingSorting(int[] input, int a, int b) {
     Arrays.sort(input);
     int i = binarySearch(input, a);
@@ -77,7 +78,7 @@ public class ElementsInRange {
 
     return 0;
   }
-  
+
   public static String areElementsInRangeModifyInput(int[] input, int a, int b) {
     for (int j = 0; j < input.length; j++) {
       int currNum = Math.abs(input[j]);

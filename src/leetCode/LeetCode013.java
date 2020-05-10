@@ -9,7 +9,7 @@ package leetCode;
 import java.util.HashMap;
 
 public class LeetCode013 {
-  
+
   private static final HashMap<Character, Integer> keyMap = new HashMap<>();
 
   static {

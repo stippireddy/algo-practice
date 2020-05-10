@@ -3,11 +3,11 @@
  *
  * <p>
  * This LeetCode problem can be found @ https://leetcode.com/problems/integer-break/description/
- * 
  */
 package leetCode;
 
 public class LeetCode343 {
+
   public int integerBreakMyFirstIntuition(int n) {
     if (n == 2) {
       return 1;

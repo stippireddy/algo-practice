@@ -8,6 +8,7 @@ package interviewbit.arrays;
 import java.util.ArrayList;
 
 public class PrettyPrint {
+
   public static ArrayList<ArrayList<Integer>> prettyPrint(int a) {
     int size = 2 * a - 1;
     ArrayList<ArrayList<Integer>> result = new ArrayList<>();

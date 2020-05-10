@@ -3,6 +3,7 @@ package geeksForGeeks.trees.bst;
 import karumanchi.trees.TreeNode;
 
 public class BST1 {
+
   public TreeNode insertIterative(TreeNode root, int data) {
     TreeNode nodeToBeInserted = new TreeNode(data);
     if (root == null) {

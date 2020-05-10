@@ -7,6 +7,7 @@
 package geeksForGeeks.arrays;
 
 public class BinarySearch03 {
+
   public int findElementInRotatedArray(int[] a, int key) {
     int left = 0, right = a.length - 1;
     while (left < right) {
@@ -28,7 +29,10 @@ public class BinarySearch03 {
         }
       }
     }
-    if (a[left] == key) return left;
-    else return -1;
+    if (a[left] == key) {
+      return left;
+    } else {
+      return -1;
+    }
   }
 }

@@ -2,9 +2,7 @@
  * Created by Sarveswara Tippireddy on Sep 3, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/two-sum-iv-input-is-a-bst/description/
- * 
+ * This LeetCode problem can be found @ https://leetcode.com/problems/two-sum-iv-input-is-a-bst/description/
  */
 package leetCode;
 
@@ -13,7 +11,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
-
 import karumanchi.trees.TreeNode;
 
 public class LeetCode653 {

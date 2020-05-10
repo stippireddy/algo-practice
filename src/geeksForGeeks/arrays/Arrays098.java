@@ -7,6 +7,7 @@
 package geeksForGeeks.arrays;
 
 public class Arrays098 {
+
   public int findMinimumInRotatedArray(int[] a) {
     int start = 0, end = a.length - 1;
     while (start < end) {

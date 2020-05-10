@@ -2,7 +2,6 @@ package interviewbit.arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
 import org.testng.annotations.Test;
 
 public class MaxNonNegativeSubArrayTest {

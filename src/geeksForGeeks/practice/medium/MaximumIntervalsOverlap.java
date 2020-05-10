@@ -13,6 +13,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class MaximumIntervalsOverlap {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
@@ -47,10 +48,11 @@ public class MaximumIntervalsOverlap {
         guests--;
       }
     }
-    return new int[] {maxGuests, maxOverLapTime};
+    return new int[]{maxGuests, maxOverLapTime};
   }
 
   static class Interval implements Comparable<Interval> {
+
     int time;
     int arrivalDeparture;
 

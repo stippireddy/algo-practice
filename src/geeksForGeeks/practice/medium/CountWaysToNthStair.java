@@ -11,6 +11,7 @@ package geeksForGeeks.practice.medium;
 import java.util.Scanner;
 
 public class CountWaysToNthStair {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
@@ -20,7 +21,7 @@ public class CountWaysToNthStair {
     }
     sc.close();
   }
-  
+
   public static int getStepCountTopDown(int n) {
     int[] dp = new int[n];
     if (n == 1) {
@@ -31,7 +32,7 @@ public class CountWaysToNthStair {
     }
     dp[0] = 1;
     dp[1] = 2;
-    return dpHelper(dp, n-1);
+    return dpHelper(dp, n - 1);
   }
 
   private static int dpHelper(int[] dp, int n) {

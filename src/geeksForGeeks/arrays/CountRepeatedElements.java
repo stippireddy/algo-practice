@@ -1,6 +1,7 @@
 package geeksForGeeks.arrays;
 
 public class CountRepeatedElements {
+
   public int[] findCount(int[] a) {
     int[] result = new int[2];
     int low = a[0], high = a[a.length - 1];

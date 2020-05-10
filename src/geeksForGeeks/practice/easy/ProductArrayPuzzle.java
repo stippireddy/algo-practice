@@ -2,12 +2,10 @@
  * Created by Sarveswara Tippireddy on Oct 18, 2017
  *
  * <p>
- * This GeeksForGeeks problem can be found @
- * http://practice.geeksforgeeks.org/problems/product-array-puzzle/0
+ * This GeeksForGeeks problem can be found @ http://practice.geeksforgeeks.org/problems/product-array-puzzle/0
  *
  * <p>
- * The solution editorials can be found @ 
- * http://www.geeksforgeeks.org/a-product-array-puzzle/
+ * The solution editorials can be found @ http://www.geeksforgeeks.org/a-product-array-puzzle/
  * http://www.geeksforgeeks.org/product-array-puzzle-set-2-o1-space/
  */
 package geeksForGeeks.practice.easy;
@@ -15,6 +13,7 @@ package geeksForGeeks.practice.easy;
 import java.util.Scanner;
 
 public class ProductArrayPuzzle {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();

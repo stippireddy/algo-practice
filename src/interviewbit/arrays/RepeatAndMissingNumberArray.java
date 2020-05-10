@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RepeatAndMissingNumberArray {
+
   public ArrayList<Integer> repeatedNumberUsingXOR(final List<Integer> a) {
     int xorRes = 0;
     for (int i = 1; i <= a.size(); i++) {

@@ -2,15 +2,14 @@
  * Created by Sarveswara Tippireddy on Sep 7, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
- * 
+ * This LeetCode problem can be found @ https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
  */
 package leetCode;
 
 import karumanchi.trees.TreeNode;
 
 public class LeetCode235 {
+
   public TreeNode lowestCommonAncestorRecursive(TreeNode root, TreeNode p, TreeNode q) {
     if (root == null || p == null || q == null) {
       return root;

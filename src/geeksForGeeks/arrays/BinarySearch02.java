@@ -9,6 +9,7 @@ package geeksForGeeks.arrays;
 import java.util.Scanner;
 
 public class BinarySearch02 {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();

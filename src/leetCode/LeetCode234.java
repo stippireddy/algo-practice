@@ -2,12 +2,12 @@
  * Created by Sarveswara Tippireddy on Aug 27, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/palindrome-linked-list/description/
+ * This LeetCode problem can be found @ https://leetcode.com/problems/palindrome-linked-list/description/
  */
 package leetCode;
 
 public class LeetCode234 {
+
   public boolean isPalindrome(ListNode head) {
     if (head == null || head.next == null) {
       return true;

@@ -1,7 +1,7 @@
 package geeksForGeeks.arrays;
+
 /**
- * This geeksforgeeks problem can be accessed at
- * http://www.geeksforgeeks.org/merge-one-array-of-size-n-into-another-one-of-size-mn/
+ * This geeksforgeeks problem can be accessed at http://www.geeksforgeeks.org/merge-one-array-of-size-n-into-another-one-of-size-mn/
  *
  * <p>Problem Statement:There are two sorted arrays. First one is of size m+n containing only m
  * elements. Another one is of size n and contains n elements. Merge these two arrays into the first
@@ -12,6 +12,7 @@ package geeksForGeeks.arrays;
  * <p>output: mPlusN[] = {2, 5, 7, 8, 9, 13, 15, 20, 25}
  */
 public class Arrays009 {
+
   public void mergeArrays(int[] a, int[] b) {
     int j = a.length - 1;
     for (int i = a.length - 1; i >= 0; i--) {

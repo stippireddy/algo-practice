@@ -2,13 +2,12 @@
  * Created by Sarveswara Tippireddy on Sep 2, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/palindromic-substrings/description/
- * 
+ * This LeetCode problem can be found @ https://leetcode.com/problems/palindromic-substrings/description/
  */
 package leetCode;
 
 public class LeetCode647 {
+
   public int countSubstringsBruteForce(String s) {
     int count = 0;
     for (int i = 0; i < s.length(); i++) {

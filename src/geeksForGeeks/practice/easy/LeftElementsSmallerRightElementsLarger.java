@@ -2,18 +2,17 @@
  * Created by Sarveswara Tippireddy on Oct 18, 2017
  *
  * <p>
- * This GeeksForGeeks problem can be found @
- * http://practice.geeksforgeeks.org/problems/unsorted-array/0
+ * This GeeksForGeeks problem can be found @ http://practice.geeksforgeeks.org/problems/unsorted-array/0
  *
  * <p>
- * The solution editorials can be found @
- * http://www.geeksforgeeks.org/find-the-element-before-which-all-the-elements-are-smaller-than-it-and-after-which-all-are-greater-than-it/
+ * The solution editorials can be found @ http://www.geeksforgeeks.org/find-the-element-before-which-all-the-elements-are-smaller-than-it-and-after-which-all-are-greater-than-it/
  */
 package geeksForGeeks.practice.easy;
 
 import java.util.Scanner;
 
 public class LeftElementsSmallerRightElementsLarger {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();

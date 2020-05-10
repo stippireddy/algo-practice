@@ -2,9 +2,7 @@
  * Created by Sarveswara Tippireddy on Sep 4, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/queue-reconstruction-by-height/description/
- * 
+ * This LeetCode problem can be found @ https://leetcode.com/problems/queue-reconstruction-by-height/description/
  */
 package leetCode;
 
@@ -12,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class LeetCode406 {
+
   public int[][] reconstructQueueMyIntuitiveSolution(int[][] people) {
     if (people.length < 2) {
       return people;

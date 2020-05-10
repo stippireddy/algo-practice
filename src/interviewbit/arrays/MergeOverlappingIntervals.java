@@ -10,6 +10,7 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class MergeOverlappingIntervals {
+
   public ArrayList<Interval> merge(ArrayList<Interval> intervals) {
     if (intervals.size() < 2) {
       return intervals;
@@ -32,6 +33,7 @@ public class MergeOverlappingIntervals {
   }
 
   private class IntervalComparator implements Comparator<Interval> {
+
     @Override
     public int compare(Interval o1, Interval o2) {
       return o1.start - o2.start;
@@ -40,6 +42,7 @@ public class MergeOverlappingIntervals {
 }
 
 class Interval {
+
   int start;
   int end;
 
@@ -50,7 +53,9 @@ class Interval {
 
   @Override
   public boolean equals(Object obj) {
-    if (obj.getClass() != Interval.class) return false;
+    if (obj.getClass() != Interval.class) {
+      return false;
+    }
     Interval other = (Interval) obj;
     return other.start == this.start && other.end == this.end;
   }

@@ -1,6 +1,7 @@
 package leetCode;
 
 public class LeetCode624 {
+
   public static int maxDistance(int[][] arrays) {
     int min = Integer.MAX_VALUE;
     int max = Integer.MIN_VALUE;
@@ -16,6 +17,6 @@ public class LeetCode624 {
   }
 
   public static void main(String[] args) {
-    maxDistance(new int[][] {{1, 4}, {0, 5}});
+    maxDistance(new int[][]{{1, 4}, {0, 5}});
   }
 }

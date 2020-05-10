@@ -2,6 +2,19 @@ package generalImplementations;
 
 public class BitHacks {
 
+  public static void main(String[] args) {
+    int a = 5;
+    int b = 10;
+    swap(a, b);
+    System.out.println(a + " " + b);
+  }
+
+  public static void swap(int a, int b) {
+    a = a ^ b;
+    b = a ^ b;
+    a = a ^ b;
+  }
+
   public boolean isPowerOfTwo(int n) {
     boolean result;
     result = (n & (n - 1)) == 0;
@@ -17,7 +30,7 @@ public class BitHacks {
    *
    * @param n the value whose bits are to be counted
    * @return the number of one-bits in the two's complement binary representation of the specified
-   *     value.
+   * value.
    */
   int findNumberOfSetBits(int n) {
     int count = 1;
@@ -26,19 +39,6 @@ public class BitHacks {
       count++;
     }
     return count;
-  }
-
-  public static void main(String[] args) {
-    int a = 5;
-    int b = 10;
-    swap(a, b);
-    System.out.println(a + " " + b);
-  }
-
-  public static void swap(int a, int b) {
-    a = a ^ b;
-    b = a ^ b;
-    a = a ^ b;
   }
 
   public int setBit(int n, int j) {

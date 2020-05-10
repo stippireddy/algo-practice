@@ -2,13 +2,12 @@
  * Created by Sarveswara Tippireddy on Sep 2, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/length-of-last-word/description/
- * 
+ * This LeetCode problem can be found @ https://leetcode.com/problems/length-of-last-word/description/
  */
 package leetCode;
 
 public class LeetCode058 {
+
   public int lengthOfLastWord(String s) {
     if (s.length() == 0) {
       return 0;
@@ -30,7 +29,7 @@ public class LeetCode058 {
       if (s.charAt(i) != ' ') {
         startingIndex = i;
         i--;
-      }else {
+      } else {
         break;
       }
     }

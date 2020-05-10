@@ -3,6 +3,7 @@ package leetCode;
 import java.util.HashMap;
 
 public class LeetCode001 {
+
   public int[] twoSumBruteForce(int[] nums, int target) {
     int[] result = new int[2];
     for (int i = 0; i < nums.length - 1; i++) {

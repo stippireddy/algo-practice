@@ -2,7 +2,6 @@ package leetCode;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
-
 import karumanchi.trees.TreeNode;
 
 public class LeetCode538 {

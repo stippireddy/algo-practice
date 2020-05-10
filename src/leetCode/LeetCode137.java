@@ -3,6 +3,7 @@ package leetCode;
 import java.util.HashMap;
 
 public class LeetCode137 {
+
   public int singleNumberUsingHashMap(int[] nums) {
     HashMap<Integer, Integer> map = new HashMap<>();
     for (int num : nums) {
@@ -30,8 +31,8 @@ public class LeetCode137 {
     return result;
   }
 
-    public int singleNumberUsingMask(int[] nums) {
-        // TODO Complete this
-        return -1;
-    }
+  public int singleNumberUsingMask(int[] nums) {
+    // TODO Complete this
+    return -1;
+  }
 }

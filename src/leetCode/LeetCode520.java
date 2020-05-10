@@ -1,6 +1,7 @@
 package leetCode;
 
 public class LeetCode520 {
+
   public boolean detectCapitalUse(String word) {
     if (word.length() < 2) {
       return true;
@@ -36,7 +37,7 @@ public class LeetCode520 {
         || capitalCount == word.length()
         || (capitalCount == 1 && Character.isUpperCase(word.charAt(0)));
   }
-  
+
   public boolean detectCapitalUseUsingStringMethods(String word) {
     if (word.length() < 2) {
       return true;

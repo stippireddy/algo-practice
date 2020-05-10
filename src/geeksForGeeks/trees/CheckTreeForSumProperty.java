@@ -4,6 +4,7 @@ import karumanchi.trees.TreeNode;
 
 //TODO Add testCases
 public class CheckTreeForSumProperty {
+
   public boolean isValid(TreeNode root) {
     if (root == null || root.left == null && root.right == null) {
       return true;

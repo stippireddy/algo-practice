@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class NobleInteger {
+
   public int solve(ArrayList<Integer> a) {
     Collections.sort(a);
     for (int i = 0; i < a.size() - 1; i++) {

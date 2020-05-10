@@ -9,6 +9,7 @@ package geeksForGeeks.arrays;
 import java.util.Scanner;
 
 public class FibonacciAverage {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     boolean[] f = new boolean[101];
@@ -43,8 +44,12 @@ public class FibonacciAverage {
   }
 
   private static void setFibonacciNumbers(boolean[] f, int l) {
-    if (l > 0) f[0] = true;
-    if (l > 1) f[1] = true;
+    if (l > 0) {
+      f[0] = true;
+    }
+    if (l > 1) {
+      f[1] = true;
+    }
     int prevToPrev = 0;
     int prev = 1;
     while (prevToPrev + prev < 101) {

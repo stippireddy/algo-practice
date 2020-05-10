@@ -3,11 +3,11 @@
  *
  * <p>
  * This LeetCode problem can be found @ https://leetcode.com/problems/unique-paths/description/
- * 
  */
 package leetCode;
 
 public class LeetCode062 {
+
   public int uniquePaths(int m, int n) {
     int max = n - 1;
     int min = m - 1;

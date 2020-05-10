@@ -13,26 +13,27 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class StackUsingTwoQueues {
-	private Queue<Integer> q1 = new LinkedList<Integer>();
-	private Queue<Integer> q2 = new LinkedList<Integer>();
 
-	/* The method pop which return the element poped out of the stack */
-	public int pop() {
-		int l = q1.size();
-		if(l == 0){
-		    return -1;
-		}
-		for (int i = 1; i < l; i++) {
-			q2.add(q1.poll());
-		}
-		Queue<Integer> temp = q1;
-		q1 = q2;
-		q2 = temp;
-		return q2.poll();
-	}
+  private Queue<Integer> q1 = new LinkedList<Integer>();
+  private Queue<Integer> q2 = new LinkedList<Integer>();
 
-	/* The method push to push element into the stack */
-	public void push(int a) {
-		q1.add(a);
-	}
+  /* The method pop which return the element poped out of the stack */
+  public int pop() {
+    int l = q1.size();
+    if (l == 0) {
+      return -1;
+    }
+    for (int i = 1; i < l; i++) {
+      q2.add(q1.poll());
+    }
+    Queue<Integer> temp = q1;
+    q1 = q2;
+    q2 = temp;
+    return q2.poll();
+  }
+
+  /* The method push to push element into the stack */
+  public void push(int a) {
+    q1.add(a);
+  }
 }

@@ -16,6 +16,7 @@ package geeksForGeeks.practice.basic;
 import java.util.Scanner;
 
 public class LongestCommonPrefixInAnArray {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
@@ -82,10 +83,11 @@ public class LongestCommonPrefixInAnArray {
     }
     return res == -1 ? "-1" : minString.substring(0, res + 1);
   }
+
   public static String findLongestCommonPrefix5(String[] input) {
     TrieNode trie = createTrie(input);
     StringBuffer sb = new StringBuffer();
-    while(trie!=null){
+    while (trie != null) {
       int splitCount = 0;
       int currChar = -1;
       for (int i = 0; i < 26; i++) {
@@ -102,9 +104,6 @@ public class LongestCommonPrefixInAnArray {
       }
     }
     return sb.length() > 0 ? sb.toString() : "-1";
-  }
-  static class TrieNode {
-    TrieNode[] index = new TrieNode[26];
   }
 
   private static TrieNode createTrie(String[] input) {
@@ -123,5 +122,10 @@ public class LongestCommonPrefixInAnArray {
       }
       root = root.index[currCharIndex];
     }
+  }
+
+  static class TrieNode {
+
+    TrieNode[] index = new TrieNode[26];
   }
 }

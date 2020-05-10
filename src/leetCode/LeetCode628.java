@@ -3,6 +3,7 @@ package leetCode;
 import java.util.Arrays;
 
 public class LeetCode628 {
+
   public int maximumProduct(int[] nums) {
     Arrays.sort(nums);
     int n = nums.length;

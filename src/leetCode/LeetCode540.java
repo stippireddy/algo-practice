@@ -1,9 +1,10 @@
 package leetCode;
 
 public class LeetCode540 {
+
   /*
    * All elements before the required have first occurrence at even index (0, 2, ..) and next occurrence
-   * at odd index (1, 3, …). And all elements after the required element have first occurrence at odd
+   * at odd index (1, 3, ï¿½). And all elements after the required element have first occurrence at odd
    * index and next occurrence at even index.
    */
   public int singleNonDuplicate(int[] nums) {
@@ -22,7 +23,7 @@ public class LeetCode540 {
       } else {
         if (nums[mid - 1] == nums[mid]) {
           return singleNonDuplicate(nums, mid + 1, j);
-        }else{
+        } else {
           return singleNonDuplicate(nums, i, mid - 1);
         }
       }

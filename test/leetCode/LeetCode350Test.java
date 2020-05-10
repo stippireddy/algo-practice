@@ -10,8 +10,8 @@ public class LeetCode350Test {
   public void intersect() {
     LeetCode350 l = new LeetCode350();
     assertEquals(
-        new int[] {1, 2, 3}, l.intersect(new int[] {1, 2, 3, 1, 2, 3}, new int[] {3, 2, 1}));
-    assertEquals(new int[] {}, l.intersect(new int[] {}, new int[] {}));
-    assertEquals(new int[] {}, l.intersect(new int[] {1}, new int[] {}));
+        new int[]{1, 2, 3}, l.intersect(new int[]{1, 2, 3, 1, 2, 3}, new int[]{3, 2, 1}));
+    assertEquals(new int[]{}, l.intersect(new int[]{}, new int[]{}));
+    assertEquals(new int[]{}, l.intersect(new int[]{1}, new int[]{}));
   }
 }

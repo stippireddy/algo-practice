@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class SecondMostRepeatedString {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int numberOfTestCases = sc.nextInt();
@@ -45,7 +46,9 @@ public class SecondMostRepeatedString {
       }
     }
     for (String s : map.keySet()) {
-      if (map.get(s) == secondMax) return s;
+      if (map.get(s) == secondMax) {
+        return s;
+      }
     }
     return "";
   }

@@ -12,6 +12,7 @@ package geeksForGeeks.practice.basic;
 import java.util.Scanner;
 
 public class CountPairSum {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
@@ -35,8 +36,8 @@ public class CountPairSum {
   private static int getPairCount(int[] a, int[] b, int sum) {
     int count = 0;
     int i = 0, j = b.length - 1;
-    while(i<a.length && j >=0){
-      if(a[i]+b[j]==sum){
+    while (i < a.length && j >= 0) {
+      if (a[i] + b[j] == sum) {
         count++;
         j--;
       } else if (a[i] + b[j] > sum) {

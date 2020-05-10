@@ -3,6 +3,7 @@ package generalImplementations;
 import leetCode.ListNode;
 
 public class InsertionSort {
+
   public static void sort(int[] a) {
     for (int i = 1; i < a.length; i++) {
       int key = a[i];

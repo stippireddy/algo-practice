@@ -7,6 +7,7 @@
 package leetCode;
 
 public class LeetCode605 {
+
   public boolean canPlaceFlowers(int[] flowerbed, int n) {
     for (int i = 0; i < flowerbed.length; i++) {
       if (flowerbed[i] == 1) {

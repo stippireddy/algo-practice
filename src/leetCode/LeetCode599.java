@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class LeetCode599 {
+
   public String[] findRestaurant(String[] list1, String[] list2) {
     int leastIndexSum = Integer.MAX_VALUE;
     HashMap<String, Integer> map = new HashMap<>(list1.length);

@@ -1,6 +1,7 @@
 package leetCode;
 
 public class LeetCode461 {
+
   public int hammingDistance(int x, int y) {
     int n = x ^ y;
     int count = 0;

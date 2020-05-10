@@ -4,10 +4,10 @@ import static org.testng.Assert.assertEquals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
 import org.testng.annotations.Test;
 
 public class MinimizeTheAbsoluteDifferenceTest {
+
   //A : [ 1, 4, 5, 8, 10 ]
   //B : [ 6, 9, 15 ]
   //C : [ 2, 3, 6, 6 ]

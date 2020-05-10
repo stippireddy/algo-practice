@@ -5,7 +5,6 @@ import static org.testng.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
 import org.testng.annotations.Test;
 
 public class HotelBookingsPossibleTest {

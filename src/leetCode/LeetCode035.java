@@ -2,12 +2,12 @@
  * Created by Sarveswara Tippireddy on Aug 30, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/search-insert-position/description/
+ * This LeetCode problem can be found @ https://leetcode.com/problems/search-insert-position/description/
  */
 package leetCode;
 
 public class LeetCode035 {
+
   public int searchInsert(int[] nums, int target) {
     int low = 0, high = nums.length - 1;
     while (low <= high) {

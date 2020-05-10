@@ -12,6 +12,7 @@ package geeksForGeeks.practice.basic;
 import java.util.Scanner;
 
 public class ToggleBitsInAGivenRange {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
@@ -32,7 +33,7 @@ public class ToggleBitsInAGivenRange {
     }
     return k;
   }
-  
+
   public static int toggle2(int k, int left, int right) {
     int toggler = ((1 << right) - 1) ^ ((1 << (left - 1)) - 1);
     return k ^ toggler;

@@ -5,13 +5,13 @@ package leetCode;
  *
  * <p>This is a LeetCode problem. The problem statement can be found @
  * https://leetcode.com/problems/binary-search-tree-iterator/description/
- *
  */
-import java.util.ArrayDeque;
 
+import java.util.ArrayDeque;
 import karumanchi.trees.TreeNode;
 
 public class LeetCode173 {
+
   ArrayDeque<TreeNode> stack;
   boolean hasNext;
 

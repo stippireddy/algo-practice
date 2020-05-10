@@ -2,10 +2,11 @@ package geeksForGeeks.arrays;
 
 /**
  * @author Sarveswara Tippireddy
- *     <p>This GeeksforGeeks problem can be found @
- *     http://www.geeksforgeeks.org/minimum-length-subarray-sum-greater-given-value/
+ * <p>This GeeksforGeeks problem can be found @
+ * http://www.geeksforgeeks.org/minimum-length-subarray-sum-greater-given-value/
  */
 public class Arrays106 {
+
   public int minLengthSubArray(int[] input, int x) {
     int i = 0, j = 0;
     int minLength = input.length + 1;

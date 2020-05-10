@@ -10,9 +10,9 @@ public class LeetCode142Test {
   @Test
   public void detectCycle() {
     LeetCode142 l = new LeetCode142();
-    assertNull(l.detectCycle(ListUtils.createList(new int[] {1, 2, 3, 4, 5, 6})));
-    assertNull(l.detectCycle(ListUtils.createList(new int[] {1})));
-    assertNull(l.detectCycle(ListUtils.createList(new int[] {})));
+    assertNull(l.detectCycle(ListUtils.createList(new int[]{1, 2, 3, 4, 5, 6})));
+    assertNull(l.detectCycle(ListUtils.createList(new int[]{1})));
+    assertNull(l.detectCycle(ListUtils.createList(new int[]{})));
     ListNode node1 = new ListNode(1);
     ListNode node2 = new ListNode(2);
     ListNode node3 = new ListNode(3);

@@ -2,12 +2,12 @@
  * Created by Sarveswara Tippireddy on Aug 28, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
+ * This LeetCode problem can be found @ https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
  */
 package leetCode;
 
 public class LeetCode019 {
+
   public ListNode removeNthFromEndTwoPasses(ListNode head, int n) {
     ListNode iterator = new ListNode(-1);
     iterator.next = head;

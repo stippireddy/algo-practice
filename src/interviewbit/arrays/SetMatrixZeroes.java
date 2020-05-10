@@ -9,6 +9,7 @@ package interviewbit.arrays;
 import java.util.ArrayList;
 
 public class SetMatrixZeroes {
+
   public void setZeroes(ArrayList<ArrayList<Integer>> a) {
     int rowMax = a.size();
     int colMax = a.get(0).size();

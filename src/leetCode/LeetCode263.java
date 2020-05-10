@@ -1,6 +1,7 @@
 package leetCode;
 
 public class LeetCode263 {
+
   public boolean isUgly(int num) {
     if (num == 0) {
       return false;

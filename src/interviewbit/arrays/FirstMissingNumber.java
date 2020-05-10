@@ -9,6 +9,7 @@ package interviewbit.arrays;
 import java.util.ArrayList;
 
 public class FirstMissingNumber {
+
   public int firstMissingPositive(ArrayList<Integer> a) {
     for (int i = 0; i < a.size(); i++) {
       if (a.get(i) < 1) {

@@ -3,15 +3,14 @@
  *
  * <p>
  * This LeetCode problem can be found @ https://leetcode.com/problems/path-sum/description/
- * 
  */
 package leetCode;
 
 import java.util.ArrayDeque;
-
 import karumanchi.trees.TreeNode;
 
 public class LeetCode112 {
+
   public boolean hasPathSumRecursive(TreeNode root, int sum) {
     if (root == null) {
       return false;

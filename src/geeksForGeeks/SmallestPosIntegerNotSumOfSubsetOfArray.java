@@ -6,6 +6,7 @@ package geeksForGeeks;
  * */
 
 public class SmallestPosIntegerNotSumOfSubsetOfArray {
+
   public static int find(int[] array) {
     int result = 1;
     for (int i = 0; i < array.length; i++) {

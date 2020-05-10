@@ -7,7 +7,7 @@
 package leetCode;
 
 public class LeetCode012 {
-  
+
   // This is my initial intuition for solving this problem.
   public String intToRoman1(int num) {
     StringBuffer sb = new StringBuffer();

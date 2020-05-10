@@ -2,12 +2,12 @@
  * Created by Sarveswara Tippireddy on Aug 26, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/linked-list-cycle-ii/description/
+ * This LeetCode problem can be found @ https://leetcode.com/problems/linked-list-cycle-ii/description/
  */
 package leetCode;
 
 public class LeetCode142 {
+
   public ListNode detectCycle(ListNode head) {
     ListNode tortoise = head;
     ListNode hare = head;

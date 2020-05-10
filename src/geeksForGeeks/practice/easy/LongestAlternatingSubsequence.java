@@ -5,8 +5,7 @@
  * http://practice.geeksforgeeks.org/problems/longest-alternating-subsequence/0
  *
  * <p>The solution editorials can be found @
- * http://www.geeksforgeeks.org/longest-alternating-subsequence/
- * http://www.geeksforgeeks.org/longest-zig-zag-subsequence/
+ * http://www.geeksforgeeks.org/longest-alternating-subsequence/ http://www.geeksforgeeks.org/longest-zig-zag-subsequence/
  */
 package geeksForGeeks.practice.easy;
 
@@ -14,6 +13,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class LongestAlternatingSubsequence {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();

@@ -3,6 +3,7 @@ package leetCode;
 import karumanchi.trees.TreeNode;
 
 public class LeetCode606 {
+
   public String tree2strRecursive(TreeNode t) {
     StringBuffer sb = new StringBuffer();
     stringBuilder(t, sb);
@@ -25,10 +26,10 @@ public class LeetCode606 {
       }
     }
   }
-  
+
   public String tree2strIterative(TreeNode t) {
     //https://leetcode.com/articles/construct-string-from-binary-tree/
-      //TODO Complete this
-      return null;
+    //TODO Complete this
+    return null;
   }
 }

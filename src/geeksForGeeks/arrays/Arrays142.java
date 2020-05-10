@@ -7,6 +7,7 @@
 package geeksForGeeks.arrays;
 
 public class Arrays142 {
+
   public void reOrder(int[] a, int[] indices) {
     for (int i = 0; i < indices.length; i++) {
       while (indices[i] != i) {

@@ -4,7 +4,7 @@ import karumanchi.trees.TreeNode;
 
 public class BST2 {
 
-    TreeNode deleteNode(TreeNode root, int key) {
+  TreeNode deleteNode(TreeNode root, int key) {
     if (root == null) {
       return root;
     }

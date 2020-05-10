@@ -9,6 +9,7 @@ package interviewbit.binarySearch;
 import java.util.List;
 
 public class CountElementOccurence {
+
   public int findCount(final List<Integer> a, int b) {
     int left = 0;
     int right = a.size() - 1;
@@ -62,7 +63,9 @@ public class CountElementOccurence {
         left = mid + 1;
       }
     }
-    if (leftIndex == -1) return 0;
+    if (leftIndex == -1) {
+      return 0;
+    }
     return rightIndex - leftIndex + 1;
   }
 }

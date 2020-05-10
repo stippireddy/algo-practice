@@ -1,7 +1,10 @@
-/** Created by Sarveswara Tippireddy on Jul 3, 2017 */
+/**
+ * Created by Sarveswara Tippireddy on Jul 3, 2017
+ */
 package generalImplementations;
 
 public class BinaryIndexedTree1 {
+
   int[] bit;
   int[] input;
 

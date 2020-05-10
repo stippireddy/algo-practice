@@ -3,7 +3,6 @@
  *
  * <p>
  * This LeetCode problem can be found @ https://leetcode.com/problems/valid-parentheses/description/
- * 
  */
 package leetCode;
 
@@ -11,6 +10,7 @@ import java.util.ArrayDeque;
 import java.util.HashMap;
 
 public class LeetCode020 {
+
   public boolean isValid(String s) {
     ArrayDeque<Character> stack = new ArrayDeque<>();
     HashMap<Character, Character> map = new HashMap<>();

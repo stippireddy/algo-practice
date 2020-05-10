@@ -2,15 +2,14 @@
  * Created by Sarveswara Tippireddy on Sep 2, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/
- * 
+ * This LeetCode problem can be found @ https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/
  */
 package leetCode;
 
 import java.util.PriorityQueue;
 
 public class LeetCode378 {
+
   public int kthSmallestUsingPriorityQueue(int[][] matrix, int k) {
     PriorityQueue<HeapNode> pq = new PriorityQueue<>((x, y) -> x.val - y.val);
     for (int i = 0; i < matrix.length; i++) {
@@ -34,6 +33,7 @@ public class LeetCode378 {
 
 
 class HeapNode {
+
   int val;
   int row;
   int col;

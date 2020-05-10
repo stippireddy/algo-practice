@@ -3,7 +3,6 @@
  *
  * <p>
  * This LeetCode problem can be found @ https://leetcode.com/problems/summary-ranges/description/
- * 
  */
 package leetCode;
 
@@ -11,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LeetCode228 {
+
   public List<String> summaryRanges(int[] nums) {
     List<String> result = new ArrayList<>();
     if (nums.length == 0) {

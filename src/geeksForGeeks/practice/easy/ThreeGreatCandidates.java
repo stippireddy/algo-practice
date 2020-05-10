@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class ThreeGreatCandidates {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int T = sc.nextInt();
     while (T-- > 0) {
@@ -36,7 +36,7 @@ public class ThreeGreatCandidates {
       if (a[i - 1] < a[i]) {
         maxLeft[i] = Integer.max(a[i - 1], a[i - 2]);
       } else {
-        
+
       }
     }
     return 0;

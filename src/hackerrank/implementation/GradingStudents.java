@@ -8,6 +8,7 @@ package hackerrank.implementation;
 import java.util.Scanner;
 
 public class GradingStudents {
+
   static int[] solve(int[] grades) {
     int[] result = new int[grades.length];
     int i = 0;

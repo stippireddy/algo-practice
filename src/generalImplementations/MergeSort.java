@@ -1,7 +1,10 @@
-/** Created by Sarveswara Tippireddy on Jul 3, 2017 */
+/**
+ * Created by Sarveswara Tippireddy on Jul 3, 2017
+ */
 package generalImplementations;
 
 public class MergeSort {
+
   public static void sort(int[] a) {
     if (a.length < 2) {
       return;

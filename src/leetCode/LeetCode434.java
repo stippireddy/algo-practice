@@ -2,13 +2,12 @@
  * Created by Sarveswara Tippireddy on Sep 2, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/number-of-segments-in-a-string/description/
- * 
+ * This LeetCode problem can be found @ https://leetcode.com/problems/number-of-segments-in-a-string/description/
  */
 package leetCode;
 
 public class LeetCode434 {
+
   public int countSegments(String s) {
     if (s.length() == 0) {
       return 0;

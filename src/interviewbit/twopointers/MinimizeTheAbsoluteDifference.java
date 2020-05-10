@@ -7,10 +7,12 @@
 package interviewbit.twopointers;
 
 import java.util.ArrayList;
+
 //A : [ 1, 4, 5, 8, 10 ]
 //B : [ 6, 9, 15 ]
 //C : [ 2, 3, 6, 6 ]
 public class MinimizeTheAbsoluteDifference {
+
   public int solve(ArrayList<Integer> a, ArrayList<Integer> b, ArrayList<Integer> c) {
     int i = 0, j = 0, k = 0;
     int prevA = a.get(i), prevB = b.get(j), prevC = c.get(k);

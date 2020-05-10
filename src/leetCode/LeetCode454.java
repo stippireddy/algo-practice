@@ -9,6 +9,7 @@ package leetCode;
 import java.util.HashMap;
 
 public class LeetCode454 {
+
   public int fourSumCount(int[] a, int[] b, int[] c, int[] d) {
     HashMap<Integer, Integer> map = new HashMap<>();
     int count = 0;

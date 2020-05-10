@@ -1,7 +1,10 @@
-/** Created by Sarveswara Tippireddy on Jul 4, 2017 */
+/**
+ * Created by Sarveswara Tippireddy on Jul 4, 2017
+ */
 package generalImplementations;
 
 public class HeapSort {
+
   public static void sort(int[] a) {
     createMaxHeap(a);
     int heapSize = a.length;

@@ -2,10 +2,9 @@ package generalImplementations;
 
 import static org.testng.Assert.assertEquals;
 
-import org.testng.annotations.Test;
-
 import leetCode.ListNode;
 import leetCode.ListUtils;
+import org.testng.annotations.Test;
 
 public class InsertionSortTest {
 
@@ -20,21 +19,21 @@ public class InsertionSortTest {
     int[] a7 = {6, 6, 7, 8, 6, 9, 3, 2, 1, 1, 4, 6, 5, 10};
     int[] a8 = {64, 25, 12, 22, 11};
     InsertionSort.sort(a1);
-    assertEquals(a1, new int[] {});
+    assertEquals(a1, new int[]{});
     InsertionSort.sort(a2);
-    assertEquals(a2, new int[] {1});
+    assertEquals(a2, new int[]{1});
     InsertionSort.sort(a3);
-    assertEquals(a3, new int[] {1, 1, 1});
+    assertEquals(a3, new int[]{1, 1, 1});
     InsertionSort.sort(a4);
-    assertEquals(a4, new int[] {1, 2, 3, 4});
+    assertEquals(a4, new int[]{1, 2, 3, 4});
     InsertionSort.sort(a5);
-    assertEquals(a5, new int[] {1, 2, 3, 4});
+    assertEquals(a5, new int[]{1, 2, 3, 4});
     InsertionSort.sort(a6);
-    assertEquals(a6, new int[] {1, 1, 2, 2, 3, 3, 5, 6});
+    assertEquals(a6, new int[]{1, 1, 2, 2, 3, 3, 5, 6});
     InsertionSort.sort(a7);
-    assertEquals(a7, new int[] {1, 1, 2, 3, 4, 5, 6, 6, 6, 6, 7, 8, 9, 10});
+    assertEquals(a7, new int[]{1, 1, 2, 3, 4, 5, 6, 6, 6, 6, 7, 8, 9, 10});
     InsertionSort.sort(a8);
-    assertEquals(a8, new int[] {11, 12, 22, 25, 64});
+    assertEquals(a8, new int[]{11, 12, 22, 25, 64});
   }
 
   @Test
@@ -48,21 +47,21 @@ public class InsertionSortTest {
     int[] a7 = {6, 6, 7, 8, 6, 9, 3, 2, 1, 1, 4, 6, 5, 10};
     int[] a8 = {64, 25, 12, 22, 11};
     ListNode result = InsertionSort.sort(ListUtils.createList(a1));
-    assertEquals(ListUtils.listToArray(result), new int[] {});
+    assertEquals(ListUtils.listToArray(result), new int[]{});
     result = InsertionSort.sort(ListUtils.createList(a2));
-    assertEquals(ListUtils.listToArray(result), new int[] {1});
+    assertEquals(ListUtils.listToArray(result), new int[]{1});
     result = InsertionSort.sort(ListUtils.createList(a3));
-    assertEquals(ListUtils.listToArray(result), new int[] {1, 1, 1});
+    assertEquals(ListUtils.listToArray(result), new int[]{1, 1, 1});
     result = InsertionSort.sort(ListUtils.createList(a4));
-    assertEquals(ListUtils.listToArray(result), new int[] {1, 2, 3, 4});
+    assertEquals(ListUtils.listToArray(result), new int[]{1, 2, 3, 4});
     result = InsertionSort.sort(ListUtils.createList(a5));
-    assertEquals(ListUtils.listToArray(result), new int[] {1, 2, 3, 4});
+    assertEquals(ListUtils.listToArray(result), new int[]{1, 2, 3, 4});
     result = InsertionSort.sort(ListUtils.createList(a6));
-    assertEquals(ListUtils.listToArray(result), new int[] {1, 1, 2, 2, 3, 3, 5, 6});
+    assertEquals(ListUtils.listToArray(result), new int[]{1, 1, 2, 2, 3, 3, 5, 6});
     result = InsertionSort.sort(ListUtils.createList(a7));
     assertEquals(
-        ListUtils.listToArray(result), new int[] {1, 1, 2, 3, 4, 5, 6, 6, 6, 6, 7, 8, 9, 10});
+        ListUtils.listToArray(result), new int[]{1, 1, 2, 3, 4, 5, 6, 6, 6, 6, 7, 8, 9, 10});
     result = InsertionSort.sort(ListUtils.createList(a8));
-    assertEquals(ListUtils.listToArray(result), new int[] {11, 12, 22, 25, 64});
+    assertEquals(ListUtils.listToArray(result), new int[]{11, 12, 22, 25, 64});
   }
 }

@@ -1,6 +1,7 @@
 package generalImplementations;
 
 public class BubbleSort {
+
   public static void sort(int[] a) {
     for (int i = a.length - 1; i > 0; i--) {
       boolean swap = false;
@@ -17,9 +18,10 @@ public class BubbleSort {
       }
     }
   }
+
   /**
    * Recursive Bubble Sort has no performance/implementation advantages, but can be a good question
-   * to check one’s understanding of Bubble Sort and recursion.
+   * to check oneï¿½s understanding of Bubble Sort and recursion.
    */
   public static void sortRecursive(int[] a) {
     helper(a, a.length - 1);

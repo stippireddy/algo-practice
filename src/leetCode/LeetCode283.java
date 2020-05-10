@@ -1,6 +1,7 @@
 package leetCode;
 
 public class LeetCode283 {
+
   public void moveZeroes(int[] nums) {
     int i = 0;
     int length = nums.length;

@@ -3,7 +3,6 @@ package leetCode;
 import static org.testng.Assert.assertEquals;
 
 import java.util.Arrays;
-
 import org.testng.annotations.Test;
 
 public class LeetCode056Test {

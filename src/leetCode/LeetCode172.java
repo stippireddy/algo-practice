@@ -2,13 +2,12 @@
  * Created by Sarveswara Tippireddy on Aug 31, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/factorial-trailing-zeroes/description/
- * 
+ * This LeetCode problem can be found @ https://leetcode.com/problems/factorial-trailing-zeroes/description/
  */
 package leetCode;
 
 public class LeetCode172 {
+
   public int trailingZeroes(int n) {
     int temp = n;
     int count5 = 0;

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class HotelBookingsPossible {
+
   public boolean hotel(ArrayList<Integer> arrive, ArrayList<Integer> depart, int k) {
     ArrayList<Interval> guestList = new ArrayList<>();
     for (int i = 0; i < arrive.size(); i++) {
@@ -37,17 +38,18 @@ public class HotelBookingsPossible {
   }
 
   private class Interval implements Comparable<Interval> {
+
     private int day;
 
     private int isStart;
 
-    public int isStart() {
-      return isStart;
-    }
-
     public Interval(int day, int isStart) {
       this.day = day;
       this.isStart = isStart;
+    }
+
+    public int isStart() {
+      return isStart;
     }
 
     @Override

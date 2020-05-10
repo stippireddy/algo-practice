@@ -3,7 +3,7 @@ package geeksForGeeks;
 /*
 * This geeksforgeeks problem can be found @ http://www.geeksforgeeks.org/find-zeroes-to-be-flipped-so-that-number-of-consecutive-1s-is-maximized/
 *
-* Given an integer array and an integer m, find the maximum number of consecutive 1’s in array that can be formed by flipping at most m zeroes.
+* Given an integer array and an integer m, find the maximum number of consecutive 1ï¿½s in array that can be formed by flipping at most m zeroes.
 *
    Input:   array[] = {1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1}
    m = 2
@@ -22,6 +22,7 @@ package geeksForGeeks;
 */
 
 public class FlipZeroesToMaximizeConsecutiveOnes {
+
   public int findMaxConsecutiveOnes(int[] array, int m) {
     int low = 0;
     int high = 0;
