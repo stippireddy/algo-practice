@@ -3,11 +3,11 @@
  *
  * <p>
  * This LeetCode problem can be found @ https://leetcode.com/problems/add-binary/description/
- * 
  */
 package leetCode;
 
 public class LeetCode067 {
+
   public String addBinary(String a, String b) {
     int i = a.length() - 1, j = b.length() - 1;
     int carry = 0;

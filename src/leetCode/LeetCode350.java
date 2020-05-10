@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class LeetCode350 {
+
   public int[] intersect(int[] nums1, int[] nums2) {
     ArrayList<Integer> list = new ArrayList<>();
     Arrays.sort(nums1);

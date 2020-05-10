@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SpiralOrderMatrixI {
+
   public ArrayList<Integer> spiralOrder(final List<ArrayList<Integer>> a) {
     ArrayList<Integer> result = new ArrayList<Integer>();
     int[][] input = new int[a.size()][a.get(0).size()];

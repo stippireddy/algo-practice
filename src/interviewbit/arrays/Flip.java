@@ -8,6 +8,7 @@ package interviewbit.arrays;
 import java.util.ArrayList;
 
 public class Flip {
+
   public ArrayList<Integer> flip(String a) {
     ArrayList<Integer> res = new ArrayList<>();
     int maxFlips = 0;

@@ -1,10 +1,10 @@
 package leetCode;
 
 import java.util.ArrayDeque;
-
 import karumanchi.trees.TreeNode;
 
 public class LeetCode404 {
+
   public int sumOfLeftLeavesRecursive(TreeNode root) {
     if (root == null) {
       return 0;

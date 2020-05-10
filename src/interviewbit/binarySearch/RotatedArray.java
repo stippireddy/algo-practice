@@ -8,6 +8,7 @@ package interviewbit.binarySearch;
 import java.util.List;
 
 public class RotatedArray {
+
   public int findMin(final List<Integer> a) {
     int left = 0, right = a.size() - 1, n = a.size();
     while (left <= right) {

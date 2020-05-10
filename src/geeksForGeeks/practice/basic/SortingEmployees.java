@@ -3,7 +3,6 @@
  *
  * <p>This is a GeeksForGeeks problem. The problem statement can be found @
  * http://practice.geeksforgeeks.org/problems/sorting-employees/0
- *
  */
 package geeksForGeeks.practice.basic;
 
@@ -11,6 +10,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class SortingEmployees {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
@@ -31,6 +31,7 @@ public class SortingEmployees {
   }
 
   static class Employee implements Comparable<Employee> {
+
     private String name;
     private int salary;
 

@@ -3,7 +3,6 @@ package leetCode;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import karumanchi.trees.TreeNode;
 
 public class LeetCode508 {

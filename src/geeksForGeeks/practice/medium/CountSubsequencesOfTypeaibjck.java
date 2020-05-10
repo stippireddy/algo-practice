@@ -15,6 +15,7 @@ package geeksForGeeks.practice.medium;
 import java.util.Scanner;
 
 public class CountSubsequencesOfTypeaibjck {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
@@ -51,7 +52,7 @@ public class CountSubsequencesOfTypeaibjck {
     }
     return dpABC[s.length()];
   }
-  
+
   public static int calculateEfficientSpaceUse(String s) {
     int countA = 0;
     int countAB = 0;

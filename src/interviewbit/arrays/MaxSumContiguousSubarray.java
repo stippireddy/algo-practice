@@ -9,6 +9,7 @@ package interviewbit.arrays;
 import java.util.List;
 
 public class MaxSumContiguousSubarray {
+
   public int maxSubArray(final List<Integer> a) {
     int minNegative = Integer.max(Integer.MIN_VALUE, a.get(0));
     int maxSum = a.get(0);

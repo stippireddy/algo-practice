@@ -1,7 +1,6 @@
 package karumanchi.trees;
 
 import java.util.List;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,7 +9,7 @@ public class TreeUtilsTest {
 
   @Test
   public void testTraversals1() {
-    TreeNode root = TreeUtils.createTree(new Integer[] {null});
+    TreeNode root = TreeUtils.createTree(new Integer[]{null});
     Assert.assertNull(TreeUtils.preOrder(root));
     Assert.assertNull(TreeUtils.inOrder(root));
     Assert.assertNull(TreeUtils.postOrder(root));
@@ -58,7 +57,7 @@ public class TreeUtilsTest {
       Integer[] inOrderExpected,
       Integer[] postOrderExpected) {
     TreeNode root = TreeUtils.createTree(input);
-    
+
     List<Integer> result = TreeUtils.preOrder(root);
     Assert.assertEquals(preOrderExpected, result.toArray(new Integer[result.size()]));
     result = TreeUtils.preOrderRecursive(root);

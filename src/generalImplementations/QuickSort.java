@@ -1,7 +1,10 @@
-/** Created by Sarveswara Tippireddy on Jul 4, 2017 */
+/**
+ * Created by Sarveswara Tippireddy on Jul 4, 2017
+ */
 package generalImplementations;
 
 public class QuickSort {
+
   public static void sort(int[] a) {
     if (a.length < 2) {
       return;

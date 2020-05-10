@@ -1,6 +1,7 @@
 package leetCode;
 
 public class LeetCode453 {
+
   public int minMoves(int[] nums) {
     int min = Integer.MAX_VALUE;
     int max = Integer.MIN_VALUE;

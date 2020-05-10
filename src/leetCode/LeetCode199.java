@@ -2,10 +2,10 @@ package leetCode;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import karumanchi.trees.TreeNode;
 
 public class LeetCode199 {
+
   public List<Integer> rightSideViewBFSRecursion(TreeNode root) {
     ArrayList<Integer> result = new ArrayList<>();
     if (root == null) {

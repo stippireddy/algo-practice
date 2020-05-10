@@ -12,6 +12,7 @@ package geeksForGeeks.practice.easy;
 import java.util.Scanner;
 
 public class SortArrayOf0s1s2s {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
@@ -44,10 +45,10 @@ public class SortArrayOf0s1s2s {
       } else {
         mid++;
       }
- 
+
     }
   }
-  
+
   private static void swap(int[] input, int a, int b) {
     int temp = input[a];
     input[a] = input[b];

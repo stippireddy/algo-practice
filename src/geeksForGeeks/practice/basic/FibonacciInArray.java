@@ -12,6 +12,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 public class FibonacciInArray {
+
   private static HashSet<Integer> set = new HashSet<>();
 
   static {

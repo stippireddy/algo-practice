@@ -10,6 +10,7 @@ import java.util.HashSet;
 import java.util.List;
 
 public class FindDuplicateInArray {
+
   public int repeatedNumberInLinearTime(final List<Integer> a) {
     HashSet<Integer> set = new HashSet<>();
     for (int i : a) {
@@ -19,6 +20,7 @@ public class FindDuplicateInArray {
     }
     return -1;
   }
+
   // This solution is prompted as the problem asks specifically
   // to solve in less than linear space.
   public int repeatedNumber(final List<Integer> a) {

@@ -7,6 +7,7 @@
 package leetCode;
 
 public class LeetCode657 {
+
   public boolean judgeCircle(String moves) {
     int netHorizontalDistance = 0;
     int netVerticalDistance = 0;

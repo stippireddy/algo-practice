@@ -2,13 +2,12 @@
  * Created by Sarveswara Tippireddy on Sep 17, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/longest-continuous-increasing-subsequence/description/
- * 
+ * This LeetCode problem can be found @ https://leetcode.com/problems/longest-continuous-increasing-subsequence/description/
  */
 package leetCode;
 
 public class LeetCode674 {
+
   public int findLengthOfLCIS(int[] nums) {
     if (nums.length == 0) {
       return 0;

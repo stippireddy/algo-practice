@@ -2,8 +2,7 @@
  * Created by Sarveswara Tippireddy
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/find-the-duplicate-number/description/
+ * This LeetCode problem can be found @ https://leetcode.com/problems/find-the-duplicate-number/description/
  */
 package leetCode;
 

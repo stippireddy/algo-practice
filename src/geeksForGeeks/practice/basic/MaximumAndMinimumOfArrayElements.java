@@ -8,10 +8,11 @@
  * http://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/
  */
 package geeksForGeeks.practice.basic;
-  
+
 import java.util.Scanner;
 
 public class MaximumAndMinimumOfArrayElements {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
@@ -53,7 +54,7 @@ public class MaximumAndMinimumOfArrayElements {
         min = Integer.min(min, a[i]);
       }
     }
-    return new int[] {max, min};
+    return new int[]{max, min};
   }
 
   private static String printString(int[] input) {

@@ -7,6 +7,7 @@
 package geeksForGeeks.arrays;
 
 public class CountZeroesInRowColumnSortedMatrix {
+
   public int countZeros(int a[][], int n) {
     int count = 0;
     int[] firstRow = a[0];

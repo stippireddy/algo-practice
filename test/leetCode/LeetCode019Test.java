@@ -11,23 +11,23 @@ public class LeetCode019Test {
     LeetCode019 l = new LeetCode019();
     assertEquals(
         ListUtils.listToArray(
-            l.removeNthFromEndTwoPasses(ListUtils.createList(new int[] {1, 2, 3, 4, 5}), 2)),
-        new int[] {1, 2, 3, 5});
+            l.removeNthFromEndTwoPasses(ListUtils.createList(new int[]{1, 2, 3, 4, 5}), 2)),
+        new int[]{1, 2, 3, 5});
     assertEquals(
         ListUtils.listToArray(
-            l.removeNthFromEndTwoPasses(ListUtils.createList(new int[] {1, 2, 3, 4, 5}), 5)),
-        new int[] {2, 3, 4, 5});
+            l.removeNthFromEndTwoPasses(ListUtils.createList(new int[]{1, 2, 3, 4, 5}), 5)),
+        new int[]{2, 3, 4, 5});
     assertEquals(
         ListUtils.listToArray(
-            l.removeNthFromEndTwoPasses(ListUtils.createList(new int[] {1, 2, 3, 4, 5}), 5)),
-        new int[] {2, 3, 4, 5});
+            l.removeNthFromEndTwoPasses(ListUtils.createList(new int[]{1, 2, 3, 4, 5}), 5)),
+        new int[]{2, 3, 4, 5});
     assertEquals(
         ListUtils.listToArray(
-            l.removeNthFromEndTwoPasses(ListUtils.createList(new int[] {1, 2, 3, 4, 5}), 6)),
-        new int[] {2, 3, 4, 5});
+            l.removeNthFromEndTwoPasses(ListUtils.createList(new int[]{1, 2, 3, 4, 5}), 6)),
+        new int[]{2, 3, 4, 5});
     assertEquals(
-        ListUtils.listToArray(l.removeNthFromEndTwoPasses(ListUtils.createList(new int[] {1}), 1)),
-        new int[] {});
+        ListUtils.listToArray(l.removeNthFromEndTwoPasses(ListUtils.createList(new int[]{1}), 1)),
+        new int[]{});
   }
 
   @Test
@@ -35,18 +35,18 @@ public class LeetCode019Test {
     LeetCode019 l = new LeetCode019();
     assertEquals(
         ListUtils.listToArray(
-            l.removeNthFromEndSinglePass(ListUtils.createList(new int[] {1, 2, 3, 4, 5}), 2)),
-        new int[] {1, 2, 3, 5});
+            l.removeNthFromEndSinglePass(ListUtils.createList(new int[]{1, 2, 3, 4, 5}), 2)),
+        new int[]{1, 2, 3, 5});
     assertEquals(
         ListUtils.listToArray(
-            l.removeNthFromEndSinglePass(ListUtils.createList(new int[] {1, 2, 3, 4, 5}), 5)),
-        new int[] {2, 3, 4, 5});
+            l.removeNthFromEndSinglePass(ListUtils.createList(new int[]{1, 2, 3, 4, 5}), 5)),
+        new int[]{2, 3, 4, 5});
     assertEquals(
         ListUtils.listToArray(
-            l.removeNthFromEndSinglePass(ListUtils.createList(new int[] {1, 2, 3, 4, 5}), 5)),
-        new int[] {2, 3, 4, 5});
+            l.removeNthFromEndSinglePass(ListUtils.createList(new int[]{1, 2, 3, 4, 5}), 5)),
+        new int[]{2, 3, 4, 5});
     assertEquals(
-        ListUtils.listToArray(l.removeNthFromEndSinglePass(ListUtils.createList(new int[] {1}), 1)),
-        new int[] {});
+        ListUtils.listToArray(l.removeNthFromEndSinglePass(ListUtils.createList(new int[]{1}), 1)),
+        new int[]{});
   }
 }

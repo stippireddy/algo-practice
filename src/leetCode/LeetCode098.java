@@ -2,17 +2,15 @@ package leetCode;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import karumanchi.trees.TreeNode;
 
 public class LeetCode098 {
-  
+
   /**
-   * @param root
    * @return boolean variable that specifies if the given Tree is a valid BST
-   *     <p>This is a naive method traverses the tree to get the InOrder result. Then using the
-   *     property that each element should be greater than the previous element, it returns the
-   *     appropriate value.
+   * <p>This is a naive method traverses the tree to get the InOrder result. Then using the
+   * property that each element should be greater than the previous element, it returns the
+   * appropriate value.
    */
   public boolean isValidBST(TreeNode root) {
     List<Integer> result = inOrderTraversal(root);

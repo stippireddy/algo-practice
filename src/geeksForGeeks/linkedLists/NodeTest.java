@@ -1,17 +1,17 @@
 package geeksForGeeks.linkedLists;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
 public class NodeTest {
 
-	@Test
-	public void test() {
+  @Test
+  public void test() {
 
-		Node<Integer> node = new Node<Integer>(1);
-		assertTrue(1 == node.getData());
+    Node<Integer> node = new Node<Integer>(1);
+    assertTrue(1 == node.getData());
 
-	}
+  }
 
 }

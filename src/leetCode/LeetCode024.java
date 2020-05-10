@@ -1,6 +1,7 @@
 package leetCode;
 
 public class LeetCode024 {
+
   public ListNode swapPairsRecursive(ListNode head) {
     if (head == null || head.next == null) {
       return head;

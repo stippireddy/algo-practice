@@ -3,11 +3,11 @@
  *
  * <p>
  * This LeetCode problem can be found @ https://leetcode.com/problems/plus-one/description/
- * 
  */
 package leetCode;
 
 public class LeetCode066 {
+
   public int[] plusOne(int[] digits) {
     int carry = 1;
     for (int i = digits.length - 1; i >= 0; i--) {

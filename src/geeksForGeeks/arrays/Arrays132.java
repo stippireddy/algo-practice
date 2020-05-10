@@ -4,10 +4,11 @@ import java.util.Arrays;
 
 /**
  * @author Sarveswara Tippireddy
- *     <p>This GeeksforGeeks problem can be found @
- *     http://www.geeksforgeeks.org/find-pythagorean-triplet-in-an-unsorted-array/
+ * <p>This GeeksforGeeks problem can be found @
+ * http://www.geeksforgeeks.org/find-pythagorean-triplet-in-an-unsorted-array/
  */
 public class Arrays132 {
+
   public boolean findPythogoreanTriplets(int[] a) {
     for (int i = 0; i < a.length; i++) {
       a[i] = a[i] * a[i];

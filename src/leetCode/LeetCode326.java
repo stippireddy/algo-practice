@@ -7,6 +7,7 @@
 package leetCode;
 
 public class LeetCode326 {
+
   // Find the maximum possible power of 3 within the range of java integer.
   // If the max is perfectly divisible by the given n, then n is a power of 3.
   public boolean isPowerOfThree(int n) {

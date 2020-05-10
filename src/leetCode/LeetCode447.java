@@ -2,14 +2,14 @@
  * Created by Sarveswara Tippireddy on Aug 25, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/number-of-boomerangs/description/
+ * This LeetCode problem can be found @ https://leetcode.com/problems/number-of-boomerangs/description/
  */
 package leetCode;
 
 import java.util.HashMap;
 
 public class LeetCode447 {
+
   public int numberOfBoomerangs(int[][] points) {
     int count = 0;
     for (int i = 0; i < points.length; i++) {

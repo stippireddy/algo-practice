@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class AllFactors {
+
   public ArrayList<Integer> allFactors(int a) {
     ArrayList<Integer> result = new ArrayList<>();
     if (a == 1) {

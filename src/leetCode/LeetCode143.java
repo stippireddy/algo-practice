@@ -7,6 +7,7 @@
 package leetCode;
 
 public class LeetCode143 {
+
   public void reorderList(ListNode head) {
     if (head == null || head.next == null) {
       return;

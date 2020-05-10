@@ -2,13 +2,12 @@
  * Created by Sarveswara Tippireddy on Sep 2, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/validate-ip-address/description/
- * 
+ * This LeetCode problem can be found @ https://leetcode.com/problems/validate-ip-address/description/
  */
 package leetCode;
 
 public class LeetCode468 {
+
   public String validIPAddress(String ip) {
     if (ip.length() < 7) {
       return "Neither";

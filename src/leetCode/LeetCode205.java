@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class LeetCode205 {
+
   public boolean isIsomorphicUsingHashMap(String s, String t) {
     if (s.length() != t.length()) {
       return false;
@@ -51,8 +52,9 @@ public class LeetCode205 {
     int[] m1 = new int[256], m2 = new int[256];
     int count = 1;
     for (int i = 0; i < s.length(); i++) {
-      if (m1[s.charAt(i)] != m2[t.charAt(i)])
+      if (m1[s.charAt(i)] != m2[t.charAt(i)]) {
         return false;
+      }
       if (m1[s.charAt(i)] == 0) {
         m1[s.charAt(i)] = count;
         m2[t.charAt(i)] = count;

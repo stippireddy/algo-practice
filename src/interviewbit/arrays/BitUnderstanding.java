@@ -1,7 +1,10 @@
-/** Created by Sarveswara Tippireddy on Jul 3, 2017 */
+/**
+ * Created by Sarveswara Tippireddy on Jul 3, 2017
+ */
 package interviewbit.arrays;
 
 public class BitUnderstanding {
+
   public static void main(String[] args) {
     int i = 14;
     System.out.println(i & ~(i - 1));

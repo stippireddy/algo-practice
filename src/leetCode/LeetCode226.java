@@ -1,7 +1,6 @@
 package leetCode;
 
 import java.util.ArrayDeque;
-
 import karumanchi.trees.TreeNode;
 
 public class LeetCode226 {
@@ -37,7 +36,7 @@ public class LeetCode226 {
     }
     return root;
   }
-  
+
   public TreeNode invertTreeBFSIterative(TreeNode root) {
     if (root == null) {
       return root;

@@ -7,6 +7,7 @@
 package hackerrank.strings;
 
 public class RichieRich {
+
   static String richieRich(String s, int n, int count) {
     int i = 0, j = n - 1;
     StringBuffer sb = new StringBuffer(s);

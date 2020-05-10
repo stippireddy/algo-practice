@@ -9,6 +9,7 @@ package interviewbit.arrays;
 import java.util.ArrayList;
 
 public class KthRowPascalTriangle {
+
   public ArrayList<Integer> getRow(int a) {
     ArrayList<Integer> result = new ArrayList<>();
     for (int i = 0; i < a + 1; i++) {

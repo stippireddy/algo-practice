@@ -3,11 +3,11 @@
  *
  * <p>
  * This LeetCode problem can be found @ https://leetcode.com/problems/rotate-list/description/
- * 
  */
 package leetCode;
 
 public class LeetCode061 {
+
   public ListNode rotateRight(ListNode head, int k) {
     if (head == null || head.next == null) {
       return head;
@@ -18,7 +18,7 @@ public class LeetCode061 {
       iterator = iterator.next;
       size++;
     }
-    int moveForward = k%size;
+    int moveForward = k % size;
     iterator = head;
     while (moveForward > 0) {
       iterator = iterator.next;

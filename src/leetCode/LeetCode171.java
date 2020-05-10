@@ -2,12 +2,12 @@
  * Created by Sarveswara Tippireddy on Aug 30, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/excel-sheet-column-number/description/
+ * This LeetCode problem can be found @ https://leetcode.com/problems/excel-sheet-column-number/description/
  */
 package leetCode;
 
 public class LeetCode171 {
+
   public int titleToNumber(String s) {
     int result = 0;
     int mul = 1;

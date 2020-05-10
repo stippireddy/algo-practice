@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ToppersOfClass {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
@@ -38,8 +39,9 @@ public class ToppersOfClass {
     }
     System.out.println(sb.substring(0, sb.length() - 1));
   }
-  
+
   static class Score implements Comparable<Score> {
+
     int index;
     int score;
 
@@ -55,7 +57,7 @@ public class ToppersOfClass {
       }
       return this.index - o.index;
     }
-    
+
   }
 }
 

@@ -3,6 +3,7 @@ package geeksForGeeks.arrays;
 import java.util.Arrays;
 
 public class KSortedArray {
+
   public boolean isKSorted(int[] a, int k) {
     boolean kSorted = true;
     int[] b = Arrays.copyOf(a, a.length);

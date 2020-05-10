@@ -12,6 +12,7 @@ package geeksForGeeks.practice.easy;
 import java.util.Scanner;
 
 public class LargestZigZagSubsequence {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();

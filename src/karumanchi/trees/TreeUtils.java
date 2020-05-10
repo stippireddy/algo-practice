@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Queue;
 
 public class TreeUtils {
+
   public static List<Integer> preOrderRecursive(TreeNode root) {
     if (root == null) {
       return null;
@@ -62,7 +63,9 @@ public class TreeUtils {
   }
 
   public static void levelOrder(TreeNode head) {
-    if (head == null) return;
+    if (head == null) {
+      return;
+    }
     StringBuffer s = new StringBuffer();
     Queue<TreeNode> q = new ArrayDeque<TreeNode>();
     q.add(head);
@@ -80,7 +83,9 @@ public class TreeUtils {
   }
 
   public static void reverseLevelOrder(TreeNode head) {
-    if (head == null) return;
+    if (head == null) {
+      return;
+    }
     StringBuffer s = new StringBuffer();
     Deque<TreeNode> stack = new ArrayDeque<TreeNode>();
     Queue<TreeNode> q = new ArrayDeque<TreeNode>();

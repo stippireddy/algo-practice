@@ -3,7 +3,7 @@ package leetCode;
 import karumanchi.trees.TreeNode;
 
 public class LeetCode563 {
-  
+
   public int findTilt(TreeNode root) {
     if (root == null) {
       return 0;
@@ -26,5 +26,5 @@ public class LeetCode563 {
     result[2] = Math.abs(result[0] - result[1]) + leftResult[2] + rightResult[2];
     return result;
   }
-  
+
 }

@@ -3,11 +3,11 @@ package geeksForGeeks.trees;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
-
 import karumanchi.trees.TreeNode;
 
 //TODO create test cases
 public class BinaryTreeVerticalOrder {
+
   void verticalOrder(TreeNode root) {
     TreeMap<Integer, List<Integer>> map = new TreeMap<>();
     verticalOrderHelper(map, 0, root);

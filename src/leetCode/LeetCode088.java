@@ -1,14 +1,11 @@
 package leetCode;
 
 public class LeetCode088 {
+
   /**
-   * @param nums1
-   * @param m
-   * @param nums2
-   * @param n
-   *     <p>The final result is that all the elements from nums2 are added to nums1 so that it forms
-   *     a sorted array. This method is inefficient as the elements in nums1 are shifted whenever an
-   *     insert is to be made.
+   * @param n <p>The final result is that all the elements from nums2 are added to nums1 so that it
+   * forms a sorted array. This method is inefficient as the elements in nums1 are shifted whenever
+   * an insert is to be made.
    */
   public void mergeInefficient(int[] nums1, int m, int[] nums2, int n) {
     int i = 0, j = 0;

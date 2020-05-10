@@ -2,12 +2,14 @@ package geeksForGeeks.arrays;
 
 import java.util.Arrays;
 import java.util.HashMap;
+
 /**
  * @author Sarveswara Tippireddy
- *     <p>This GeeksforGeeks problem can be found @
- *     http://www.geeksforgeeks.org/given-two-unsorted-arrays-find-pairs-whose-sum-x/
+ * <p>This GeeksforGeeks problem can be found @
+ * http://www.geeksforgeeks.org/given-two-unsorted-arrays-find-pairs-whose-sum-x/
  */
 public class PairsWithAGivenSumInTwoUnsortedArrays {
+
   public String usingHashing(int[] a, int[] b, int x) {
     HashMap<Integer, Integer> map = new HashMap<>();
     for (int i : b) {

@@ -1,6 +1,7 @@
 package geeksForGeeks.arrays;
 
 public class Arrays130 {
+
   public int findLargestPairSum(int[] a) {
     int firstHighest = Integer.MIN_VALUE;
     int secondHighest = Integer.MIN_VALUE;

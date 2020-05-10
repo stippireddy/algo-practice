@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LeetCode056 {
+
   public List<Interval> merge(List<Interval> intervals) {
     if (intervals.size() < 2) {
       return intervals;

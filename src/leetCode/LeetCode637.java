@@ -2,18 +2,17 @@
  * Created by Sarveswara Tippireddy on Aug 29, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/average-of-levels-in-binary-tree/description/
+ * This LeetCode problem can be found @ https://leetcode.com/problems/average-of-levels-in-binary-tree/description/
  */
 package leetCode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-
 import karumanchi.trees.TreeNode;
 
 public class LeetCode637 {
+
   public List<Double> averageOfLevelsUsingBFS(TreeNode root) {
     ArrayList<Double> result = new ArrayList<>();
     if (root == null) {

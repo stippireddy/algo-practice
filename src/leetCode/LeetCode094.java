@@ -3,10 +3,10 @@ package leetCode;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
-
 import karumanchi.trees.TreeNode;
 
 public class LeetCode094 {
+
   public List<Integer> inorderTraversal(TreeNode root) {
     ArrayList<Integer> result = new ArrayList<>();
     if (root == null) {

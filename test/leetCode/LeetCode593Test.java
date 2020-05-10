@@ -11,8 +11,8 @@ public class LeetCode593Test {
   public void validSquare() {
     LeetCode593 l = new LeetCode593();
     assertTrue(
-        l.validSquare(new int[] {0, 0}, new int[] {1, 1}, new int[] {1, 0}, new int[] {0, 1}));
+        l.validSquare(new int[]{0, 0}, new int[]{1, 1}, new int[]{1, 0}, new int[]{0, 1}));
     assertFalse(
-        l.validSquare(new int[] {0, 0}, new int[] {1, 1}, new int[] {1, 0}, new int[] {0, 0}));
+        l.validSquare(new int[]{0, 0}, new int[]{1, 1}, new int[]{1, 0}, new int[]{0, 0}));
   }
 }

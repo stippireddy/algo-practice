@@ -9,7 +9,7 @@ public class Basics04Test {
   @Test
   public void findMaxContiguousSumKadane() {
     Basics04 b = new Basics04();
-    assertEquals(b.findMaxContiguousSumKadane(new int[] {-8, -9, -3, -10, -7, -1}), -1);
-    assertEquals(b.findMaxContiguousSumKadane(new int[] {-8}), -8);
+    assertEquals(b.findMaxContiguousSumKadane(new int[]{-8, -9, -3, -10, -7, -1}), -1);
+    assertEquals(b.findMaxContiguousSumKadane(new int[]{-8}), -8);
   }
 }

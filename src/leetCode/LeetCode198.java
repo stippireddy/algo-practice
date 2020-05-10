@@ -1,6 +1,7 @@
 package leetCode;
 
 public class LeetCode198 {
+
   public int rob(int[] nums) {
     int i = 0;
     int sum = 0;

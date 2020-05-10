@@ -1,6 +1,7 @@
 package leetCode;
 
 public class LeetCode203 {
+
   public ListNode removeElements(ListNode head, int val) {
     ListNode prev = head;
     while (head != null && head.val == val) {
@@ -28,7 +29,7 @@ public class LeetCode203 {
     }
     return nodeToBeReturned;
   }
-  
+
   public ListNode removeElementsRecursive(ListNode head, int val) {
     if (head == null) {
       return null;

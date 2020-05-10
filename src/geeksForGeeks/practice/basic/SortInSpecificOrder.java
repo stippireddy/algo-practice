@@ -14,6 +14,7 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class SortInSpecificOrder {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
@@ -61,6 +62,7 @@ public class SortInSpecificOrder {
         });
     Arrays.sort(a, odd, a.length);
   }
+
   public static void sortByUsingNegNumbers(Integer[] a) {
     for (int i = 0; i < a.length; i++) {
       if ((a[i] & 1) != 0) {

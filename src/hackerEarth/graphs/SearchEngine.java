@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SearchEngine {
+
   public static void main(String args[]) throws Exception {
     Scanner s = new Scanner(System.in);
     int n = s.nextInt();
@@ -40,15 +41,6 @@ public class SearchEngine {
     return root.weight;
   }
 
-  private static class TrieNode {
-    int weight;
-    TrieNode[] chars = new TrieNode[26];
-
-    TrieNode(int weight) {
-      this.weight = weight;
-    }
-  }
-
   private static TrieNode createTrie(ArrayList<String> strings, ArrayList<Integer> weights) {
     TrieNode root = new TrieNode(-1);
     for (int i = 0; i < strings.size(); i++) {
@@ -73,6 +65,16 @@ public class SearchEngine {
       trie.chars[c - 'a'] = new TrieNode(weight);
       trie = trie.chars[c - 'a'];
       i++;
+    }
+  }
+
+  private static class TrieNode {
+
+    int weight;
+    TrieNode[] chars = new TrieNode[26];
+
+    TrieNode(int weight) {
+      this.weight = weight;
     }
   }
 }

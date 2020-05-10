@@ -9,62 +9,62 @@ import java.util.StringTokenizer;
 
 public class INTEST {
 
-	public static void main(String[] args) {
-		FastScanner s = new FastScanner();
-		int n = s.nextInt();
-		int k = s.nextInt();
-		int count = 0;
-		while (n-- > 0) {
-			if (s.nextInt() % k == 0) {
-				count++;
-			}
-		}
-		System.out.println(count);
-	}
+  public static void main(String[] args) {
+    FastScanner s = new FastScanner();
+    int n = s.nextInt();
+    int k = s.nextInt();
+    int count = 0;
+    while (n-- > 0) {
+      if (s.nextInt() % k == 0) {
+        count++;
+      }
+    }
+    System.out.println(count);
+  }
 
-	public static class FastScanner {
+  public static class FastScanner {
 
-		BufferedReader br;
-		StringTokenizer st;
+    BufferedReader br;
+    StringTokenizer st;
 
-		public FastScanner(String s) {
-			try {
-				br = new BufferedReader(new FileReader(s));
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
-		}
+    public FastScanner(String s) {
+      try {
+        br = new BufferedReader(new FileReader(s));
+      } catch (FileNotFoundException e) {
+        e.printStackTrace();
+      }
+    }
 
-		public FastScanner() {
-			br = new BufferedReader(new InputStreamReader(System.in));
-		}
+    public FastScanner() {
+      br = new BufferedReader(new InputStreamReader(System.in));
+    }
 
-		public String next() {
-			if (st == null || !st.hasMoreTokens()) {
-				try {
-					st = new StringTokenizer(br.readLine());
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-			return st.nextToken();
-		}
+    public String next() {
+      if (st == null || !st.hasMoreTokens()) {
+        try {
+          st = new StringTokenizer(br.readLine());
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+      }
+      return st.nextToken();
+    }
 
-		public int nextInt() {
-			return Integer.parseInt(next());
-		}
+    public int nextInt() {
+      return Integer.parseInt(next());
+    }
 
-		public long nextLong() {
-			return Long.parseLong(next());
-		}
+    public long nextLong() {
+      return Long.parseLong(next());
+    }
 
-		public double nextDouble() {
-			return Double.parseDouble(next());
-		}
+    public double nextDouble() {
+      return Double.parseDouble(next());
+    }
 
-		public void close() throws IOException {
-			br.close();
-		}
-	}
+    public void close() throws IOException {
+      br.close();
+    }
+  }
 
 }

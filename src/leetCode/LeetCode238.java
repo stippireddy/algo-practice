@@ -2,13 +2,12 @@
  * Created by Sarveswara Tippireddy on Sep 1, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/product-of-array-except-self/description/
- * 
+ * This LeetCode problem can be found @ https://leetcode.com/problems/product-of-array-except-self/description/
  */
 package leetCode;
 
 public class LeetCode238 {
+
   public int[] productExceptSelf1(int[] nums) {
     int product = 1;
     int numberOfZeroes = 0;

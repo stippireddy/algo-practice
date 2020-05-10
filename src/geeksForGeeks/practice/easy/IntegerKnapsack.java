@@ -12,6 +12,7 @@ package geeksForGeeks.practice.easy;
 import java.util.Scanner;
 
 public class IntegerKnapsack {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int numberOfTestCases = sc.nextInt();
@@ -45,13 +46,13 @@ public class IntegerKnapsack {
     if (dp[weight][n] != -1) {
       return dp[weight][n];
     }
-    if(weights[n-1]<=weight){
+    if (weights[n - 1] <= weight) {
       dp[weight][n] =
           Integer.max(
               dpHelper(weight - weights[n - 1], values, weights, dp, n - 1) + values[n - 1],
               dpHelper(weight, values, weights, dp, n - 1));
-    }else{
-      dp[weight][n] = dpHelper(weight, values, weights, dp, n-1);
+    } else {
+      dp[weight][n] = dpHelper(weight, values, weights, dp, n - 1);
     }
     return dp[weight][n];
   }

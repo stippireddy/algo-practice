@@ -2,13 +2,12 @@
  * Created by Sarveswara Tippireddy on Sep 1, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/complex-number-multiplication/description/
- * 
+ * This LeetCode problem can be found @ https://leetcode.com/problems/complex-number-multiplication/description/
  */
 package leetCode;
 
 public class LeetCode537 {
+
   public String complexNumberMultiply(String a, String b) {
     String[] aSplit = a.split("\\+");
     String[] bSplit = b.split("\\+");

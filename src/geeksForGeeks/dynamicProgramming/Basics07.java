@@ -2,10 +2,11 @@ package geeksForGeeks.dynamicProgramming;
 
 /**
  * @author Sarveswara Tippireddy
- *     <p>This GeeksforGeeks problem can be found @
- *     http://www.geeksforgeeks.org/dynamic-programming-set-3-longest-increasing-subsequence/
+ * <p>This GeeksforGeeks problem can be found @
+ * http://www.geeksforgeeks.org/dynamic-programming-set-3-longest-increasing-subsequence/
  */
 public class Basics07 {
+
   public int findLIS(int[] a) {
     int[] lis = new int[a.length];
     lis[0] = 1;

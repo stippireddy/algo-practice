@@ -7,6 +7,7 @@
 package geeksForGeeks.arrays;
 
 public class Arrays021 {
+
   public boolean isXTheMajorityElement(int[] a, int x) {
     if (a[a.length / 2] != x) {
       return false;

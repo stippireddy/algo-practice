@@ -5,12 +5,13 @@ import java.util.HashMap;
 
 /**
  * @author Sarveswara Tippireddy
- *     <p>This GeeksforGeeks problem can be found @
- *     http://www.geeksforgeeks.org/count-pairs-difference-equal-k/
- *     <p>The solution however is implemented for a slightly modified version of the above problem
- *     which can be found @ http://practice.geeksforgeeks.org/problems/pairs-with-difference-k/0
+ * <p>This GeeksforGeeks problem can be found @
+ * http://www.geeksforgeeks.org/count-pairs-difference-equal-k/
+ * <p>The solution however is implemented for a slightly modified version of the above problem
+ * which can be found @ http://practice.geeksforgeeks.org/problems/pairs-with-difference-k/0
  */
 public class Arrays104 {
+
   public int findPairsUsingHashing(int[] input, int x) {
     HashMap<Integer, Integer> map = new HashMap<>();
     for (int i : input) {

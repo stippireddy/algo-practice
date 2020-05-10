@@ -1,6 +1,7 @@
 package leetCode;
 
 public class LeetCode389 {
+
   public char findTheDifference(String s, String t) {
     int[] charCount = new int[26];
     for (int i = 0; i < t.length(); i++) {

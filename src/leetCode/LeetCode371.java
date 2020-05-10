@@ -1,6 +1,7 @@
 package leetCode;
 
 public class LeetCode371 {
+
   public int getSum(int a, int b) {
     int sum = a;
     while (b != 0) {

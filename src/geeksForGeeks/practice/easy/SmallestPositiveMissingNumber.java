@@ -6,14 +6,14 @@
  * http://practice.geeksforgeeks.org/problems/smallest-positive-missing-number/0
  *
  * <p>
- * The related solution editorial can be found @
- * http://www.geeksforgeeks.org/find-the-smallest-positive-number-missing-from-an-unsorted-array/
+ * The related solution editorial can be found @ http://www.geeksforgeeks.org/find-the-smallest-positive-number-missing-from-an-unsorted-array/
  */
 package geeksForGeeks.practice.easy;
 
 import java.util.Scanner;
 
 public class SmallestPositiveMissingNumber {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();

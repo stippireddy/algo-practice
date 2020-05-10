@@ -8,7 +8,10 @@ package interviewbit.arrays;
 import java.util.ArrayList;
 
 public class MaximumUnsortedSubarray {
-  /** Failed Attempt1 */
+
+  /**
+   * Failed Attempt1
+   */
 
   //  public ArrayList<Integer> subUnsort(ArrayList<Integer> a) {
   //    ArrayList<Integer> result = new ArrayList<>();

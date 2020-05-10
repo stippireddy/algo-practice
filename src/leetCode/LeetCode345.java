@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 public class LeetCode345 {
+
   public String reverseVowels(String s) {
     char[] input = s.toCharArray();
     int i = 0, j = input.length - 1;

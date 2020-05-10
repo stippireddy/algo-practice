@@ -6,14 +6,14 @@
  *
  * <p>The solution editorials can be found @
  * http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence/
- * http://www.geeksforgeeks.org/space-optimized-solution-lcs/
- * http://www.geeksforgeeks.org/printing-longest-common-subsequence/
+ * http://www.geeksforgeeks.org/space-optimized-solution-lcs/ http://www.geeksforgeeks.org/printing-longest-common-subsequence/
  */
 package geeksForGeeks.practice.medium;
 
 import java.util.Scanner;
 
 public class LongestCommonSubsequence {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();

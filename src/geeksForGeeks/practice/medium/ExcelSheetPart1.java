@@ -12,6 +12,7 @@ package geeksForGeeks.practice.medium;
 import java.util.Scanner;
 
 public class ExcelSheetPart1 {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int numberOfTestCases = sc.nextInt();
@@ -26,8 +27,8 @@ public class ExcelSheetPart1 {
     StringBuffer sb = new StringBuffer();
     while (n > 0) {
       if ((n % 26) == 0) {
-          sb.append('Z');
-          n = (n / 26) - 1;
+        sb.append('Z');
+        n = (n / 26) - 1;
       } else {
         sb.append((char) ('A' + (n % 26) - 1));
         n /= 26;

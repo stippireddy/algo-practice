@@ -12,15 +12,17 @@ package geeksForGeeks.practice.basic;
 import java.util.Scanner;
 
 public class PrintShortestPathOnScreen {
+
   char[][] input =
-      new char[][] {
-        {'A', 'B', 'C', 'D', 'E'},
-        {'F', 'G', 'H', 'I', 'J'},
-        {'K', 'L', 'M', 'N', 'O'},
-        {'P', 'Q', 'R', 'S', 'T'},
-        {'U', 'V', 'W', 'X', 'Y'},
-        {'Z'}
+      new char[][]{
+          {'A', 'B', 'C', 'D', 'E'},
+          {'F', 'G', 'H', 'I', 'J'},
+          {'K', 'L', 'M', 'N', 'O'},
+          {'P', 'Q', 'R', 'S', 'T'},
+          {'U', 'V', 'W', 'X', 'Y'},
+          {'Z'}
       };
+
   public static int printPath(String s) {
     int currRow = 0;
     int currCol = 0;
@@ -36,7 +38,7 @@ public class PrintShortestPathOnScreen {
     }
     return totalPathDistance;
   }
-  
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();

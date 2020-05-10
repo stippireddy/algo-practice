@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LeetCode448 {
+
   /**
-   * @param nums
    * @return a list of integers that are absent from the sequence of [1, nums.length]
-   *     <p>The challenge is to implement the function in O(n) time using constant space. This
-   *     implementation makes at most n swaps to make sure that all the numbers are in their
-   *     respective indices. Note that the index of number n is n-1. Then we output numbers that are
-   *     mismatched at the indices they are supposed to appear.
+   * <p>The challenge is to implement the function in O(n) time using constant space. This
+   * implementation makes at most n swaps to make sure that all the numbers are in their respective
+   * indices. Note that the index of number n is n-1. Then we output numbers that are mismatched at
+   * the indices they are supposed to appear.
    */
   public List<Integer> findDisappearedNumbersBySwapping(int[] nums) {
     for (int i = 0; i < nums.length; ) {

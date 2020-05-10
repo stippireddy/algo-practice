@@ -3,11 +3,11 @@
  *
  * <p>
  * This LeetCode problem can be found @ https://leetcode.com/problems/reverse-integer/description/
- * 
  */
 package leetCode;
 
 public class LeetCode007 {
+
   public int reverse(int n) {
     int result = 0;
     while (n != 0) {

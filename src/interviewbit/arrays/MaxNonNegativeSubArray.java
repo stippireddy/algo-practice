@@ -8,6 +8,7 @@ package interviewbit.arrays;
 import java.util.ArrayList;
 
 public class MaxNonNegativeSubArray {
+
   public ArrayList<Integer> maxset(ArrayList<Integer> a) {
     ArrayList<Integer> result = new ArrayList<>();
     int maxLeftIndex = 0;

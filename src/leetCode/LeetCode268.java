@@ -1,6 +1,7 @@
 package leetCode;
 
 public class LeetCode268 {
+
   public int missingNumber(int[] nums) {
     int temp = 0;
     for (int i = 0; i < nums.length; i++) {

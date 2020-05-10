@@ -3,11 +3,11 @@
  *
  * <p>
  * This LeetCode problem can be found @ https://leetcode.com/problems/perfect-number/description/
- * 
  */
 package leetCode;
 
 public class LeetCode507 {
+
   public boolean checkPerfectNumber(int num) {
     if (num == 1) {
       return false;

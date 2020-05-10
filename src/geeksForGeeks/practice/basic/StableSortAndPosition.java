@@ -13,6 +13,7 @@ import java.awt.Point;
 import java.util.Scanner;
 
 public class StableSortAndPosition {
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
@@ -79,7 +80,7 @@ public class StableSortAndPosition {
       k++;
     }
   }
-  
+
   public static int findIndexAfterStableSort2(int[] input, int keyIndex) {
     int index = 0;
     for (int i = 0; i < input.length; i++) {

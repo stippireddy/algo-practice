@@ -2,12 +2,12 @@
  * Created by Sarveswara Tippireddy on Jul 2, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/#/description
+ * This LeetCode problem can be found @ https://leetcode.com/problems/best-time-to-buy-and-sell-stock/#/description
  */
 package leetCode;
 
 public class LeetCode121 {
+
   public int maxProfit(int[] prices) {
     if (prices.length < 2) {
       return 0;

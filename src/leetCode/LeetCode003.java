@@ -2,13 +2,12 @@
  * Created by Sarveswara Tippireddy on Sep 5, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
- * 
+ * This LeetCode problem can be found @ https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
  */
 package leetCode;
 
 public class LeetCode003 {
+
   public int lengthOfLongestSubstring(String s) {
     char[] sArray = s.toCharArray();
     int[] freq = new int[128];

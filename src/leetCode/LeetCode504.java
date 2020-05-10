@@ -1,6 +1,7 @@
 package leetCode;
 
 public class LeetCode504 {
+
   public String convertToBase7(int num) {
     boolean isNegative = false;
     if (num < 0) {

@@ -2,13 +2,12 @@
  * Created by Sarveswara Tippireddy on Sep 1, 2017
  *
  * <p>
- * This LeetCode problem can be found @
- * https://leetcode.com/problems/intersection-of-two-linked-lists/
- * 
+ * This LeetCode problem can be found @ https://leetcode.com/problems/intersection-of-two-linked-lists/
  */
 package leetCode;
 
 public class LeetCode160 {
+
   public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
     int length1 = getLength(headA);
     int length2 = getLength(headB);

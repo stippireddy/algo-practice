@@ -3,11 +3,11 @@
  *
  * <p>
  * This LeetCode problem can be found @ https://leetcode.com/problems/count-and-say/description/
- * 
  */
 package leetCode;
 
 public class LeetCode038 {
+
   public String countAndSay(int n) {
     String s = "1";
     StringBuffer sb = new StringBuffer();

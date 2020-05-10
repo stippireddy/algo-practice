@@ -3,15 +3,15 @@
  *
  * <p>
  * This LeetCode problem can be found @ https://leetcode.com/problems/number-of-1-bits/description/
- * 
- * Sources for the ideas used in the solutions: 
- * https://leetcode.com/articles/number-1-bits/
- * https://discuss.leetcode.com/topic/11385/simple-java-solution-bit-shifting 
- * Do read them for better understanding.
+ *
+ * Sources for the ideas used in the solutions: https://leetcode.com/articles/number-1-bits/
+ * https://discuss.leetcode.com/topic/11385/simple-java-solution-bit-shifting Do read them for
+ * better understanding.
  */
 package leetCode;
 
 public class LeetCode191 {
+
   // The question requires n to be treated as an unsigned integer
   public int hammingWeightUsingUnsignedShift(int n) {
     int count = 0;

@@ -2,12 +2,10 @@
  * Created by Sarveswara Tippireddy on Oct 25, 2017
  *
  * <p>
- * This GeeksForGeeks problem can be found @
- * http://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1
+ * This GeeksForGeeks problem can be found @ http://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1
  *
  * <p>
- * The solution editorial can be found @ 
- * http://www.geeksforgeeks.org/print-left-view-binary-tree/
+ * The solution editorial can be found @ http://www.geeksforgeeks.org/print-left-view-binary-tree/
  */
 package geeksForGeeks.practice.easy;
 
@@ -16,6 +14,7 @@ import java.util.Scanner;
 
 // A Binary Tree node
 class Node {
+
   int data;
   Node left, right;
 
@@ -27,6 +26,7 @@ class Node {
 
 
 class LeftViewOfBinaryTree {
+
   public static void main(String args[]) {
     Scanner sc = new Scanner(System.in);
     int t = sc.nextInt();
@@ -43,14 +43,16 @@ class LeftViewOfBinaryTree {
         if (parent == null) {
           parent = new Node(n1);
           m.put(n1, parent);
-          if (root == null)
+          if (root == null) {
             root = parent;
+          }
         }
         Node child = new Node(n2);
-        if (lr == 'L')
+        if (lr == 'L') {
           parent.left = child;
-        else
+        } else {
           parent.right = child;
+        }
         m.put(n2, child);
         n--;
       }
@@ -64,6 +66,7 @@ class LeftViewOfBinaryTree {
 
 
 class GfG {
+
   void leftView(Node root) {
     StringBuffer sb = new StringBuffer();
     HashMap<Integer, Node> map = new HashMap<>();

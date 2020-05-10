@@ -4,10 +4,11 @@ import java.util.Arrays;
 
 /**
  * @author Sarveswara Tippireddy
- *     <p>This GeeksforGeeks problem can be found @
- *     http://www.geeksforgeeks.org/sort-array-wave-form-2/
+ * <p>This GeeksforGeeks problem can be found @
+ * http://www.geeksforgeeks.org/sort-array-wave-form-2/
  */
 public class Arrays109 {
+
   public void convertBySorting(int[] input) {
     Arrays.sort(input);
     for (int i = 0; i < input.length - 1; i += 2) {

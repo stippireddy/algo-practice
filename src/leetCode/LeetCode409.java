@@ -1,6 +1,7 @@
 package leetCode;
 
 public class LeetCode409 {
+
   public int longestPalindrome(String s) {
     int[] count = new int[128];
     for (char c : s.toCharArray()) {

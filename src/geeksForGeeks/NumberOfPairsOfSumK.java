@@ -10,49 +10,49 @@ import java.util.HashMap;
 
 public class NumberOfPairsOfSumK {
 
-	public static int findNumberOfPairs(int[] input, int k) {
-		if (input.length < 2) {
-			return 0;
-		}
-		Arrays.sort(input);
-		int i = 0;
-		int j = input.length - 1;
-		int count = 0;
-		while (i < j) {
-			if (input[i] + input[j] < k) {
-				i++;
-			} else if (input[i] + input[j] > k) {
-				j--;
-			} else {
-				count++;
-				i++;
-				j--;
-			}
-		}
-		return count;
-	}
+  public static int findNumberOfPairs(int[] input, int k) {
+    if (input.length < 2) {
+      return 0;
+    }
+    Arrays.sort(input);
+    int i = 0;
+    int j = input.length - 1;
+    int count = 0;
+    while (i < j) {
+      if (input[i] + input[j] < k) {
+        i++;
+      } else if (input[i] + input[j] > k) {
+        j--;
+      } else {
+        count++;
+        i++;
+        j--;
+      }
+    }
+    return count;
+  }
 
-	public static int findNumberOfPairsUsingHashMap(int[] input, int k) {
-		if (input.length < 2) {
-			return 0;
-		}
-		int count = 0;
-		HashMap<Integer, Integer> map = new HashMap<>(input.length);
-		for (int i : input) {
-			map.put(i, i);
-		}
-		for (int i : input) {
-			if (map.containsKey(k - i)) {
-				count++;
-			}
-		}
-		return count / 2;
-	}
+  public static int findNumberOfPairsUsingHashMap(int[] input, int k) {
+    if (input.length < 2) {
+      return 0;
+    }
+    int count = 0;
+    HashMap<Integer, Integer> map = new HashMap<>(input.length);
+    for (int i : input) {
+      map.put(i, i);
+    }
+    for (int i : input) {
+      if (map.containsKey(k - i)) {
+        count++;
+      }
+    }
+    return count / 2;
+  }
 
-	public static void main(String[] args) throws IOException {
-		int[] input = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-		System.out.println(findNumberOfPairs(input, 19));
-		System.out.println(findNumberOfPairsUsingHashMap(input, 19));
-	}
+  public static void main(String[] args) throws IOException {
+    int[] input = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    System.out.println(findNumberOfPairs(input, 19));
+    System.out.println(findNumberOfPairsUsingHashMap(input, 19));
+  }
 
 }

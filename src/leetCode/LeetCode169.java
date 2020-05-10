@@ -8,6 +8,10 @@ package leetCode;
 
 public class LeetCode169 {
 
+  public static void main(String[] args) {
+    new LeetCode169().majorityElementBitMagic(new int[]{4, 5, 4});
+  }
+
   public int majorityElementBoyerMooreAlgorithm(int[] nums) {
     int k = nums[0];
     int count = 0;
@@ -34,7 +38,7 @@ public class LeetCode169 {
     }
     return -1;
   }
-  
+
   public int majorityElementBitMagic(int[] nums) {
     int result = 0;
     int n = 1;
@@ -45,15 +49,11 @@ public class LeetCode169 {
           count++;
         }
       }
-      if(count>nums.length/2){
+      if (count > nums.length / 2) {
         result = result | n;
       }
       n = n << 1;
     }
     return result;
-  }
-  
-  public static void main(String[] args) {
-    new LeetCode169().majorityElementBitMagic(new int[] {4, 5, 4});
   }
 }

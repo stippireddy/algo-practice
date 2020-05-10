@@ -11,22 +11,22 @@ public class LeetCode088Test {
     LeetCode088 l = new LeetCode088();
     testHelperInefficient(
         l,
-        new int[] {1, 3, 5, 7, 10, 0, 0, 0, 0, 0},
+        new int[]{1, 3, 5, 7, 10, 0, 0, 0, 0, 0},
         5,
-        new int[] {2, 4, 6, 8, 9},
+        new int[]{2, 4, 6, 8, 9},
         5,
-        new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+        new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
     testHelperInefficient(
         l,
-        new int[] {1, 2, 3, 4, 5, 6, 0, 0, 0, 0},
+        new int[]{1, 2, 3, 4, 5, 6, 0, 0, 0, 0},
         6,
-        new int[] {7, 8, 9, 10},
+        new int[]{7, 8, 9, 10},
         4,
-        new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
-    testHelperInefficient(l, new int[] {1}, 1, new int[] {}, 0, new int[] {1});
-    testHelperInefficient(l, new int[] {0}, 0, new int[] {1}, 1, new int[] {1});
+        new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+    testHelperInefficient(l, new int[]{1}, 1, new int[]{}, 0, new int[]{1});
+    testHelperInefficient(l, new int[]{0}, 0, new int[]{1}, 1, new int[]{1});
     testHelperInefficient(
-        l, new int[] {1, 2, 3, 0, 0, 0}, 3, new int[] {2, 5, 6}, 3, new int[] {1, 2, 2, 3, 5, 6});
+        l, new int[]{1, 2, 3, 0, 0, 0}, 3, new int[]{2, 5, 6}, 3, new int[]{1, 2, 2, 3, 5, 6});
   }
 
   private void testHelperInefficient(
@@ -40,22 +40,22 @@ public class LeetCode088Test {
     LeetCode088 l = new LeetCode088();
     testHelperEfficient(
         l,
-        new int[] {1, 3, 5, 7, 10, 0, 0, 0, 0, 0},
+        new int[]{1, 3, 5, 7, 10, 0, 0, 0, 0, 0},
         5,
-        new int[] {2, 4, 6, 8, 9},
+        new int[]{2, 4, 6, 8, 9},
         5,
-        new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+        new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
     testHelperEfficient(
         l,
-        new int[] {1, 2, 3, 4, 5, 6, 0, 0, 0, 0},
+        new int[]{1, 2, 3, 4, 5, 6, 0, 0, 0, 0},
         6,
-        new int[] {7, 8, 9, 10},
+        new int[]{7, 8, 9, 10},
         4,
-        new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
-    testHelperEfficient(l, new int[] {1}, 1, new int[] {}, 0, new int[] {1});
-    testHelperEfficient(l, new int[] {0}, 0, new int[] {1}, 1, new int[] {1});
+        new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+    testHelperEfficient(l, new int[]{1}, 1, new int[]{}, 0, new int[]{1});
+    testHelperEfficient(l, new int[]{0}, 0, new int[]{1}, 1, new int[]{1});
     testHelperEfficient(
-        l, new int[] {1, 2, 3, 0, 0, 0}, 3, new int[] {2, 5, 6}, 3, new int[] {1, 2, 2, 3, 5, 6});
+        l, new int[]{1, 2, 3, 0, 0, 0}, 3, new int[]{2, 5, 6}, 3, new int[]{1, 2, 2, 3, 5, 6});
   }
 
   private void testHelperEfficient(

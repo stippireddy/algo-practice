@@ -3,6 +3,7 @@ package geeksForGeeks.trees.bst;
 import java.util.Scanner;
 
 class Node {
+
   int key;
   Node left, right;
 
@@ -13,31 +14,8 @@ class Node {
 }
 
 public class Delete_A_BST_Node {
+
   Node root;
-
-  void insert(Node root, int key) {
-    if (key < root.key) { //System.out.print(root.key);
-      if (root.left != null) insert(root.left, key);
-      else {
-        root.left = new Node(key);
-      }
-      //root = root.left;
-      //insert(root.left,key);
-    } else if (key > root.key) {
-      //System.out.print(root.key);
-      if (root.right != null) insert(root.right, key);
-      else {
-        root.right = new Node(key);
-      }
-    }
-  }
-
-  void inorder(Node node) {
-    if (node == null) return;
-    else inorder(node.left);
-    System.out.print(node.key + " ");
-    inorder(node.right);
-  }
 
   public static void main(String args[]) {
     Scanner sc = new Scanner(System.in);
@@ -60,7 +38,37 @@ public class Delete_A_BST_Node {
       t--;
     }
   }
+
+  void insert(Node root, int key) {
+    if (key < root.key) { //System.out.print(root.key);
+      if (root.left != null) {
+        insert(root.left, key);
+      } else {
+        root.left = new Node(key);
+      }
+      //root = root.left;
+      //insert(root.left,key);
+    } else if (key > root.key) {
+      //System.out.print(root.key);
+      if (root.right != null) {
+        insert(root.right, key);
+      } else {
+        root.right = new Node(key);
+      }
+    }
+  }
+
+  void inorder(Node node) {
+    if (node == null) {
+      return;
+    } else {
+      inorder(node.left);
+    }
+    System.out.print(node.key + " ");
+    inorder(node.right);
+  }
 }
+
 /* class Node
 {
     int key;
@@ -73,6 +81,7 @@ public class Delete_A_BST_Node {
     }
 }*/
 class GfG {
+
   Node deleteNode(Node root, int key) {
     if (root == null) {
       return root;
