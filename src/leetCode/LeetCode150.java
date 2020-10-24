@@ -49,12 +49,12 @@ public class LeetCode150 {
    * @return int which is the evaluated value of the expression formed by the input tokens.
    * <p>A typical solution that pushes all the operands on to the stack and pops them to
    * evaluate when an operator is encountered. The result is then pushed on the stack. The final
-   * residue on the stack is the required solution.
+   * residual element on the stack is the required solution.
    */
   public int evalRPNUsingStack(String[] tokens) {
     ArrayDeque<String> stack = new ArrayDeque<>();
-    for (int i = 0; i < tokens.length; i++) {
-      switch (tokens[i]) {
+    for (String token : tokens) {
+      switch (token) {
         case "+":
           if (stack.size() < 2) {
             throw new UnsupportedOperationException();
@@ -88,10 +88,10 @@ public class LeetCode150 {
           stack.push(String.valueOf(op1 / op2));
           break;
         default:
-          stack.push(tokens[i]);
+          stack.push(token);
           break;
       }
     }
-    return Integer.valueOf(stack.pop());
+    return Integer.parseInt(stack.pop());
   }
 }

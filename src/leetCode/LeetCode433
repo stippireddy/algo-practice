@@ -13,6 +13,7 @@ public class LeetCode433 {
     if (!set.contains(end)) {
       return -1;
     }
+    char[] geneCharacters = {'A', 'C', 'G', 'T'};
     ArrayDeque<String> transformations = new ArrayDeque<>();
     transformations.add(start);
     int result = 0;
@@ -23,41 +24,16 @@ public class LeetCode433 {
         char[] currentTransformation = transformations.poll().toCharArray();
         for (int i = 0; i < currentTransformation.length; i++) {
           char actual = currentTransformation[i];
-          currentTransformation[i] = 'A';
-          String nextTransformation = String.valueOf(currentTransformation);
-          if (end.equals(nextTransformation)) {
-            return result;
-          }
-          if (set.contains(nextTransformation)) {
-            nextTransformations.add(nextTransformation);
-            set.remove(nextTransformation);
-          }
-          currentTransformation[i] = 'C';
-          nextTransformation = String.valueOf(currentTransformation);
-          if (end.equals(nextTransformation)) {
-            return result;
-          }
-          if (set.contains(nextTransformation)) {
-            nextTransformations.add(nextTransformation);
-            set.remove(nextTransformation);
-          }
-          currentTransformation[i] = 'G';
-          nextTransformation = String.valueOf(currentTransformation);
-          if (end.equals(nextTransformation)) {
-            return result;
-          }
-          if (set.contains(nextTransformation)) {
-            nextTransformations.add(nextTransformation);
-            set.remove(nextTransformation);
-          }
-          currentTransformation[i] = 'T';
-          nextTransformation = String.valueOf(currentTransformation);
-          if (end.equals(nextTransformation)) {
-            return result;
-          }
-          if (set.contains(nextTransformation)) {
-            nextTransformations.add(nextTransformation);
-            set.remove(nextTransformation);
+          for (char c : geneCharacters) {
+            currentTransformation[i] = c;
+            String nextTransformation = String.valueOf(currentTransformation);
+            if (end.equals(nextTransformation)) {
+              return result;
+            }
+            if (set.contains(nextTransformation)) {
+              nextTransformations.add(nextTransformation);
+              set.remove(nextTransformation);
+            }
           }
           currentTransformation[i] = actual;
         }
