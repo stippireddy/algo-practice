@@ -38,31 +38,19 @@ public class LeetCode647 {
   public int countSubstringsEfficient(String s) {
     int count = 0;
     for (int i = 0; i < s.length(); i++) {
-      int left = i - 1, right = i + 1;
-      count++;
-      while (left >= 0 && right < s.length()) {
-        if (s.charAt(left) == s.charAt(right)) {
-          left--;
-          right++;
-          count++;
-        } else {
-          break;
-        }
-      }
-    }
-    for (int i = 1; i < s.length(); i++) {
-      if (s.charAt(i) == s.charAt(i - 1)) {
-        int left = i - 2, right = i + 1;
+      int left = i;
+      int right = i;
+      while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+        left--;
+        right++;
         count++;
-        while (left >= 0 && right < s.length()) {
-          if (s.charAt(left) == s.charAt(right)) {
-            left--;
-            right++;
-            count++;
-          } else {
-            break;
-          }
-        }
+      }
+      left = i - 1;
+      right = i;
+      while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+        left--;
+        right++;
+        count++;
       }
     }
     return count;
