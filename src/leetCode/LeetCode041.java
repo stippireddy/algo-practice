@@ -8,7 +8,7 @@ package leetCode;
 
 public class LeetCode041 {
 
-  public int firstMissingPositive(int[] nums) {
+  public int firstMissingPositive1(int[] nums) {
     for (int i = 0; i < nums.length; ) {
       if (nums[i] > 0 && nums[i] < nums.length + 1) {
         // The following condition takes care of the possibility
@@ -21,6 +21,23 @@ public class LeetCode041 {
         }
       }
       i++;
+    }
+    for (int i = 0; i < nums.length; i++) {
+      if (nums[i] != i + 1) {
+        return i + 1;
+      }
+    }
+    return nums.length + 1;
+  }
+
+  public int firstMissingPositive2(int[] nums) {
+    for (int i = 0; i < nums.length; i++) {
+      while (nums[i] != i + 1 && nums[i] > 0 && nums[i] <= nums.length
+          && nums[nums[i] - 1] != nums[i]) {
+        int temp = nums[nums[i] - 1];
+        nums[nums[i] - 1] = nums[i];
+        nums[i] = temp;
+      }
     }
     for (int i = 0; i < nums.length; i++) {
       if (nums[i] != i + 1) {
