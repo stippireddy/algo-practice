@@ -26,7 +26,7 @@ public class LeetCode133 {
     }
   }
 
-  class Node {
+  static class Node {
 
     public int val;
     public List<Node> neighbors;
