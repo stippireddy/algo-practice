@@ -1,30 +1,27 @@
 package leetCode;
 
-import java.util.ArrayDeque;
-import java.util.HashSet;
-
 public class LeetCode785 {
 
   public boolean isBipartite(int[][] graph) {
-    HashSet<Integer> visited = new HashSet<>();
-    ArrayDeque<Integer> queue = new ArrayDeque<>();
-    queue.add(0);
-    HashSet<Integer> red = new HashSet<>();
-    HashSet<Integer> black = new HashSet<>();
-    red.add(0);
-    while (!queue.isEmpty()) {
-      int size = queue.size();
-      for (int i = 0; i < size; i++) {
-        int vertex = queue.poll();
-        HashSet<Integer> other = red.contains(vertex) ? black : red;
-        visited.add(vertex);
-        for (int neighbor : graph[vertex]) {
-          if (!visited.contains(neighbor)) {
-            queue.offer(neighbor);
-          }
-        }
+    int[] visited = new int[graph.length];
+    for (int i = 0; i < graph.length; i++) {
+      if (visited[i] == 0 && !dfs(graph, i, 1, visited)) {
+        return false;
       }
     }
-    return visited.size() == graph.length;
+    return true;
+  }
+
+  private boolean dfs(int[][] graph, int index, int color, int[] visited) {
+    if (visited[index] != 0) {
+      return visited[index] == color;
+    }
+    visited[index] = color;
+    for (int adj : graph[index]) {
+      if (!dfs(graph, adj, -color, visited)) {
+        return false;
+      }
+    }
+    return true;
   }
 }
