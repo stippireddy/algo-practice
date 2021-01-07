@@ -5,7 +5,34 @@ import java.util.Map;
 
 public class LeetCode523 {
 
-  public boolean checkSubarraySumOn2(int[] nums, int k) {
+  public boolean checkSubarraySum3(int[] nums, int k) {
+    if (nums.length < 2) {
+      return false;
+    }
+    for (int i = 0; i < nums.length - 1; i++) {
+      if (nums[i] == 0 && nums[i + 1] == 0) {
+        return true;
+      }
+    }
+    if (k <= 0) {
+      return false;
+    }
+    int runningSum = nums[0];
+    HashMap<Integer, Integer> map = new HashMap<>();
+    map.put(nums[0] % k, 0);
+    for (int i = 1; i < nums.length; i++) {
+      runningSum = (runningSum + nums[i]) % k;
+      if (runningSum == 0) {
+        return true;
+      }
+      if (map.containsKey(runningSum) && i - map.get(runningSum) > 1) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public boolean checkSubarraySum2(int[] nums, int k) {
     if (nums == null || nums.length == 0) {
       return false;
     }
