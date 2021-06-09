@@ -14,10 +14,10 @@ public class LeetCode105 {
     for (int i = 0; i < inorder.length; i++) {
       indexMap.put(inorder[i], i);
     }
-    return helper(preorder, inorder, 0, inorder.length - 1, indexMap);
+    return helper(preorder, 0, inorder.length - 1, indexMap);
   }
 
-  private TreeNode helper(int[] preorder, int[] inorder, int left, int right,
+  private TreeNode helper(int[] preorder, int left, int right,
       HashMap<Integer, Integer> indexMap) {
     if (index == preorder.length || left > right) {
       return null;
@@ -25,8 +25,8 @@ public class LeetCode105 {
     TreeNode root = new TreeNode(preorder[index]);
     int splitIndex = indexMap.get(preorder[index]);
     index++;
-    root.left = helper(preorder, inorder, left, splitIndex - 1, indexMap);
-    root.right = helper(preorder, inorder, splitIndex + 1, right, indexMap);
+    root.left = helper(preorder, left, splitIndex - 1, indexMap);
+    root.right = helper(preorder, splitIndex + 1, right, indexMap);
     return root;
   }
 }

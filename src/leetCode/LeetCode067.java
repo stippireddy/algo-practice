@@ -9,28 +9,30 @@ package leetCode;
 public class LeetCode067 {
 
   public String addBinary(String a, String b) {
-    int i = a.length() - 1, j = b.length() - 1;
+    StringBuilder sb = new StringBuilder();
+    int i = a.length() - 1;
+    int j = b.length() - 1;
     int carry = 0;
-    StringBuffer sb = new StringBuffer();
-    while (i >= 0 && j >= 0) {
-      int temp = a.charAt(i) - '0' + b.charAt(j) - '0' + carry;
-      carry = temp / 2;
-      sb.append(temp % 2);
-      i--;
-      j--;
+    while (i >= 0 || j >= 0) {
+      int sum = carry;
+      if (i < 0) {
+        sum += (b.charAt(j) - '0');
+        j--;
+      } else if (j < 0) {
+        sum += (a.charAt(i) - '0');
+        i--;
+      } else {
+        sum += (b.charAt(j) - '0');
+        sum += (a.charAt(i) - '0');
+        i--;
+        j--;
+      }
+      sb.append(sum % 2);
+      carry = sum / 2;
     }
-    while (i >= 0) {
-      int temp = a.charAt(i) - '0' + carry;
-      carry = temp / 2;
-      sb.append(temp % 2);
-      i--;
+    if (carry > 0) {
+      sb.append(carry);
     }
-    while (j >= 0) {
-      int temp = b.charAt(j) - '0' + carry;
-      carry = temp / 2;
-      sb.append(temp % 2);
-      j--;
-    }
-    return carry == 0 ? sb.reverse().toString() : sb.append('1').reverse().toString();
+    return sb.reverse().toString();
   }
 }
