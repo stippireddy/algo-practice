@@ -2,8 +2,8 @@ package generalImplementations;
 
 import static org.testng.Assert.assertEquals;
 
-import leetCode.ListNode;
-import leetCode.ListUtils;
+import leetcode.ListNode;
+import leetcode.ListUtils;
 import org.testng.annotations.Test;
 
 public class InsertionSortTest {

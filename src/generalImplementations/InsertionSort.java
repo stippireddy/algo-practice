@@ -1,6 +1,6 @@
 package generalImplementations;
 
-import leetCode.ListNode;
+import leetcode.ListNode;
 
 public class InsertionSort {
 
