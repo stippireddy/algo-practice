@@ -8,26 +8,21 @@ package leetcode;
 
 public class LeetCode125 {
 
-  public boolean isPalindrome(String s) {
-    int i = 0, j = s.length() - 1;
-    while (i < j) {
-      char currI = s.charAt(i);
-      if (!Character.isLetterOrDigit(currI)) {
-        i++;
-        continue;
-      }
-      char currJ = s.charAt(j);
-      if (!Character.isLetterOrDigit(currJ)) {
-        j--;
-        continue;
-      }
-      if (Character.toLowerCase(currI) == Character.toLowerCase(currJ)) {
-        i++;
-        j--;
-      } else {
-        return false;
-      }
+    public boolean isPalindrome(String s) {
+        int i = 0, j = s.length() - 1;
+        while (i < j) {
+            if (!Character.isLetterOrDigit(s.charAt(i))) {
+                i++;
+            } else if (!Character.isLetterOrDigit(s.charAt(j))) {
+                j--;
+            } else {
+                if (Character.toLowerCase(s.charAt(i)) != Character.toLowerCase(s.charAt(j))) {
+                    return false;
+                }
+                i++;
+                j--;
+            }
+        }
+        return true;
     }
-    return true;
-  }
 }
