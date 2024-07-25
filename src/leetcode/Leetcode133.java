@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class LeetCode133 {
+public class Leetcode133 {
 
   public Node cloneGraph(Node node) {
     if (node == null) {

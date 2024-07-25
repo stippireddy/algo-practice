@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LeetCode986 {
-
   public int[][] intervalIntersection(int[][] firstList, int[][] secondList) {
     if (firstList.length == 0 || secondList.length == 0) {
       return new int[0][];
@@ -12,7 +11,7 @@ public class LeetCode986 {
     int i = 0, j = 0;
     List<int[]> resultList = new ArrayList<>();
     while (i < firstList.length && j < secondList.length) {
-      if ((firstList[i][0] <= secondList[j][1] && firstList[i][1] >= secondList[j][0])) {
+      if (firstList[i][0] <= secondList[j][1] && firstList[i][1] >= secondList[j][0]) {
         int[] intersection = new int[2];
         intersection[0] = Integer.max(firstList[i][0], secondList[j][0]);
         intersection[1] = Integer.min(firstList[i][1], secondList[j][1]);

@@ -2,7 +2,7 @@ package leetcode;
 
 import java.util.HashMap;
 
-public class LeetCode138 {
+public class Leetcode138 {
 
   public Node copyRandomList(Node head) {
     if (head == null) {

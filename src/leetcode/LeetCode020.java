@@ -10,27 +10,35 @@ import java.util.ArrayDeque;
 import java.util.HashMap;
 
 public class LeetCode020 {
-
-  public boolean isValid(String s) {
-    ArrayDeque<Character> stack = new ArrayDeque<>();
-    HashMap<Character, Character> map = new HashMap<>();
-    map.put('}', '{');
-    map.put(']', '[');
-    map.put(')', '(');
-    for (int i = 0; i < s.length(); i++) {
-      char currentChar = s.charAt(i);
-      if (map.containsKey(currentChar)) {
-        if (stack.isEmpty()) {
-          return false;
-        } else {
-          if (stack.pop() != map.get(currentChar)) {
-            return false;
-          }
+    // Consider the test case: "([)]"
+    public boolean isValid(String s) {
+        ArrayDeque<Character> stack = new ArrayDeque<>();
+        for (char c : s.toCharArray()) {
+            switch (c) {
+                case '(':
+                case '{':
+                case '[':
+                    stack.push(c);
+                    break;
+                case ')':
+                    if (stack.isEmpty() || stack.peek() != '(') {
+                        return false;
+                    }
+                    stack.pop();
+                    break;
+                case '}':
+                    if (stack.isEmpty() || stack.peek() != '{') {
+                        return false;
+                    }
+                    stack.pop();
+                    break;
+                case ']':
+                    if (stack.isEmpty() || stack.peek() != '[') {
+                        return false;
+                    }
+                    stack.pop();
+            }
         }
-      } else {
-        stack.push(currentChar);
-      }
+        return stack.isEmpty();
     }
-    return stack.isEmpty();
-  }
 }
