@@ -19,7 +19,7 @@ public class Leetcode133 {
     if (node == null || map.containsKey(node)) {
       return;
     }
-    map.putIfAbsent(node, new Node(node.val));
+    map.put(node, new Node(node.val));
     for (Node n : node.neighbors) {
       helper(n, map);
       map.get(node).neighbors.add(map.get(n));
