@@ -8,57 +8,43 @@ package leetcode;
 
 public class LeetCode238 {
 
-  public int[] productExceptSelf1(int[] nums) {
-    int product = 1;
-    int numberOfZeroes = 0;
-    int onlyZeroIndex = -1;
-    for (int i = 0; i < nums.length; i++) {
-      if (nums[i] != 0) {
-        product *= nums[i];
-      } else {
-        onlyZeroIndex = i;
-        numberOfZeroes++;
-      }
+    // Below solution uses extra space for left and right products
+    public int[] productExceptSelfSuboptimal(int[] nums) {
+        int[] left = new int[nums.length];
+        int[] right = new int[nums.length];
+        int product = 1;
+        for (int i = 0; i < nums.length; i++) {
+            product *= nums[i];
+            left[i] = product;
+        }
+        product = 1;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            product *= nums[i];
+            right[i] = product;
+        }
+        int[] result = new int[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            int l = i == 0 ? 1 : left[i - 1];
+            int r = i == nums.length - 1 ? 1 : right[i + 1];
+            result[i] = l * r;
+        }
+        return result;
     }
-    int[] result = new int[nums.length];
-    if (numberOfZeroes == 1) {
-      result[onlyZeroIndex] = product;
-      return result;
-    } else if (numberOfZeroes == 0) {
-      for (int i = 0; i < result.length; i++) {
-        result[i] = product / nums[i];
-      }
-    }
-    return result;
-  }
 
-  public int[] productExceptSelf2(int[] nums) {
-    int[] result = new int[nums.length];
-    result[result.length - 1] = 1;
-    for (int i = result.length - 2; i >= 0; i--) {
-      result[i] = result[i + 1] * nums[i + 1];
+    // Below solution uses just the output array space
+    public int[] productExceptSelf(int[] nums) {
+        int[] result = new int[nums.length];
+        int product = 1;
+        for (int i = 0; i < nums.length; i++) {
+            product *= nums[i];
+            result[i] = product;
+        }
+        product = 1;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            int l = i == 0 ? 1 : result[i - 1];
+            result[i] = l * product;
+            product *= nums[i];
+        }
+        return result;
     }
-    int leftProduct = nums[0];
-    for (int i = 1; i < result.length; i++) {
-      result[i] = leftProduct * result[i];
-      leftProduct *= nums[i];
-    }
-    return result;
-  }
-
-  public int[] productExceptSelf3(int[] nums) {
-    multiply(nums, 1, 0);
-    return nums;
-  }
-
-  public int multiply(int[] a, int fwdProduct, int indx) {
-    int revProduct = 1;
-    if (indx < a.length) {
-      revProduct = multiply(a, fwdProduct * a[indx], indx + 1);
-      int cur = a[indx];
-      a[indx] = fwdProduct * revProduct;
-      revProduct *= cur;
-    }
-    return revProduct;
-  }
 }
