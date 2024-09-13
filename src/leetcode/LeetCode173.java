@@ -7,47 +7,35 @@ package leetcode;
  * https://leetcode.com/problems/binary-search-tree-iterator/description/
  */
 
+import java.lang.reflect.Array;
 import java.util.ArrayDeque;
+
 import karumanchi.trees.TreeNode;
 
-public class LeetCode173 {
+class BSTIterator {
+    ArrayDeque<TreeNode> stack;
 
-  ArrayDeque<TreeNode> stack;
-  boolean hasNext;
+    public BSTIterator(TreeNode root) {
+        stack = new ArrayDeque<>();
+        while (root != null) {
+            stack.push(root);
+            root = root.left;
+        }
+    }
 
-  public LeetCode173(TreeNode root) {
-    stack = new ArrayDeque<>();
-    while (root != null) {
-      stack.push(root);
-      root = root.left;
+    public int next() {
+        TreeNode root = stack.pop();
+        if (root.right != null) {
+            TreeNode temp = root.right;
+            while (temp != null) {
+                stack.push(temp);
+                temp = temp.left;
+            }
+        }
+        return root.val;
     }
-    if (stack.size() > 0) {
-      hasNext = true;
-    } else {
-      hasNext = false;
-    }
-  }
 
-  /** @return whether we have a next smallest number */
-  public boolean hasNext() {
-    return hasNext;
-  }
-
-  /** @return the next smallest number */
-  public int next() {
-    TreeNode currMin = stack.pop();
-    if (currMin.right != null) {
-      TreeNode t = currMin.right;
-      while (t != null) {
-        stack.push(t);
-        t = t.left;
-      }
+    public boolean hasNext() {
+        return !stack.isEmpty();
     }
-    if (stack.size() > 0) {
-      hasNext = true;
-    } else {
-      hasNext = false;
-    }
-    return currMin.val;
-  }
 }

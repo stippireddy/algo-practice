@@ -1,39 +1,32 @@
 package leetcode;
 
 public class LeetCode953 {
+    public boolean isAlienSorted(String[] words, String order) {
+        int[] indices = new int[26];
+        for (int i = 0; i < order.length(); i++) {
+            indices[order.charAt(i) - 'a'] = i;
+        }
+        int minLength = Integer.MAX_VALUE;
+        for (String word : words) {
+            minLength = Integer.min(minLength, word.length());
+        }
 
-  public static void main(String[] args) {
-    LeetCode953 l = new LeetCode953();
-    System.out.println(l.isAlienSorted(new String[]{"hello", "leetcode"},
-        "hlabcdefgijkmnopqrstuvwxyz"));
-  }
-
-  public boolean isAlienSorted(String[] words, String order) {
-    int[] orderMap = new int[26];
-    for (int i = 0; i < order.length(); i++) {
-      orderMap[order.charAt(i) - 'a'] = i;
-    }
-    for (int i = 0; i < words.length - 1; i++) {
-      if (!isLessThan(words[i], words[i + 1], orderMap)) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  private boolean isLessThan(String a, String b, int[] map) {
-    int i = 0;
-    int j = 0;
-    while (i < a.length() && j < b.length()) {
-      if (map[a.charAt(i) - 'a'] < map[b.charAt(j) - 'a']) {
+        for (int index = 0; index < words.length - 1; index++) {
+            String word1 = words[index];
+            String word2 = words[index + 1];
+            int i = 0, j = 0;
+            while (i < word1.length() && j < word2.length() && word1.charAt(i) == word2.charAt(j)) {
+                i++;
+                j++;
+            }
+            // This is to handle the case of apple, app
+            if (j == word2.length() && i < word1.length()) {
+                return false;
+            }
+            if (i < word1.length() && j < word2.length() && indices[word1.charAt(i) - 'a'] > indices[word2.charAt(j) - 'a']) {
+                return false;
+            }
+        }
         return true;
-      } else if (map[a.charAt(i) - 'a'] == map[b.charAt(j) - 'a']) {
-        i++;
-        j++;
-      } else {
-        return false;
-      }
     }
-    return i == a.length();
-  }
 }

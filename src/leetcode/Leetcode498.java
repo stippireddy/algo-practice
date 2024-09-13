@@ -6,15 +6,39 @@ public class Leetcode498 {
         int[] result = new int[n];
         while (count < n) {
             while (i >= 0 && j < mat[0].length) {
-                result[count++] = mat[i][j];
+                result[count] = mat[i][j];
                 i--;
                 j++;
+                count++;
             }
-            if(i < 0 && j < mat[0].length) {
-                i = 0;
+            if (count == n) {
+                break;
             }
-            if(i >= 0 && j == mat[0].length) {
+            // Explain this in the interview before you code
+            if (i < 0 && j == mat[0].length) {
+                i += 2;
                 j--;
+            } else if (i >= 0 && j == mat[0].length) {
+                i += 2;
+                j--;
+            } else if (i < 0 && j < mat[0].length) {
+                i++;
+            }
+            while (i < mat.length && j >= 0) {
+                result[count] = mat[i][j];
+                i++;
+                j--;
+                count++;
+            }
+            // Explain this in the interview before you code
+            if (j < 0 && i == mat.length) {
+                j += 2;
+                i--;
+            } else if (i == mat.length && j >= 0) {
+                i--;
+                j += 2;
+            } else if (j < 0 && i < mat.length) {
+                j++;
             }
         }
         return result;

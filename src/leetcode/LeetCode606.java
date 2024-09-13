@@ -4,32 +4,28 @@ import karumanchi.trees.TreeNode;
 
 public class LeetCode606 {
 
-  public String tree2strRecursive(TreeNode t) {
-    StringBuffer sb = new StringBuffer();
-    stringBuilder(t, sb);
-    return sb.toString();
-  }
-
-  private void stringBuilder(TreeNode t, StringBuffer sb) {
-    if (t == null) {
-      return;
+    public String tree2str(TreeNode root) {
+        StringBuffer sb = new StringBuffer();
+        helper(root, sb);
+        return sb.toString();
     }
-    sb.append(t.val);
-    if (t.left != null || t.right != null) {
-      sb.append('(');
-      stringBuilder(t.left, sb);
-      sb.append(')');
-      if (t.right != null) {
-        sb.append('(');
-        stringBuilder(t.right, sb);
-        sb.append(')');
-      }
-    }
-  }
 
-  public String tree2strIterative(TreeNode t) {
-    //https://leetcode.com/articles/construct-string-from-binary-tree/
-    //TODO Complete this
-    return null;
-  }
+    private void helper(TreeNode root, StringBuffer sb) {
+        if (root == null) {
+            return;
+        }
+        sb.append(root.val);
+        if (root.left != null || root.right != null) {
+            sb.append("(");
+            if (root.left != null) {
+                helper(root.left, sb);
+            }
+            sb.append(")");
+            if (root.right != null) {
+                sb.append("(");
+                helper(root.right, sb);
+                sb.append(")");
+            }
+        }
+    }
 }

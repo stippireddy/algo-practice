@@ -1,27 +1,45 @@
 package leetcode;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 public class Leetcode1209 {
     public String removeDuplicates(String s, int k) {
-        StringBuilder sb = new StringBuilder();
-        int i = 0;
-        while (i < k - 1) {
-            sb.append(s.charAt(i));
-            i++;
-        }
-        while (i < s.length()) {
-            sb.append(s.charAt(i));
-            i++;
-            int index = sb.length() - 1;
-            char c = sb.charAt(index);
-            int count = 0;
-            while (index >= 0 && c == sb.charAt(index)) {
-                index--;
-                count++;
+        ArrayDeque<CharacterCount> q = new ArrayDeque<>();
+        for (char c : s.toCharArray()) {
+            if (q.isEmpty()) {
+                q.addLast(new CharacterCount(c));
+            } else {
+                if (q.peekLast().c == c) {
+                    if (q.peekLast().count == k - 1) {
+                        q.removeLast();
+                    } else {
+                        q.peekLast().count++;
+                    }
+                } else {
+                    q.addLast(new CharacterCount(c));
+                }
             }
-            if (count >= k) {
-                sb.setLength(sb.length() - k);
+        }
+        StringBuilder sb = new StringBuilder();
+        while (!q.isEmpty()) {
+            CharacterCount pojo = q.pollFirst();
+            while (pojo.count > 0) {
+                sb.append(pojo.c);
+                pojo.count--;
             }
         }
         return sb.toString();
+    }
+
+    class CharacterCount {
+        private char c;
+        private int count;
+
+        CharacterCount(char c) {
+            this.c = c;
+            this.count = 1;
+        }
     }
 }
