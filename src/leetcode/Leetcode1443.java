@@ -3,7 +3,7 @@ package leetcode;
 import java.util.*;
 
 public class Leetcode1443 {
-    public int minTime(int n, int[][] edges, List<Boolean> hasApple) {
+    public static int minTime(int n, int[][] edges, List<Boolean> hasApple) {
         Node[] graph = new Node[n];
         for(int i = 0; i < n; i++) {
             graph[i] = new Node(i, hasApple.get(i));
@@ -18,11 +18,11 @@ public class Leetcode1443 {
         return helper(graph, 0, visited);
     }
 
-    private int helper(Node[] graph, int i, boolean[] visited) {
-
+    private static int helper(Node[] graph, int i, boolean[] visited) {
+        return 0;
     }
 
-    class Node {
+    static class Node {
         private int val;
         private boolean hasApple;
         private List<Node> neighbors;
